@@ -2,13 +2,13 @@ import React, { FC } from 'react';
 import * as Styled from './styles';
 
 interface IProps {
-  link : string;
   text : string;
   isSelect? : boolean;
+  onClick?() : void;
 }
 
-const SelectableOption : FC<IProps> = ({ children, link , text }) => (
-  <Styled.MainContainer href={link} >
+const SelectableOption : FC<IProps> = ({ children , text , onClick }) => (
+  <Styled.MainContainer onClick={onClick} >
     <Styled.ItemContainer>
       <Styled.IconContainer>
         {children}

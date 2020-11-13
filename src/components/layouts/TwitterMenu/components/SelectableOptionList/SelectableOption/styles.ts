@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { colors } from "../../../../../config/colors";
+import { colors } from "../../../../../../config/colors";
 
 export const ItemContainer = styled.div({
   width: 'max-content',
@@ -11,7 +11,8 @@ export const ItemContainer = styled.div({
 
 export const IconContainer = styled.div({
   fontSize : 28,
-  lineHeight : 0
+  lineHeight : 0,
+  position : 'relative',
 });
 
 export const TextContainer = styled.div({
@@ -27,7 +28,7 @@ interface MainContainerProps {
   isSelect? : boolean;
 }
 
-export const MainContainer = styled.a<MainContainerProps>(({ isSelect }) => ({
+export const MainContainer = styled.div<MainContainerProps>(({ isSelect }) => ({
   height : 60,
   display: 'flex',
   alignItems : 'center',
