@@ -8,6 +8,7 @@ export const Container = styled.div({
   padding : '10px 15px',
   cursor : 'pointer',
   borderBottom: '1px solid rgb(230,230,230)',
+  userSelect : 'none'
 });
 
 export const AuthenticatedAccountContainer = styled.div({

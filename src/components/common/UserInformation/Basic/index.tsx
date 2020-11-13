@@ -16,7 +16,7 @@ const Basic : FC<NSUserInformation.IBasic> = ({ children , image , imageSize , u
       <UserAvatar size={imageSize || 40} image={image} />
       <Styled.TextContainer>
         <GlobalStyled.Nickname>{TextLimit(nickname)}</GlobalStyled.Nickname>
-        <GlobalStyled.Username>{username}</GlobalStyled.Username>
+        <GlobalStyled.Username>@{username}</GlobalStyled.Username>
       </Styled.TextContainer>
     </Styled.UserDataContainer>
     <Styled.ChildrenContainer>

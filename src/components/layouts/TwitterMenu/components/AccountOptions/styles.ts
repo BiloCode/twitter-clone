@@ -7,6 +7,7 @@ export const Container = styled.div({
   padding: 10,
   borderRadius: 30,
   cursor: 'pointer',
+  userSelect : 'none',
   position: 'relative',
   ':hover' : {
     backgroundColor : colors.skyblueSmooth

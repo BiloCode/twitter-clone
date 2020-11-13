@@ -20,7 +20,7 @@ export const NewsIndicator = styled.span({
   height : sizeIndicator,
   borderRadius : '50%',
   position : 'absolute',
-  top : sizeIndicator / 2,
-  right: -sizeIndicator / 2,
+  top : 0,
+  right: -sizeIndicator,
   backgroundColor : colors.skyblue
 });

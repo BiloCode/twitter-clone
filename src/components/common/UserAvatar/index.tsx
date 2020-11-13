@@ -12,14 +12,14 @@ interface IProps {
 
 const UserAvatar : FC<IProps> = ({ image , size , onClick , onMouseEnter , onMouseLeave }) => (
   <Styled.Container
-    size={size}
+    containerSize={size}
     onClick={onClick}
     onMouseEnter={onMouseEnter}
     onMouseLeave={onMouseLeave}
   >
     {
       image && (
-        <Styled.Image src={image} />
+        <Styled.Image src={image} draggable={false} />
       )
     }
   </Styled.Container>
