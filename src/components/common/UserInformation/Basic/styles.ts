@@ -6,10 +6,14 @@ export const UserDataContainer = styled.div({
 
 //User Text
 export const TextContainer = styled.div({
-  display: 'grid',
+  display : 'flex',
+  justifyContent : 'center',
+  flexDirection : 'column',
   paddingLeft: 10
 });
 
 export const ChildrenContainer = styled.div({
-  
+  display: 'flex',
+  justifyContent : 'center',
+  alignItems : 'center'
 });

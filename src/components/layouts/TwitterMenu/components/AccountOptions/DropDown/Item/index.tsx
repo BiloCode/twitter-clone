@@ -6,10 +6,10 @@ interface IProps {
   onClick?() : void;
 }
 
-const ItemDropDown : FC<IProps> = ({ text , onClick }) => (
+const Item : FC<IProps> = ({ text , onClick }) => (
   <Styled.Container onClick={onClick} >
     <Styled.Text>{text}</Styled.Text>
   </Styled.Container>
 );
 
-export default ItemDropDown;
+export default Item;

@@ -3,6 +3,7 @@ export namespace NSUserInformation {
     image : string;
     username : string;
     nickname : string;
+    imageSize? : number;
     onClick?() : void;
   }
 

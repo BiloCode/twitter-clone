@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
+import React, { FC, useState } from 'react';
 import * as Styled from './styles';
 
 import ArrowDown from './ArrowDown';
 import UserInformation from 'components/common/UserInformation';
 import DropDown from './DropDown';
 
-const AccountOptions = () => {
+const AccountOptions : FC = () => {
   const [ isDropdownHide , setIsDropdownHide ] = useState<boolean>(false);
 
   return <Styled.Container>

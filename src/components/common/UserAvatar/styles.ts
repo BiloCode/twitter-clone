@@ -6,7 +6,7 @@ export const Image = styled.img({
   borderRadius : 'inherit',
   objectFit : 'cover',
   transition : '.2s',
-  border: '2px solid #fff'
+  border: '1px solid rgb(230,230,230)'
 });
 
 interface IContainerProps {
