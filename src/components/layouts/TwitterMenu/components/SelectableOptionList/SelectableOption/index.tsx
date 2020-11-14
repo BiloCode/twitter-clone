@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 import * as Styled from './styles';
 
 interface IProps {
-  text : string;
+  text? : string;
   isSelect? : boolean;
   onClick?() : void;
 }

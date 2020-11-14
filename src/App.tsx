@@ -1,13 +1,13 @@
 import React from 'react';
 import { RecoilRoot } from 'recoil';
-import Home from './containers/home';
+import DefaultRouter from 'router';
 import { GlobalStyle } from './globalStyles';
 
 function App() {
   return (
     <RecoilRoot>
       <GlobalStyle />
-      <Home />
+      <DefaultRouter />
     </RecoilRoot>
   );
 }

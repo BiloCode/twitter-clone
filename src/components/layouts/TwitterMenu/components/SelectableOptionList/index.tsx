@@ -10,31 +10,31 @@ import HomeOption from './HomeOption';
 import { useRecoilValue } from 'recoil';
 import { CurrentAccountSelector } from 'atoms/AccountState';
 import MoreOptions from './MoreOptions';
-import useNavigate from 'hooks/useNavigate';
+import useLinkNavigate from 'hooks/useLinkNavigate';
 
 const SelectableOptionList = () => {
   const CurrentAccount = useRecoilValue(CurrentAccountSelector);
-  const Navigate = useNavigate();
+  const Navigate = useLinkNavigate();
 
   return <div>
-    <SelectableOption text='' onClick={Navigate('/')} >
+    <SelectableOption onClick={Navigate('/')} >
       <FiTwitter />
     </SelectableOption>
     <HomeOption />   
-    <SelectableOption text='Explore' onClick={Navigate('/')}>
+    <SelectableOption text='Explore' onClick={Navigate('/explore')}>
       <AiOutlineNumber />
     </SelectableOption>
     <NotificationOption notifications={CurrentAccount?.notifications} />
-    <SelectableOption text='Messages' onClick={Navigate('/')}>
+    <SelectableOption text='Messages' onClick={Navigate('/messages')}>
       <AiOutlineInbox />
     </SelectableOption>
-    <SelectableOption text='Saves' onClick={Navigate('/')}>
+    <SelectableOption text='Saves' onClick={Navigate('/i/bookmarks')}>
       <BsBookmark />
     </SelectableOption>
-    <SelectableOption text='Lists' onClick={Navigate('/')}>
+    <SelectableOption text='Lists' onClick={Navigate(`/${CurrentAccount?.personalInformation.username}/lists`)}>
       <BsFileText />
     </SelectableOption>
-    <SelectableOption text='Profile' onClick={Navigate('/')}>
+    <SelectableOption text='Profile' onClick={Navigate(`/${CurrentAccount?.personalInformation.username}`)}>
       <AiOutlineUser />
     </SelectableOption>
     <MoreOptions />
