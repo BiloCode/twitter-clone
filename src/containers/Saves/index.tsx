@@ -1,10 +1,10 @@
 import React, { FC } from 'react';
 import { RouteComponentProps } from '@reach/router'
 
-const Home : FC<RouteComponentProps> = () => (
+const Saves : FC<RouteComponentProps> = () => (
   <>
-    <h1>Inicio</h1>
+    <h1>Elementos Guardados</h1>
   </>
 );
 
-export default Home;
+export default Saves;

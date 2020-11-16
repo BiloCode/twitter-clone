@@ -17,7 +17,7 @@ const SelectableOptionList = () => {
   const Navigate = useLinkNavigate();
 
   return <div>
-    <SelectableOption onClick={Navigate('/')} >
+    <SelectableOption onClick={Navigate('/home')} >
       <FiTwitter />
     </SelectableOption>
     <HomeOption />   

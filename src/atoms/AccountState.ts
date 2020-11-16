@@ -51,14 +51,12 @@ export const HaveNotifications = selector({
     const Accounts = get(AccountState);
     const SelectedAccount = get(SelectedAccountState);
     
-    let isHaveNotifications = false;
     for(let v of Accounts) {
       if(v.notifications > 0 && v._id !== SelectedAccount){
-        isHaveNotifications = true;
-        break;
+        return true;
       }
     }
 
-    return isHaveNotifications;
+    return false;
   }
 })
