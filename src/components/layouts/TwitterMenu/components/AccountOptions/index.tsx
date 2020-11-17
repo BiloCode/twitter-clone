@@ -1,15 +1,15 @@
-import React, { FC, useState } from 'react';
+import React, { FC, memo, useState } from 'react';
 import * as Styled from './styles';
 
 import ArrowDown from './ArrowDown';
 import UserInformation from 'components/common/UserInformation';
 import DropDown from './DropDown';
 import { useRecoilValue } from 'recoil';
-import { CurrentAccountSelector, HaveNotifications } from 'atoms/AccountState';
+import { CurrentAccountSelector, HaveNotificationsSelector } from 'atoms/AccountState';
 
 const AccountOptions : FC = () => {
   const Account = useRecoilValue(CurrentAccountSelector);
-  const isHaveNotifications = useRecoilValue(HaveNotifications);
+  const isHaveNotifications = useRecoilValue(HaveNotificationsSelector);
   const [ isDropdownHide , setIsDropdownHide ] = useState<boolean>(false);
 
   return <Styled.Container>
@@ -25,4 +25,4 @@ const AccountOptions : FC = () => {
   </Styled.Container>
 };
 
-export default AccountOptions;
+export default memo(AccountOptions);

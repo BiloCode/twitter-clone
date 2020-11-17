@@ -24,7 +24,7 @@ const DefaultRouter = () => (
       <Messages path='messages' />
       <Lists path=':username/lists' />
       <Profile path=':username' />
-      <Default default={true} />
+      <Default default />
     </RootLayout>
   </Router>
 );

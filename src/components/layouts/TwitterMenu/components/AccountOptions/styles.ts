@@ -11,5 +11,8 @@ export const Container = styled.div({
   position: 'relative',
   ':hover' : {
     backgroundColor : colors.skyblueSmooth
+  },
+  ':active' : {
+    backgroundColor : colors.skyblueSmooth2
   }
 });

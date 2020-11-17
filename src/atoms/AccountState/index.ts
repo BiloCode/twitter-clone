@@ -1,14 +1,15 @@
 import { atom, selector } from "recoil";
-import { SelectedAccountState } from "./SelectedAccountState";
+import { SelectedAccountState } from "atoms/SelectedAccountState";
+import { IAccountState } from "./types";
 
-export const AccountState = atom({
+export const AccountState = atom<IAccountState[]>({
   key : 'AccountState',
   default : [
     {
       _id : '3512asde2b12r1ieu2',
       createdAt : new Date(),
-      following : 70,
-      followers : 3,
+      following : [],
+      followers : [],
       notifications : 0,
       personalInformation : {
         nickname : 'TheBilo16',
@@ -21,8 +22,8 @@ export const AccountState = atom({
     {
       _id : '3512asde2123b12r1ieu2',
       createdAt : new Date(),
-      following : 70,
-      followers : 3,
+      following : [],
+      followers : [],
       notifications : 5,
       personalInformation : {
         nickname : 'Billy Alexander Paredes Aycho',
@@ -45,8 +46,8 @@ export const CurrentAccountSelector = selector({
   }
 });
 
-export const HaveNotifications = selector({
-  key : 'HaveNotifications',
+export const HaveNotificationsSelector = selector({
+  key : 'HaveNotificationsSelector',
   get : ({ get }) => {
     const Accounts = get(AccountState);
     const SelectedAccount = get(SelectedAccountState);
