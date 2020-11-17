@@ -7,8 +7,8 @@ interface IProps {
   onClick?() : void;
 }
 
-const SelectableOption : FC<IProps> = ({ children , text , onClick }) => (
-  <Styled.MainContainer onClick={onClick} >
+const SelectableOption : FC<IProps> = ({ children , text , onClick , isSelect }) => (
+  <Styled.MainContainer onClick={onClick} isSelect={isSelect} >
     <Styled.ItemContainer>
       <Styled.IconContainer>
         {children}

@@ -6,7 +6,6 @@ export const Image = styled.img({
   borderRadius : 'inherit',
   objectFit : 'cover',
   transition : '.2s',
-  border: '1px solid rgb(230,230,230)'
 });
 
 interface IContainerProps {
@@ -19,6 +18,7 @@ export const Container = styled.div<IContainerProps>(({ containerSize , hoverabl
   height: containerSize,
   borderRadius : '50%',
   backgroundColor : 'rgb(230,230,230)',
+  border: '3px solid #fff',
   [Image] : {
     cursor: 'pointer',
     ':hover' : {

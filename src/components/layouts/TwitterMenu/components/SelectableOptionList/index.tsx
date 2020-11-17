@@ -11,30 +11,52 @@ import { useRecoilValue } from 'recoil';
 import { CurrentAccountSelector } from 'atoms/AccountState';
 import MoreOptions from './MoreOptions';
 import useLinkNavigate from 'hooks/useLinkNavigate';
+import useRouteCheck from 'hooks/useRouteCheck';
 
 const SelectableOptionList = () => {
-  const CurrentAccount = useRecoilValue(CurrentAccountSelector);
+  const Account = useRecoilValue(CurrentAccountSelector);
   const Navigate = useLinkNavigate();
+  const RouteCheck = useRouteCheck();
 
   return <div>
     <SelectableOption onClick={Navigate('/home')} >
       <FiTwitter />
     </SelectableOption>
     <HomeOption />   
-    <SelectableOption text='Explore' onClick={Navigate('/explore')}>
+    <SelectableOption
+      text='Explore'
+      isSelect={RouteCheck('explore')}
+      onClick={Navigate('/explore')}
+    >
       <AiOutlineNumber />
     </SelectableOption>
-    <NotificationOption notifications={CurrentAccount?.notifications} />
-    <SelectableOption text='Messages' onClick={Navigate('/messages')}>
+    <NotificationOption notifications={Account?.notifications} />
+    <SelectableOption
+      text='Messages'
+      isSelect={RouteCheck('messages')}
+      onClick={Navigate('/messages')}
+    >
       <AiOutlineInbox />
     </SelectableOption>
-    <SelectableOption text='Saves' onClick={Navigate('/i/bookmarks')}>
+    <SelectableOption
+      text='Saves'
+      isSelect={RouteCheck('bookmarks')}
+      onClick={Navigate('/i/bookmarks')}
+    >
       <BsBookmark />
     </SelectableOption>
-    <SelectableOption text='Lists' onClick={Navigate(`/${CurrentAccount?.personalInformation.username}/lists`)}>
+    <SelectableOption
+      text='Lists'
+      isSelect={RouteCheck('lists')}
+      onClick={Navigate(`/${Account?.personalInformation.username}/lists`)}
+    >
       <BsFileText />
     </SelectableOption>
-    <SelectableOption text='Profile' onClick={Navigate(`/${CurrentAccount?.personalInformation.username}`)}>
+    <SelectableOption
+      text='Profile'
+      isSelect={RouteCheck(Account?.personalInformation.username || '')}
+      onClick={Navigate(`/${Account?.personalInformation.username}`)}
+    >
       <AiOutlineUser />
     </SelectableOption>
     <MoreOptions />

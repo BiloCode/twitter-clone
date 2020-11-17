@@ -10,9 +10,10 @@ interface IProps {
   onMouseLeave?() : void;
 }
 
-const UserAvatar : FC<IProps> = ({ image , size , onClick , onMouseEnter , onMouseLeave }) => (
+const UserAvatar : FC<IProps> = ({ image , size , onClick , hoverable , onMouseEnter , onMouseLeave }) => (
   <Styled.Container
     containerSize={size}
+    hoverable={hoverable}
     onClick={onClick}
     onMouseEnter={onMouseEnter}
     onMouseLeave={onMouseLeave}

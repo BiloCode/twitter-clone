@@ -4,6 +4,7 @@ import { AiOutlineHome } from 'react-icons/ai';
 
 import SelectableOption from '../SelectableOption';
 import useLinkNavigate from 'hooks/useLinkNavigate';
+import useRouteCheck from 'hooks/useRouteCheck';
 
 interface IProps {
   isNewTweets? : boolean;
@@ -11,8 +12,13 @@ interface IProps {
 
 const HomeOption : FC<IProps> = ({ isNewTweets }) => {
   const Navigate = useLinkNavigate();
+  const RouteCheck = useRouteCheck();
 
-  return <SelectableOption text='Home' onClick={Navigate('/home')} >
+  return <SelectableOption
+    text='Home'
+    isSelect={RouteCheck('home')}
+    onClick={Navigate('/home')}
+  >
     <AiOutlineHome />
     { isNewTweets && <Styled.IndicatorContainer /> }
   </SelectableOption>
