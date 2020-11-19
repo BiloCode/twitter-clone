@@ -13,10 +13,10 @@ export const AccountState = atom<IAccountState[]>({
       notifications : 0,
       personalInformation : {
         nickname : 'TheBilo16',
-        username : 'TBilo',
+        username : 'TBilo16',
         profileImage : 'https://www.elcomercio.com/files/og_thumbnail/uploads/2020/07/27/5f1f38a4e0fab.gif',
         backgroundImage : '',
-        description : ''
+        description : 'I am Programmer and Gamer'
       },
     },
     {
@@ -60,4 +60,4 @@ export const HaveNotificationsSelector = selector({
 
     return false;
   }
-})
+});

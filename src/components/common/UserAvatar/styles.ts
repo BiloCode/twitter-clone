@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 export const Image = styled.img({
-  width: 'inherit',
-  height : 'inherit',
+  width: '100%',
+  height : '100%',
   borderRadius : 'inherit',
   objectFit : 'cover',
   transition : '.2s',
