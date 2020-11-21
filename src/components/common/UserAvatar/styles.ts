@@ -11,14 +11,17 @@ export const Image = styled.img({
 interface IContainerProps {
   containerSize : number;
   hoverable? : boolean;
+  borderWidth? : number;
 }
 
-export const Container = styled.div<IContainerProps>(({ containerSize , hoverable }) => ({
+export const Container = styled.div<IContainerProps>(({ containerSize , hoverable , borderWidth }) => ({
   width: containerSize,
   height: containerSize,
   borderRadius : '50%',
   backgroundColor : 'rgb(230,230,230)',
-  border: '3px solid #fff',
+  borderWidth : borderWidth || 1,
+  borderColor : '#fff',
+  borderStyle : 'solid',
   [Image] : {
     cursor: 'pointer',
     ':hover' : {

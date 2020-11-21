@@ -17,27 +17,29 @@ const DropDown : FC<IProps> = () => {
   const CurrentAccount = useRecoilValue(CurrentAccountSelector);
   const SelectedAccount = useRecoilValue(SelectedAccountState);
 
-  return <ShadedContainer>
-    <Styled.Container>
-      {
-        Accounts.map((v,i) => (
-          <AccountItem
-            key={v._id}
-            notifications={v.notifications}
-            isAuthenticated={v._id === SelectedAccount}
-            user={{
-              image : v.personalInformation.profileImage,
-              nickname : v.personalInformation.nickname,
-              username : v.personalInformation.username
-            }}
-          />
-        ))
-      }
-      <Item text='Add a new exists account' />  
-      {  Accounts.length > 1 && <Item text='Manage accounts' />  }
-      <Item text={`Log out @${CurrentAccount?.personalInformation.username}`} />
-    </Styled.Container>
-  </ShadedContainer>
+  return <Styled.RootContainer>
+    <ShadedContainer>
+      <Styled.Container>
+        {
+          Accounts.map((v,i) => (
+            <AccountItem
+              key={v._id}
+              notifications={v.notifications}
+              isAuthenticated={v._id === SelectedAccount}
+              user={{
+                image : v.personalInformation.profileImage,
+                nickname : v.personalInformation.nickname,
+                username : v.personalInformation.username
+              }}
+            />
+          ))
+        }
+        <Item text='Add a new exists account' />  
+        {  Accounts.length > 1 && <Item text='Manage accounts' />  }
+        <Item text={`Log out @${CurrentAccount?.personalInformation.username}`} />
+      </Styled.Container>
+    </ShadedContainer>
+  </Styled.RootContainer>
 };
 
 export default memo(DropDown);

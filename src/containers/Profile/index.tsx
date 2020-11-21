@@ -13,7 +13,7 @@ const Profile : FC<RouteComponentProps> = () => {
   
   return <DesignColumns>
     <StatusBar.Push title={Account?.personalInformation.nickname!} subtitle={'15 Tweets'} />
-    <UserProfileDesign />
+    <UserProfileDesign.Extend twitterUser={Account} />
   </DesignColumns>
 };
 
