@@ -3,7 +3,7 @@ import { BsCheck } from 'react-icons/bs';
 
 import * as Styled from './styles';
 
-import UserInformation from 'components/common/UserInformation';
+import UserBasicData from 'components/common/UserBasicData';
 
 interface IProps {
   isAuthenticated? : boolean;
@@ -17,7 +17,7 @@ interface IProps {
 
 const AccountItem : FC<IProps> = ({ isAuthenticated , notifications , user }) => (
   <Styled.Container>
-    <UserInformation.Basic
+    <UserBasicData
       image={user.image}
       nickname={user.nickname}
       username={user.username}
@@ -34,7 +34,7 @@ const AccountItem : FC<IProps> = ({ isAuthenticated , notifications , user }) =>
           </Styled.NotificationsContainer>
         ) : null
       }
-    </UserInformation.Basic>
+    </UserBasicData>
   </Styled.Container>
 );
 

@@ -6,15 +6,19 @@ import * as Styled from './styles';
 
 import StatusBar from 'components/layouts/StatusBar';
 import DesignColumns from 'components/layouts/DesignColumns';
-import TwitterUserFloat from 'components/layouts/TwitterUserFloat';
 import SeparatorBar from 'components/common/SeparatorBar';
+import Tweet from 'components/layouts/Tweet';
 
 const Home : FC<RouteComponentProps> = () => (
   <DesignColumns>
     <StatusBar.Simple title='Inicio' icon={<GiStarsStack />} />
     <Styled.ContainerTweets>
       <SeparatorBar />
-      <TwitterUserFloat />
+      <Tweet />
+      <Tweet />
+      <Tweet />
+      <Tweet />
+      <Tweet />
     </Styled.ContainerTweets>
   </DesignColumns>
 );

@@ -1,4 +1,4 @@
-import React, { memo } from 'react';
+import React, { FC, memo } from 'react';
 import * as Styled from './styles';
 
 import ShadedContainer from 'components/common/ShadedContainer';
@@ -8,10 +8,15 @@ import { useRecoilValue } from 'recoil';
 import { CurrentAccountSelector } from 'atoms/AccountState';
 import FollowButton from './FollowButton';
 
-const TwitterUserFloat = () => {
+interface IProps {
+  top? : number;
+  left? : number;
+}
+
+const TwitterUserFloat : FC<IProps> = ({ top , left }) => {
   const Account = useRecoilValue(CurrentAccountSelector);
 
-  return <Styled.RootContainer>
+  return <Styled.RootContainer top={top} left={left} >
     <ShadedContainer>
       <UserProfileDesign.Basic twitterUser={Account}>
         <FollowButton isFollow={false} />

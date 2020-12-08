@@ -2,7 +2,7 @@ import React, { FC, memo, useState } from 'react';
 import * as Styled from './styles';
 
 import ArrowDown from './ArrowDown';
-import UserInformation from 'components/common/UserInformation';
+import UserBasicData from 'components/common/UserBasicData';
 import DropDown from './DropDown';
 import { useRecoilValue } from 'recoil';
 import { CurrentAccountSelector, HaveNotificationsSelector } from 'atoms/AccountState';
@@ -13,14 +13,14 @@ const AccountOptions : FC = () => {
   const [ isDropdownHide , setIsDropdownHide ] = useState<boolean>(false);
 
   return <Styled.Container>
-    <UserInformation.Basic
+    <UserBasicData
       image={Account?.personalInformation.profileImage!}
       username={Account?.personalInformation.username!}
       nickname={Account?.personalInformation.nickname!}
       onClick={() => setIsDropdownHide(isHide => !isHide)}
     >
       <ArrowDown showIndicator={isHaveNotifications} />
-    </UserInformation.Basic>
+    </UserBasicData>
     { isDropdownHide && <DropDown /> }
   </Styled.Container>
 };
