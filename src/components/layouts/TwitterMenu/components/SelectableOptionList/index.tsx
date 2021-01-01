@@ -7,14 +7,14 @@ import SelectableOption from './SelectableOption';
 import NotificationOption from './NotificationOption';
 import HomeOption from './HomeOption';
 
-import { useRecoilValue } from 'recoil';
-import { CurrentAccountSelector } from 'atoms/AccountState';
 import MoreOptions from './MoreOptions';
 import useLinkNavigate from 'hooks/useLinkNavigate';
 import useRouteCheck from 'hooks/useRouteCheck';
+import { useStore } from 'effector-react';
+import current_account_selector from 'store/account/selectors/current_account_selector';
 
 const SelectableOptionList = () => {
-  const Account = useRecoilValue(CurrentAccountSelector);
+  const current_account = useStore(current_account_selector);
   const Navigate = useLinkNavigate();
   const RouteCheck = useRouteCheck();
 
@@ -30,7 +30,7 @@ const SelectableOptionList = () => {
     >
       <AiOutlineNumber />
     </SelectableOption>
-    <NotificationOption notifications={Account?.notifications} />
+    <NotificationOption notifications={current_account?.notifications} />
     <SelectableOption
       text='Messages'
       isSelect={RouteCheck('messages')}
@@ -48,14 +48,14 @@ const SelectableOptionList = () => {
     <SelectableOption
       text='Lists'
       isSelect={RouteCheck('lists')}
-      onClick={Navigate(`/${Account?.personalInformation.username}/lists`)}
+      onClick={Navigate(`/${current_account?.personalInformation.username}/lists`)}
     >
       <BsFileText />
     </SelectableOption>
     <SelectableOption
       text='Profile'
-      isSelect={RouteCheck(Account?.personalInformation.username || '')}
-      onClick={Navigate(`/${Account?.personalInformation.username}`)}
+      isSelect={RouteCheck(current_account?.personalInformation.username || '')}
+      onClick={Navigate(`/${current_account?.personalInformation.username}`)}
     >
       <AiOutlineUser />
     </SelectableOption>

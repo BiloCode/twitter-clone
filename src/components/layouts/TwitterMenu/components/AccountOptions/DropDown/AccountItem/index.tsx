@@ -12,16 +12,18 @@ interface IProps {
     image : string;
     username : string;
     nickname : string;
-  }
+  };
+  onClick?() : void;
 }
 
-const AccountItem : FC<IProps> = ({ isAuthenticated , notifications , user }) => (
+const AccountItem : FC<IProps> = ({ isAuthenticated , notifications , user , onClick }) => (
   <Styled.Container>
     <UserBasicData
       image={user.image}
       nickname={user.nickname}
       username={user.username}
       imageSize={50}
+      onClick={onClick}
     >
       {
         isAuthenticated ? (

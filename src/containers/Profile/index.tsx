@@ -5,15 +5,15 @@ import StatusBar from 'components/layouts/StatusBar'
 import DesignColumns from 'components/layouts/DesignColumns';
 import UserProfileDesign from 'components/layouts/UserProfileDesign';
 
-import { useRecoilValue } from 'recoil';
-import { CurrentAccountSelector } from 'atoms/AccountState';
+import { useStore } from 'effector-react';
+import current_account_selector from 'store/account/selectors/current_account_selector';
 
 const Profile : FC<RouteComponentProps> = () => {
-  const Account = useRecoilValue(CurrentAccountSelector);
+  const current_account = useStore(current_account_selector);
   
   return <DesignColumns>
-    <StatusBar.Push title={Account?.personalInformation.nickname!} subtitle={'15 Tweets'} />
-    <UserProfileDesign.Extend twitterUser={Account} />
+    <StatusBar.Push title={current_account?.personalInformation.nickname!} subtitle={'15 Tweets'} />
+    <UserProfileDesign.Extend twitterUser={current_account} />
   </DesignColumns>
 };
 

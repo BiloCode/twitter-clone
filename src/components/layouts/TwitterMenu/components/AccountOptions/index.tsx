@@ -4,24 +4,26 @@ import * as Styled from './styles';
 import ArrowDown from './ArrowDown';
 import UserBasicData from 'components/common/UserBasicData';
 import DropDown from './DropDown';
-import { useRecoilValue } from 'recoil';
-import { CurrentAccountSelector, HaveNotificationsSelector } from 'atoms/AccountState';
+
+import { useStore } from 'effector-react';
+import current_account_selector from 'store/account/selectors/current_account_selector';
+import have_notification_selector from 'store/account/selectors/have_notification_selector';
 
 const AccountOptions : FC = () => {
-  const Account = useRecoilValue(CurrentAccountSelector);
-  const isHaveNotifications = useRecoilValue(HaveNotificationsSelector);
-  const [ isDropdownHide , setIsDropdownHide ] = useState<boolean>(false);
+  const [ is_dropdown_hide , setIsDropdownHide ] = useState<boolean>(false);
+  const current_account = useStore(current_account_selector);
+  const is_have_notification = useStore(have_notification_selector);
 
   return <Styled.Container>
     <UserBasicData
-      image={Account?.personalInformation.profileImage!}
-      username={Account?.personalInformation.username!}
-      nickname={Account?.personalInformation.nickname!}
+      image={current_account?.personalInformation.profileImage!}
+      username={current_account?.personalInformation.username!}
+      nickname={current_account?.personalInformation.nickname!}
       onClick={() => setIsDropdownHide(isHide => !isHide)}
     >
-      <ArrowDown showIndicator={isHaveNotifications} />
+      <ArrowDown showIndicator={is_have_notification} />
     </UserBasicData>
-    { isDropdownHide && <DropDown /> }
+    { is_dropdown_hide && <DropDown /> }
   </Styled.Container>
 };
 

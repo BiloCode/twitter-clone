@@ -7,7 +7,7 @@ import FollowSection from '../../__global__/FollowSection';
 import PersonalInformation from '../../__global__/PersonalInformation';
 import ProfileImage from './ProfileImage';
 
-import { IAccountState } from 'atoms/AccountState/types';
+import { IAccountState } from 'store/account/types';
 
 interface IProps {
   twitterUser? : IAccountState;

@@ -1,7 +1,6 @@
 import React, { FC } from 'react';
 import * as Styled from './styles';
-
-import { IAccountState } from 'atoms/AccountState/types';
+import { IAccountState } from 'store/account/types';
 
 import CommonFollowers from './CommonFollowers';
 import UserAvatar from 'components/common/UserAvatar';
