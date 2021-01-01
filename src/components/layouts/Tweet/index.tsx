@@ -1,30 +1,25 @@
-import React, { useState } from 'react';
+import React, { memo } from 'react';
 import * as Styled from './styles';
 
 import UserAvatar from 'components/common/UserAvatar';
 import UserInformation from './UserInformation';
-import TwitterUserFloat from '../TwitterUserFloat';
 
 import { useStore } from 'effector-react';
-import current_account_selector from 'store/account/selectors/current_account_selector';
+import currentAccountSelector from 'store/account/selectors/currentAccountSelector';
+import usePositionFloatProfile from 'hooks/usePositionFloatProfile';
 
 const Tweet = () => {
-  const current_account = useStore(current_account_selector);
+  const current_account = useStore(currentAccountSelector);
+  const { onMouseEnter , onMouseLeave } = usePositionFloatProfile();
 
-  const [ modal , setModal ] = useState<boolean>(false);
-  
   return <Styled.TweetContainer>
     <Styled.Container>
-      <Styled.ImageContainer
-        onMouseEnter={() => setModal(true)}
-        onMouseLeave={() => setModal(false)}
-      >
+      <Styled.ImageContainer onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave} >
         <UserAvatar
           hoverable
           size={49}
           image={current_account?.personalInformation.profileImage}
         />
-        { modal && <TwitterUserFloat top={60} /> }
       </Styled.ImageContainer>
       <Styled.InformationContainer>
         <UserInformation 
@@ -40,4 +35,4 @@ const Tweet = () => {
   </Styled.TweetContainer>
 };
 
-export default Tweet;
+export default memo(Tweet);

@@ -6,18 +6,18 @@ import Item from './Item';
 import AccountItem from './AccountItem';
 
 import { useStore } from 'effector-react';
-import { accounts_store } from 'store/account/accounts_store';
-import { AccountChange, selected_account_store } from 'store/account/selected_account_store';
-import current_account_selector from 'store/account/selectors/current_account_selector';
+import { accountsStore } from 'store/account/accountsStore';
+import { AccountChange, selectedAccountStore } from 'store/account/selectedAccountStore';
+import currentAccountSelector from 'store/account/selectors/currentAccountSelector';
 
 interface IProps {
   onClose?() : void;
 }
 
 const DropDown : FC<IProps> = () => {
-  const selected_account = useStore(selected_account_store);
-  const user_accounts = useStore(accounts_store);
-  const current_account = useStore(current_account_selector);
+  const selected_account = useStore(selectedAccountStore);
+  const user_accounts = useStore(accountsStore);
+  const current_account = useStore(currentAccountSelector);
 
   return <Styled.RootContainer>
     <ShadedContainer>

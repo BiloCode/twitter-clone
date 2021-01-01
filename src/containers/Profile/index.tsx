@@ -6,10 +6,10 @@ import DesignColumns from 'components/layouts/DesignColumns';
 import UserProfileDesign from 'components/layouts/UserProfileDesign';
 
 import { useStore } from 'effector-react';
-import current_account_selector from 'store/account/selectors/current_account_selector';
+import currentAccountSelector from 'store/account/selectors/currentAccountSelector';
 
 const Profile : FC<RouteComponentProps> = () => {
-  const current_account = useStore(current_account_selector);
+  const current_account = useStore(currentAccountSelector);
   
   return <DesignColumns>
     <StatusBar.Push title={current_account?.personalInformation.nickname!} subtitle={'15 Tweets'} />

@@ -4,21 +4,25 @@ import * as Styled from './styles';
 import ShadedContainer from 'components/common/ShadedContainer';
 import UserProfileDesign from 'components/layouts/UserProfileDesign';
 import FollowButton from './FollowButton';
-
-import { useStore } from 'effector-react';
-import current_account_selector from 'store/account/selectors/current_account_selector';
+import { ICoords } from 'store/tweet/types';
+import { IAccountState } from 'store/account/types';
+import { SetActive } from 'store/tweet/userProfileFloatStore';
 
 interface IProps {
-  top? : number;
-  left? : number;
+  coords : ICoords;
+  user_profile : IAccountState
 }
 
-const TwitterUserFloat : FC<IProps> = ({ top , left }) => {
-  const current_account = useStore(current_account_selector);
+const TwitterUserFloat : FC<IProps> = ({ coords , user_profile }) => {
+  const onMouseLeave = () => SetActive(false);
 
-  return <Styled.RootContainer top={top} left={left} >
+  return <Styled.RootContainer
+    top={coords.y} 
+    left={coords.x} 
+    onMouseLeave={onMouseLeave}
+  >
     <ShadedContainer>
-      <UserProfileDesign.Basic twitterUser={current_account}>
+      <UserProfileDesign.Basic twitterUser={user_profile}>
         <FollowButton isFollow={false} />
       </UserProfileDesign.Basic>
     </ShadedContainer>

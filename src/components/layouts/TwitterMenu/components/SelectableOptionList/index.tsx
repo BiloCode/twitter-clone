@@ -11,10 +11,10 @@ import MoreOptions from './MoreOptions';
 import useLinkNavigate from 'hooks/useLinkNavigate';
 import useRouteCheck from 'hooks/useRouteCheck';
 import { useStore } from 'effector-react';
-import current_account_selector from 'store/account/selectors/current_account_selector';
+import currentAccountSelector from 'store/account/selectors/currentAccountSelector';
 
 const SelectableOptionList = () => {
-  const current_account = useStore(current_account_selector);
+  const current_account = useStore(currentAccountSelector);
   const Navigate = useLinkNavigate();
   const RouteCheck = useRouteCheck();
 

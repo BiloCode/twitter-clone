@@ -32,4 +32,4 @@ const initialState : IAccountState[] = [
   }
 ]
 
-export const accounts_store = createStore<IAccountState[]>(initialState);
+export const accountsStore = createStore<IAccountState[]>(initialState);

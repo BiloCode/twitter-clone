@@ -6,13 +6,13 @@ import UserBasicData from 'components/common/UserBasicData';
 import DropDown from './DropDown';
 
 import { useStore } from 'effector-react';
-import current_account_selector from 'store/account/selectors/current_account_selector';
-import have_notification_selector from 'store/account/selectors/have_notification_selector';
+import currentAccountSelector from 'store/account/selectors/currentAccountSelector';
+import haveNotificationSelector from 'store/account/selectors/haveNotificationSelector';
 
 const AccountOptions : FC = () => {
   const [ is_dropdown_hide , setIsDropdownHide ] = useState<boolean>(false);
-  const current_account = useStore(current_account_selector);
-  const is_have_notification = useStore(have_notification_selector);
+  const current_account = useStore(currentAccountSelector);
+  const is_have_notification = useStore(haveNotificationSelector);
 
   return <Styled.Container>
     <UserBasicData

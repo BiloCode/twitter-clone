@@ -1,16 +1,22 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 
 interface IRootContainerProps {
-  top? : number;
-  left? : number;
+  top : number;
+  left : number;
 }
 
-export const RootContainer = styled.div<IRootContainerProps>(props => ({
-  position : 'absolute',
-  top : props.top || 0,
-  left : props.left || 0,
-  zIndex : 10
-}));
+const Animation = keyframes`
+  from { opacity : 0; }
+  to { opacity : 1; }
+`;
+
+export const RootContainer = styled.div<IRootContainerProps>`
+  position : fixed;
+  top : ${({ top }) => top}px;
+  left : ${({ left }) => left}px;
+  z-index : 10;
+  animation : ${Animation} .3s linear forwards;
+`;
 
 export const Container = styled.div({
 
