@@ -2,7 +2,7 @@ import React from 'react';
 import { Router } from '@reach/router';
 
 //Menu
-import RootLayout from 'components/layouts/RootLayout';
+import RootLayout from 'shared/components/layouts/RootLayout';
 
 //Containers
 import Home from 'containers/Home';

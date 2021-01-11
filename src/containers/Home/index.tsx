@@ -4,10 +4,10 @@ import { GiStarsStack } from 'react-icons/gi';
 
 import * as Styled from './styles';
 
-import StatusBar from 'components/layouts/StatusBar';
-import DesignColumns from 'components/layouts/DesignColumns';
-import SeparatorBar from 'components/common/SeparatorBar';
-import Tweet from 'components/layouts/Tweet';
+import StatusBar from 'shared/components/layouts/StatusBar';
+import DesignColumns from 'shared/components/layouts/DesignColumns';
+import SeparatorBar from 'shared/components/common/SeparatorBar';
+import Tweet from 'shared/components/layouts/Tweet';
 
 const Home : FC<RouteComponentProps> = () => (
   <DesignColumns>

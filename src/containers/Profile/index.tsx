@@ -1,12 +1,12 @@
 import React, { FC } from 'react';
 import { RouteComponentProps } from '@reach/router'
 
-import StatusBar from 'components/layouts/StatusBar'
-import DesignColumns from 'components/layouts/DesignColumns';
-import UserProfileDesign from 'components/layouts/UserProfileDesign';
+import StatusBar from 'shared/components/layouts/StatusBar'
+import DesignColumns from 'shared/components/layouts/DesignColumns';
+import UserProfileDesign from 'shared/components/layouts/UserProfileDesign';
 
 import { useStore } from 'effector-react';
-import currentAccountSelector from 'store/account/selectors/currentAccountSelector';
+import currentAccountSelector from 'store/accounts/selectors/currentAccountSelector';
 
 const Profile : FC<RouteComponentProps> = () => {
   const current_account = useStore(currentAccountSelector);
