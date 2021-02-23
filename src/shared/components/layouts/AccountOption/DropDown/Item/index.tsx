@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { FC, memo } from 'react';
 import * as Styled from './styles';
 
 interface IProps {
@@ -12,4 +12,4 @@ const Item : FC<IProps> = ({ text , onClick }) => (
   </Styled.Container>
 );
 
-export default Item;
+export default memo(Item);

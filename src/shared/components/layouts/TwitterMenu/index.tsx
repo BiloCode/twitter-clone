@@ -1,19 +1,19 @@
 import React from 'react';
 import * as Styled from './styles';
 
-import SelectableOptionList from './components/SelectableOptionList';
-import AccountOptions from './components/AccountOptions';
+import TwitterMenuOptions from '../TwitterMenuOptions';
+import AccountOption from '../AccountOption';
 import TweetButton from '../../common/TweetButton';
 
 const TwitterMenu = () => (
   <Styled.MainContainer>
     <Styled.MenuOptionContainer>
-      <SelectableOptionList />
+      <TwitterMenuOptions />
       <Styled.ButtonContainer>
         <TweetButton />
-      </Styled.ButtonContainer>  
+      </Styled.ButtonContainer>
     </Styled.MenuOptionContainer>
-    <AccountOptions />
+    <AccountOption />
   </Styled.MainContainer>
 );
 

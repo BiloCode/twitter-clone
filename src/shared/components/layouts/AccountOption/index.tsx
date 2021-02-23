@@ -9,17 +9,19 @@ import { useStore } from 'effector-react';
 import currentAccountSelector from 'store/accounts/selectors/currentAccountSelector';
 import haveNotificationSelector from 'store/accounts/selectors/haveNotificationSelector';
 
-const AccountOptions : FC = () => {
-  const [ is_dropdown_hide , setIsDropdownHide ] = useState<boolean>(false);
+const AccountOption : FC = () => {
   const current_account = useStore(currentAccountSelector);
   const is_have_notification = useStore(haveNotificationSelector);
+
+  const [ is_dropdown_hide , setIsDropdownHide ] = useState<boolean>(false);
+  const ToggleDropdown = () => setIsDropdownHide(isHide => !isHide)
 
   return <Styled.Container>
     <UserBasicData
       image={current_account?.personalInformation.profileImage!}
       username={current_account?.personalInformation.username!}
       nickname={current_account?.personalInformation.nickname!}
-      onClick={() => setIsDropdownHide(isHide => !isHide)}
+      onClick={ToggleDropdown}
     >
       <ArrowDown showIndicator={is_have_notification} />
     </UserBasicData>
@@ -27,4 +29,4 @@ const AccountOptions : FC = () => {
   </Styled.Container>
 };
 
-export default memo(AccountOptions);
+export default memo(AccountOption);

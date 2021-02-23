@@ -1,9 +1,7 @@
 import Push from './Push';
 import Simple from './Simple';
 
-const StatusBar = {
+export default {
   Push,
   Simple
-}
-
-export default StatusBar;
+};

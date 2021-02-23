@@ -1,38 +1,40 @@
 import React, { memo } from 'react';
-import * as Styled from './styles';
-
-import UserAvatar from 'shared/components/common/UserAvatar';
-import UserInformation from './UserInformation';
+import * as S from './styles';
 
 import { useStore } from 'effector-react';
 import currentAccountSelector from 'store/accounts/selectors/currentAccountSelector';
+
+import UserInformation from '../../common/UserInformation';
+import UserAvatar from 'shared/components/common/UserAvatar';
 import usePositionFloatProfile from 'shared/hooks/usePositionFloatProfile';
+import TweetOptions from '../TweetOptions';
 
 const Tweet = () => {
-  const current_account = useStore(currentAccountSelector);
   const { onMouseEnter , onMouseLeave } = usePositionFloatProfile();
+  const current_account = useStore(currentAccountSelector);
 
-  return <Styled.TweetContainer>
-    <Styled.Container>
-      <Styled.ImageContainer onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave} >
+  return <S.TweetContainer>
+    <S.Container>
+      <S.ImageContainer onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave} >
         <UserAvatar
           hoverable
           size={49}
           image={current_account?.personalInformation.profileImage}
         />
-      </Styled.ImageContainer>
-      <Styled.InformationContainer>
+      </S.ImageContainer>
+      <S.InformationContainer>
         <UserInformation 
           nickname={current_account?.personalInformation.nickname!}
           username={current_account?.personalInformation.username!} 
         />
-        <Styled.Content>
+        <S.Content>
           Let's goo! ~ thanks for your support Destellos
-          RT are appreciatedDestellos =w=
-        </Styled.Content>
-      </Styled.InformationContainer>
-    </Styled.Container>  
-  </Styled.TweetContainer>
+          RT are appreciatedDestellos =w= a65462465
+        </S.Content>
+      </S.InformationContainer>
+    </S.Container>
+    <TweetOptions />
+  </S.TweetContainer>
 };
 
 export default memo(Tweet);

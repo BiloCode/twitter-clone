@@ -1,17 +1,18 @@
-import React, { FC } from 'react';
+import React, { FC, memo } from 'react';
 import * as Styled from './styles';
 
 interface IProps {
   text? : string;
+  content : JSX.Element;
   isSelect? : boolean;
   onClick?() : void;
 }
 
-const SelectableOption : FC<IProps> = ({ children , text , onClick , isSelect }) => (
+const Option : FC<IProps> = ({ text , onClick , isSelect , content }) => (
   <Styled.MainContainer onClick={onClick} isSelect={isSelect} >
     <Styled.ItemContainer>
       <Styled.IconContainer>
-        {children}
+        {content}
       </Styled.IconContainer>
       {
         text && (
@@ -24,4 +25,4 @@ const SelectableOption : FC<IProps> = ({ children , text , onClick , isSelect })
   </Styled.MainContainer>
 );
 
-export default SelectableOption;
+export default memo(Option, (prev, next) => prev.isSelect === next.isSelect);

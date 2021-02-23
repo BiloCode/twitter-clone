@@ -1,22 +1,21 @@
-import React, { FC } from 'react';
-import { BsCheck } from 'react-icons/bs';
-
+import React, { FC, memo } from 'react';
 import * as Styled from './styles';
+import { BsCheck } from 'react-icons/bs';
 
 import UserBasicData from 'shared/components/common/UserBasicData';
 
 interface IProps {
-  isAuthenticated? : boolean;
+  onClick?() : void;
   notifications? : number;
+  isAuthenticated? : boolean;
   user : {
     image : string;
     username : string;
     nickname : string;
   };
-  onClick?() : void;
 }
 
-const AccountItem : FC<IProps> = ({ isAuthenticated , notifications , user , onClick }) => (
+const UserAccountItem : FC<IProps> = ({ isAuthenticated , notifications , user , onClick }) => (
   <Styled.Container>
     <UserBasicData
       image={user.image}
@@ -40,4 +39,4 @@ const AccountItem : FC<IProps> = ({ isAuthenticated , notifications , user , onC
   </Styled.Container>
 );
 
-export default AccountItem;
+export default memo(UserAccountItem);

@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const RootContainer = styled.div({
+  width: 300,
   position:  'absolute',
   left : 0,
   right : 0,

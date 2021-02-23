@@ -7,6 +7,9 @@ export const Container = styled.div({
   userSelect : 'none',
   ':last-child' : {
     borderBottom : 'none'
+  },
+  ':hover' : {
+    backgroundColor: 'rgb(238,238,238)'
   }
 });
 
