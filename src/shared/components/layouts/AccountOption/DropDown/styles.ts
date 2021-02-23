@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const RootContainer = styled.div({
   width: 300,
   position:  'absolute',
+  zIndex: 1,
   left : 0,
   right : 0,
   transform: 'translateY(calc(-100% - 70px))',

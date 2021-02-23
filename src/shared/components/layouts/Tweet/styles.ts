@@ -10,6 +10,7 @@ export const TweetContainer = styled.article({
 export const Container = styled.div({
   marginTop : 10,
   display : 'flex',
+  alignItems: 'flex-start'
 });
 
 export const ImageContainer = styled.div({
@@ -27,7 +28,9 @@ export const InformationContainer = styled.div({
 
 export const Content = styled.span({
   fontWeight : 400,
-  fontSize : 15
+  fontSize : 15,
+  marginTop: 3,
+  display: "inline-block"
 })
 
 export const Icon = styled.div({
