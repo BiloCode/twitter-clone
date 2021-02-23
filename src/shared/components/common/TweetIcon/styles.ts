@@ -1,5 +1,6 @@
-import { colors } from "config/colors";
 import styled from "styled-components";
+import { colors } from "config/colors";
+import { TIconColor } from '.';
 
 export const IconContainer = styled.div`
   width: 32px;
@@ -13,23 +14,24 @@ export const IconContainer = styled.div`
 `;
 
 export const Text = styled.span`
+  min-width: 16px;
   font-size: 13px;
   margin-left: 3px;
   color: ${colors.textLight};
 `;
 
-export const Container = styled.div`
+export const Container = styled.div<TIconColor>`
   display: flex;
   align-items: center;
   cursor: pointer;
 
-  &:hover {
-    ${IconContainer} {
-      background-color: ${colors.skyblueSmooth2};
+  &:hover, &.selected {
+    ${Text}, ${IconContainer} {
+      color: ${({ text }) => text};
     }
+  }
 
-    ${Text} {
-      color: ${colors.skyblue};
-    }
+  &:hover ${IconContainer} {
+    background-color: ${({ background }) => background};
   }
 `;

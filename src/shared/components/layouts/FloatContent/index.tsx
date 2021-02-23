@@ -1,4 +1,4 @@
-import React from 'react';
+import ImageViewer from '../ImageViewer';
 import FloatPortal from 'shared/components/common/FloatPortal';
 import TwitterUserFloat from '../TwitterUserFloat';
 
@@ -15,12 +15,10 @@ const FloatContent = () => {
     <FloatPortal>
       { 
         isActive && (
-          <TwitterUserFloat
-            coords={coords} 
-            user_profile={current_account!}
-          /> 
+          <TwitterUserFloat coords={coords} user_profile={current_account!} /> 
         )
       }
+      <ImageViewer />
     </FloatPortal>
   )
 }

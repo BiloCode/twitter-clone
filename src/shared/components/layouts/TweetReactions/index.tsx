@@ -1,19 +1,36 @@
-import React from 'react';
+import { useState } from 'react';
 import * as S from './styles';
-import { FaRegComment } from 'react-icons/fa';
-import { MdRefresh } from 'react-icons/md';
-import { AiOutlineHeart } from 'react-icons/ai';
-import { BsUpload } from 'react-icons/bs'
+
+import configurationIcons from './config';
+import { BsUpload } from 'react-icons/bs';
 
 import TweetIcon from '../../common/TweetIcon';
 
-const TweetReactions = () => (
-  <S.Container>
-    <TweetIcon icon={<FaRegComment />} amount={40} />
-    <TweetIcon icon={<MdRefresh />} amount={3}  />
-    <TweetIcon icon={<AiOutlineHeart />} amount={10}  />
-    <TweetIcon icon={<BsUpload />} />
+const TweetReactions = () => {
+  const [ reactionSelect , setReactionSelect ] = useState<number>(-1);
+  const changeReaction = (id : number) => setReactionSelect(() => id);
+
+  return <S.Container>
+    {
+      configurationIcons(15,105,10).map((v,i) => (
+        <TweetIcon
+          id={i}
+          icons={v.icons}
+          amount={v.amount}
+          colors={v.colors}
+          selected={reactionSelect === i}
+          onClick={changeReaction}
+        />
+      ))
+    }
+    <TweetIcon
+      id={3}
+      icons={{
+        basic : <BsUpload />,
+        selected : <BsUpload />
+      }}
+    />
   </S.Container>
-);
+};
 
 export default TweetReactions;

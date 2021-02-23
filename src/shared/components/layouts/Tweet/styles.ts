@@ -1,14 +1,14 @@
-import { colors } from "config/colors";
 import styled from "styled-components";
 
 export const TweetContainer = styled.article({
   padding : '0 15px',
   position : 'relative',
-  borderBottom : '1px solid rgb(230,230,230)'
+  borderBottom : '1px solid rgb(230,230,230)',
+  cursor : "pointer"
 });
 
 export const Container = styled.div({
-  marginTop : 10,
+  paddingTop : 10,
   display : 'flex',
   alignItems: 'flex-start'
 });
