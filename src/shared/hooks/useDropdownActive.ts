@@ -1,12 +1,14 @@
-import { useState } from "react"
+import { useState } from "react";
 
-export default () => {
-  const [ active , setActive ] = useState<boolean>(false);
+const useDropdownActive = () => {
+  const [active, setActive] = useState<boolean>(false);
 
-  const toggleActive = () => setActive(active => !active);
+  const toggleActive = () => setActive((active) => !active);
 
   return {
     active,
-    toggleActive
-  }
-}
+    toggleActive,
+  };
+};
+
+export default useDropdownActive;

@@ -1,11 +1,15 @@
-import React, { FC } from 'react';
-import { RouteComponentProps } from '@reach/router'
-import DesignColumns from 'shared/components/layouts/DesignColumns';
+import { FC } from "react";
+import { RouteComponentProps } from "@reach/router";
+import * as S from "./style";
 
-const Notifications : FC<RouteComponentProps> = () => (
-  <DesignColumns>
-    <h1>Notificaciones</h1>
-  </DesignColumns>
+import { Spinner } from "shared/components/common/Spinner";
+
+const Notifications: FC<RouteComponentProps> = () => (
+  <div>
+    <S.SpinnerContainer>
+      <Spinner size={32} borderSize={4} />
+    </S.SpinnerContainer>
+  </div>
 );
 
 export default Notifications;

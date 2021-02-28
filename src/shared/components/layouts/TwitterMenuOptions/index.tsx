@@ -17,50 +17,50 @@ import useRouteCheck from 'shared/hooks/useRouteCheck';
 const SelectableOptionList = () => {
   const current_account = useStore(currentAccountSelector);
   const Navigate = useLinkNavigate();
-  const RouteCheck = useRouteCheck();
+  const isRouteSelect = useRouteCheck();
 
   return <div>
     <Option content={<FiTwitter />} onClick={Navigate('/home')} />
     <Option
       text='Home'
       content={<HomeOption />}
-      isSelect={RouteCheck('home')}
+      isSelect={isRouteSelect('home')}
       onClick={Navigate('/home')}
     />
     <Option
       text='Explore'
       content={<AiOutlineNumber />}
-      isSelect={RouteCheck('explore')}
+      isSelect={isRouteSelect('explore')}
       onClick={Navigate('/explore')}
     />
     <Option
       text='Notifications'
       content={<NotificationOption notifications={current_account?.notifications} />}
-      isSelect={RouteCheck('notifications')}
+      isSelect={isRouteSelect('notifications')}
       onClick={Navigate('/notifications')}
     />
     <Option
       text='Messages'
       content={<AiOutlineInbox />}
-      isSelect={RouteCheck('messages')}
+      isSelect={isRouteSelect('messages')}
       onClick={Navigate('/messages')}
     />
     <Option
       text='Saves'
       content={<BsBookmark />}
-      isSelect={RouteCheck('bookmarks')}
+      isSelect={isRouteSelect('bookmarks')}
       onClick={Navigate('/i/bookmarks')}
     />
     <Option
       text='Lists'
       content={<BsFileText />}
-      isSelect={RouteCheck('lists')}
+      isSelect={isRouteSelect('lists')}
       onClick={Navigate(`/${current_account?.personalInformation.username}/lists`)}
     />
     <Option
       text='Profile'
       content={<AiOutlineUser />}
-      isSelect={RouteCheck(current_account?.personalInformation.username || '')}
+      isSelect={isRouteSelect(current_account?.personalInformation.username || '')}
       onClick={Navigate(`/${current_account?.personalInformation.username}`)}
     />
     <MoreOptions />

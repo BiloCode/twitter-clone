@@ -1,7 +1,9 @@
-import Push from './Push';
-import Simple from './Simple';
+import Push from "./Push";
+import Simple from "./Simple";
 
-export default {
+const Components = {
   Push,
-  Simple
+  Simple,
 };
+
+export default Components;

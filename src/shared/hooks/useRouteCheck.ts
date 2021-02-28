@@ -2,10 +2,9 @@ import { useLocation } from '@reach/router';
 
 const useRouteCheck = () => {
   const history = useLocation(),
-    pathname = history.pathname.split('/'),
-    current = pathname[pathname.length - 1];
+    pathname = history.pathname.split('/');
 
-  return (path : string) => current === path;
+  return (path : string) => pathname.includes(path);
 };
 
 export default useRouteCheck;

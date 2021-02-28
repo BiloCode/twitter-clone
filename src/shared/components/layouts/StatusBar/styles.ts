@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 interface IContainerProps {
   spaceBetween? : boolean;
+  activeBorder? : boolean;
 }
 
 export const Container = styled.div<IContainerProps>(props => ({
@@ -11,7 +12,7 @@ export const Container = styled.div<IContainerProps>(props => ({
   display : 'flex',
   justifyContent : props.spaceBetween ? 'space-between' : 'flex-start',
   alignItems : 'center',
-  borderBottom : '1px solid rgb(230,230,230)',
+  borderBottom : props.activeBorder ? '1px solid rgb(230,230,230)' : 'none',
   userSelect : 'none'
 }));
 

@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import { FC } from 'react';
 import * as Styled from './styles';
 
 const DesignColumns : FC = ({ children }) => (
@@ -7,7 +7,6 @@ const DesignColumns : FC = ({ children }) => (
       {children}
     </Styled.LeftContainer>
     <Styled.RightContainer>
-      
     </Styled.RightContainer>
   </Styled.Container>
 )
