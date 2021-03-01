@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Container = styled.div`
   width: 100vw;
   height: 100vh;
-  background-color: rgba(0,0,0,.8);
+  background-color: rgba(0, 0, 0, 0.8);
   position: fixed;
   top: 0;
   left: 0;
@@ -19,17 +19,27 @@ export const ImageContent = styled.div`
   justify-content: center;
   align-items: center;
   position: relative;
+  user-select: none;
 `;
 
-export const HideIconFloat = styled.button`
+type HideIconFloatType = {
+  top?: number;
+  right?: number;
+  left?: number;
+  bottom?: number;
+};
+
+export const HideIconFloat = styled.button<HideIconFloatType>`
   position: absolute;
-  right: 5px;
-  top: 5px;
+  top: ${({ top }) => top}px;
+  right: ${({ right }) => right}px;
+  left: ${({ left }) => left}px;
+  bottom: ${({ bottom }) => bottom}px;
   background-color: transparent;
 `;
 
 export const ReactionContent = styled.div`
-  width: 600px;
+  width: 35vw;
   margin: 0 auto;
   position: absolute;
   display: flex;

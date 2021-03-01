@@ -28,7 +28,7 @@ const DefaultRouter = () => (
       </NotificationLayout>
       <Saves path="i/bookmarks" />
       <Messages path="messages" />
-      <Lists path=":username/lists" />
+      <Lists path="lists" />
       <ProfileLayout path=":username">
         <Tweets path="/" />
       </ProfileLayout>

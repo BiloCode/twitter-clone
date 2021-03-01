@@ -5,6 +5,7 @@ import { useStore } from "effector-react";
 import { floatUserProfileStore } from "store/float_user_profile";
 
 import currentAccountSelector from "store/accounts/selectors/currentAccountSelector";
+import ImageViewer from "../ImageViewer";
 
 const FloatContent = () => {
   const current_account = useStore(currentAccountSelector);

@@ -1,8 +1,12 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
+type ContainerType = {
+  isBig?: boolean;
+};
+
+export const Container = styled.div<ContainerType>`
   width: 100%;
-  max-width: 425px;
+  max-width: ${({ isBig }) => (isBig ? "initial" : "425px")};
   margin-top: 10px;
   display: flex;
   justify-content: space-between;

@@ -1,23 +1,30 @@
-import React, { FC } from 'react';
+import { FC } from "react";
 
-import * as GlobalStyled from '../styles';
-import HoverableIcon from 'shared/components/common/HoverableIcon';
+import * as S from "./styles";
+import * as GS from "../styles";
+
+import HoverableIcon from "shared/components/common/HoverableIcon";
 
 interface IProps {
-  title : string;
-  activeBorder? : boolean;
-  icon? : JSX.Element;
+  title: string;
+  subtitle?: string;
+  activeBorder?: boolean;
+  icon?: JSX.Element;
 }
 
-const Simple : FC<IProps> = ({ title , icon , activeBorder }) => (
-  <GlobalStyled.Container spaceBetween activeBorder={activeBorder} >
-    <GlobalStyled.Title>{title}</GlobalStyled.Title>
-    { icon && <HoverableIcon>{icon}</HoverableIcon> }
-  </GlobalStyled.Container>
+const Simple: FC<IProps> = ({ title, icon, subtitle, activeBorder }) => (
+  <GS.Container spaceBetween activeBorder={activeBorder}>
+    <S.TextContainer>
+      <GS.Title>{title}</GS.Title>
+      {subtitle && <GS.Subtitle>{subtitle}</GS.Subtitle>}
+    </S.TextContainer>
+
+    {icon && <HoverableIcon>{icon}</HoverableIcon>}
+  </GS.Container>
 );
 
 Simple.defaultProps = {
-  activeBorder : true
-}
+  activeBorder: true,
+};
 
 export default Simple;

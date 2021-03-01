@@ -1,5 +1,6 @@
 import React, { FC } from "react";
 import { RouteComponentProps } from "@reach/router";
+import * as S from "./styles";
 
 import { useStore } from "effector-react";
 import currentAccountSelector from "store/accounts/selectors/currentAccountSelector";
@@ -35,15 +36,17 @@ const Profile: FC<RouteComponentProps> = ({ children }) => {
 
   return (
     <DesignColumns>
-      <StatusBar.Push
-        title={current_account?.personalInformation.nickname!}
-        subtitle={"15 Tweets"}
-      />
-      <UserProfileDesign.Extend twitterUser={current_account} />
-      <TabLayout
-        tabs={ProfileTabs(current_account?.personalInformation.nickname!)}
-      />
-      {children}
+      <S.Container>
+        <StatusBar.Push
+          title={current_account?.personalInformation.nickname!}
+          subtitle={"15 Tweets"}
+        />
+        <UserProfileDesign.Extend twitterUser={current_account} />
+        <TabLayout
+          tabs={ProfileTabs(current_account?.personalInformation.username!)}
+        />
+        {children}
+      </S.Container>
     </DesignColumns>
   );
 };

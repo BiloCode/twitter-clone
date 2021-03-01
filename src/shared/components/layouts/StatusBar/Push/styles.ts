@@ -1,16 +1,13 @@
-import { colors } from "config/colors";
 import styled from "styled-components";
 
+export const RowContent = styled.div`
+  display: flex;
+`;
+
 export const BackIconContainer = styled.div({
-  width : 53,
+  width: 53,
 });
 
 export const TextContainer = styled.div({
-  display : 'grid'
-})
-
-export const Subtitle = styled.span({
-  fontSize : 13,
-  fontWeight : 400,
-  color : colors.textLight
-})
+  display: "grid",
+});

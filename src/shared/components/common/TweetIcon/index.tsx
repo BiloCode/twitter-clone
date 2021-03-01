@@ -16,12 +16,13 @@ export type TIconType = {
 
 type TProps = {
   amount?: number;
+  isBig?: boolean;
   colors?: TIconColor;
   onClick?(): void;
   icons: TIconType;
 };
 
-const TweetIcon: FC<TProps> = ({ icons, amount, colors }) => {
+const TweetIcon: FC<TProps> = ({ icons, amount, colors, isBig }) => {
   const [selected, setSelect] = useState<boolean>(false);
 
   const currentAmount = (amount || 0) + (selected ? 1 : 0);
@@ -32,7 +33,7 @@ const TweetIcon: FC<TProps> = ({ icons, amount, colors }) => {
       text={colors?.text}
       onClick={toggleTweetIcon}
       background={colors?.background}
-      className={classnames({ selected })}
+      className={classnames({ selected, big: isBig })}
     >
       <S.IconContainer>
         {!selected ? icons.basic : icons.selected}

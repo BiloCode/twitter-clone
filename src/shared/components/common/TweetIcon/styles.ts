@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { colors } from "config/colors";
-import { TIconColor } from '.';
+import { TIconColor } from ".";
 
 export const IconContainer = styled.div`
   width: 32px;
@@ -25,7 +25,8 @@ export const Container = styled.div<TIconColor>`
   align-items: center;
   cursor: pointer;
 
-  &:hover, &.selected {
+  &:hover,
+  &.selected {
     ${Text}, ${IconContainer} {
       color: ${({ text }) => text};
     }
@@ -33,5 +34,27 @@ export const Container = styled.div<TIconColor>`
 
   &:hover ${IconContainer} {
     background-color: ${({ background }) => background};
+  }
+
+  &.big {
+    ${Text},${IconContainer} {
+      color: #fff;
+    }
+
+    ${IconContainer} {
+      width: 40px;
+      height: 40px;
+      font-size: 1.35em;
+    }
+
+    ${Text} {
+      font-size: 14px;
+    }
+
+    &:hover {
+      ${IconContainer} {
+        background-color: rgba(255, 255, 255, 0.1);
+      }
+    }
   }
 `;

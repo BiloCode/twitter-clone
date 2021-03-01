@@ -1,9 +1,15 @@
 import { FC } from "react";
 import { RouteComponentProps } from "@reach/router";
+import Tweet from "shared/components/layouts/Tweet";
 
 const Tweets: FC<RouteComponentProps> = () => (
   <div>
-    <h1>Tweets</h1>
+    <Tweet />
+    <Tweet />
+    <Tweet />
+    <Tweet />
+    <Tweet />
+    <Tweet />
   </div>
 );
 
