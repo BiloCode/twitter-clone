@@ -1,32 +1,32 @@
-import React, { FC } from 'react';
-import * as Styled from './styles';
+import React, { FC } from "react";
+import * as S from "./styles";
 
-import UserAvatar from 'shared/components/common/UserAvatar';
-import useTextLimit from 'shared/hooks/useTextLimit';
+import UserAvatar from "shared/components/common/UserAvatar";
+import UserTextInformation from "../UserTextInformation";
 
 interface IProps {
-  image : string;
-  username : string;
-  nickname : string;
-  imageSize? : number;
-  onClick?() : void;
+  image: string;
+  username: string;
+  nickname: string;
+  imageSize?: number;
+  onClick?(): void;
 }
 
-const UserBasicData : FC<IProps> = ({ children , image , imageSize , username , nickname , onClick }) => {
-  const TextLimit = useTextLimit();
-  
-  return <Styled.Container onClick={onClick} >
-    <Styled.UserDataContainer>
+const UserBasicData: FC<IProps> = ({
+  children,
+  image,
+  imageSize,
+  username,
+  nickname,
+  onClick,
+}) => (
+  <S.Container onClick={onClick}>
+    <S.UserDataContainer>
       <UserAvatar size={imageSize || 40} image={image} />
-      <Styled.TextContainer>
-        <Styled.Nickname>{TextLimit(nickname)}</Styled.Nickname>
-        <Styled.Username>@{username}</Styled.Username>
-      </Styled.TextContainer>
-    </Styled.UserDataContainer>
-    <Styled.ChildrenContainer>
-      {children}
-    </Styled.ChildrenContainer>
-  </Styled.Container>
-}
+      <UserTextInformation nickname={nickname} username={username} />
+    </S.UserDataContainer>
+    <S.ChildrenContainer>{children}</S.ChildrenContainer>
+  </S.Container>
+);
 
 export default UserBasicData;

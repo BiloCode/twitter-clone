@@ -7,7 +7,7 @@ import currentAccountSelector from "store/accounts/selectors/currentAccountSelec
 
 import StatusBar from "shared/components/layouts/StatusBar";
 import DesignColumns from "shared/components/layouts/DesignColumns";
-import UserProfileDesign from "shared/components/layouts/UserProfileDesign";
+import UserProfileDesign from "shared/components/common/UserProfileDesign";
 import TabLayout from "../TabLayout";
 
 function ProfileTabs(username: string) {
