@@ -5,7 +5,7 @@ import * as S from "./styles";
 import { useStore } from "effector-react";
 import currentAccountSelector from "store/accounts/selectors/currentAccountSelector";
 
-import StatusBar from "shared/components/layouts/StatusBar";
+import TitleBar from "shared/components/layouts/TitleBar";
 import DesignColumns from "shared/components/layouts/DesignColumns";
 import UserProfileDesign from "shared/components/common/UserProfileDesign";
 import TabLayout from "../TabLayout";
@@ -36,17 +36,15 @@ const Profile: FC<RouteComponentProps> = ({ children }) => {
 
   return (
     <DesignColumns>
-      <S.Container>
-        <StatusBar.Push
-          title={current_account?.personalInformation.nickname!}
-          subtitle={"15 Tweets"}
-        />
-        <UserProfileDesign.Extend twitterUser={current_account} />
-        <TabLayout
-          tabs={ProfileTabs(current_account?.personalInformation.username!)}
-        />
-        {children}
-      </S.Container>
+      <TitleBar.Push
+        title={current_account?.personalInformation.nickname!}
+        subtitle={"15 Tweets"}
+      />
+      <UserProfileDesign.Extend twitterUser={current_account} />
+      <TabLayout
+        tabs={ProfileTabs(current_account?.personalInformation.username!)}
+      />
+      {children}
     </DesignColumns>
   );
 };

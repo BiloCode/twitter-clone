@@ -14,6 +14,7 @@ export const LeftContainer = styled.div({
 
 export const RightContainer = styled.div({
   width: 350,
+  padding: "0 1em",
   height: "100%",
   borderLeft: "1px solid rgb(230,230,230)",
 });

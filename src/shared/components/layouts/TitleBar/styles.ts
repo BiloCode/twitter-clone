@@ -4,11 +4,12 @@ import { colors } from "config/colors";
 interface IContainerProps {
   spaceBetween?: boolean;
   activeBorder?: boolean;
+  padding?: string;
 }
 
 export const Container = styled.div<IContainerProps>((props) => ({
   width: "100%",
-  padding: "5px 15px",
+  padding: props.padding ? props.padding : "5px 15px",
   display: "flex",
   justifyContent: props.spaceBetween ? "space-between" : "flex-start",
   alignItems: "center",

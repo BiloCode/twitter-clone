@@ -2,12 +2,14 @@ import * as S from "./styles";
 
 import FollowButton from "shared/components/common/FollowButton";
 import UserBasicData from "shared/components/common/UserBasicData";
+import TouchableText from "shared/components/common/TouchableText";
+import TitleBar from "shared/components/layouts/TitleBar";
 
 const users = new Array(3).fill("");
 
 const UserRecomendations = () => (
   <div>
-    <S.Title>A quien seguir</S.Title>
+    <TitleBar.Simple title="Who to follow" padding="1em 1.5em" />
     <S.ContainerUsers>
       {users.map((v, i) => (
         <S.UserRecomendated key={i}>
@@ -21,6 +23,7 @@ const UserRecomendations = () => (
           </UserBasicData>
         </S.UserRecomendated>
       ))}
+      <TouchableText text="Show More" />
     </S.ContainerUsers>
   </div>
 );

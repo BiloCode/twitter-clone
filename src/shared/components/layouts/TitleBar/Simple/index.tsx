@@ -7,13 +7,20 @@ import HoverableIcon from "shared/components/common/HoverableIcon";
 
 interface IProps {
   title: string;
+  padding?: string;
   subtitle?: string;
-  activeBorder?: boolean;
   icon?: JSX.Element;
+  activeBorder?: boolean;
 }
 
-const Simple: FC<IProps> = ({ title, icon, subtitle, activeBorder }) => (
-  <GS.Container spaceBetween activeBorder={activeBorder}>
+const Simple: FC<IProps> = ({
+  title,
+  icon,
+  subtitle,
+  padding,
+  activeBorder,
+}) => (
+  <GS.Container padding={padding} spaceBetween activeBorder={activeBorder}>
     <S.TextContainer>
       <GS.Title>{title}</GS.Title>
       {subtitle && <GS.Subtitle>{subtitle}</GS.Subtitle>}

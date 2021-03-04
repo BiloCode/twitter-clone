@@ -1,29 +1,31 @@
-import { FC } from 'react';
-import { RouteComponentProps } from '@reach/router'
+import { FC } from "react";
+import { RouteComponentProps } from "@reach/router";
 
-import { HiOutlineCog } from 'react-icons/hi';
+import { HiOutlineCog } from "react-icons/hi";
 
-import DesignColumns from 'shared/components/layouts/DesignColumns';
-import StatusBar from 'shared/components/layouts/StatusBar';
-import NotificationTabLayout , { ITab } from 'shared/components/layouts/TabLayout';
+import DesignColumns from "shared/components/layouts/DesignColumns";
+import TitleBar from "shared/components/layouts/TitleBar";
+import NotificationTabLayout, {
+  ITab,
+} from "shared/components/layouts/TabLayout";
 
-const tabs : ITab[] = [
+const tabs: ITab[] = [
   {
-    title : "All",
-    link : "/notifications"
+    title: "All",
+    link: "/notifications",
   },
   {
-    title : "Mentions",
-    link : "/notifications/mentions"
-  }
-]
+    title: "Mentions",
+    link: "/notifications/mentions",
+  },
+];
 
-const NotificationsLayout : FC<RouteComponentProps> = ({ children }) => (
+const NotificationsLayout: FC<RouteComponentProps> = ({ children }) => (
   <DesignColumns>
     <div>
-      <StatusBar.Simple
+      <TitleBar.Simple
         activeBorder={false}
-        title='Notifications'
+        title="Notifications"
         icon={<HiOutlineCog />}
       />
       <NotificationTabLayout tabs={tabs} />

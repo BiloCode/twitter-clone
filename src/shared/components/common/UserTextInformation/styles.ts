@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { colors } from "config/colors";
 
 export const Nickname = styled.span`
-  width: 160px;
+  width: 130px;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
