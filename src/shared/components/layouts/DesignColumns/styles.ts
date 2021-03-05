@@ -12,9 +12,16 @@ export const LeftContainer = styled.div({
   maxWidth: 600,
 });
 
-export const RightContainer = styled.div({
-  width: 350,
-  padding: "0 1em",
-  height: "100%",
-  borderLeft: "1px solid rgb(230,230,230)",
-});
+export const RightContainer = styled.div`
+  width: 400px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  border-left: 1px solid rgb(230, 230, 230);
+`;
+
+export const AsideContent = styled.div`
+  width: 350px;
+  height: 100%;
+`;

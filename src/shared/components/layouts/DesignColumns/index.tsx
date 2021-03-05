@@ -1,5 +1,5 @@
 import { FC } from "react";
-import * as Styled from "./styles";
+import * as S from "./styles";
 
 import UserTrends from "../UserTrends";
 import UserRecomendations from "../UserRecomendations";
@@ -10,15 +10,15 @@ const DesignColumns: FC = ({ children }) => {
   const { rightElementRef } = useScrollableRightContent();
 
   return (
-    <Styled.Container>
-      <Styled.LeftContainer>{children}</Styled.LeftContainer>
-      <Styled.RightContainer>
-        <div ref={rightElementRef}>
+    <S.Container>
+      <S.LeftContainer>{children}</S.LeftContainer>
+      <S.RightContainer>
+        <S.AsideContent ref={rightElementRef}>
           <UserTrends />
           <UserRecomendations />
-        </div>
-      </Styled.RightContainer>
-    </Styled.Container>
+        </S.AsideContent>
+      </S.RightContainer>
+    </S.Container>
   );
 };
 

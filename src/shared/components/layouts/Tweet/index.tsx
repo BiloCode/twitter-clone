@@ -10,6 +10,7 @@ import usePositionFloatProfile from "shared/hooks/usePositionFloatProfile";
 import TweetOptions from "../TweetOptions";
 import TweetImage from "shared/components/common/TweetImage";
 import TweetReactions from "../TweetReactions";
+import { TweetImageContainer } from "shared/components/common/TweetImageContainer";
 
 const Tweet = () => {
   const current_account = useStore(currentAccountSelector);
@@ -18,7 +19,7 @@ const Tweet = () => {
   return (
     <S.TweetContainer>
       <S.Container>
-        <S.ImageContainer
+        <TweetImageContainer
           onMouseEnter={onMouseEnter}
           onMouseLeave={onMouseLeave}
         >
@@ -27,7 +28,7 @@ const Tweet = () => {
             size={49}
             image={current_account?.personalInformation.profileImage}
           />
-        </S.ImageContainer>
+        </TweetImageContainer>
         <S.InformationContainer>
           <TweetUserInformation
             nickname={current_account?.personalInformation.nickname!}

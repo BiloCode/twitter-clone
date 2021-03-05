@@ -8,11 +8,13 @@ import TitleBar from "shared/components/layouts/TitleBar";
 import DesignColumns from "shared/components/layouts/DesignColumns";
 import SeparatorBar from "shared/components/common/SeparatorBar";
 import Tweet from "shared/components/layouts/Tweet";
+import NewTweetControls from "shared/components/common/NewTweetControls";
 
 const Home: FC<RouteComponentProps> = () => (
   <DesignColumns>
     <TitleBar.Simple title="Inicio" icon={<GiStarsStack />} />
     <Styled.ContainerTweets>
+      <NewTweetControls />
       <SeparatorBar />
       <Tweet />
       <Tweet />

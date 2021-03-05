@@ -1,5 +1,5 @@
-import React, { memo } from "react";
-import { FiTwitter } from "react-icons/fi";
+import { memo } from "react";
+import { FaTwitter } from "react-icons/fa";
 import { BsBookmark, BsFileText } from "react-icons/bs";
 import { AiOutlineInbox, AiOutlineNumber, AiOutlineUser } from "react-icons/ai";
 
@@ -13,6 +13,7 @@ import currentAccountSelector from "store/accounts/selectors/currentAccountSelec
 
 import useLinkNavigate from "shared/hooks/useLinkNavigate";
 import useRouteCheck from "shared/hooks/useRouteCheck";
+import { colors } from "config/colors";
 
 const SelectableOptionList = () => {
   const current_account = useStore(currentAccountSelector);
@@ -21,7 +22,10 @@ const SelectableOptionList = () => {
 
   return (
     <div>
-      <Option content={<FiTwitter />} onClick={Navigate("/home")} />
+      <Option
+        content={<FaTwitter color={colors.skyblue} />}
+        onClick={Navigate("/home")}
+      />
       <Option
         text="Home"
         content={<HomeOption />}

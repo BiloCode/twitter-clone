@@ -1,9 +1,8 @@
-import React from 'react';
-import * as Styled from './styles';
+import * as Styled from "./styles";
 
-import TwitterMenuOptions from '../TwitterMenuOptions';
-import AccountOption from '../AccountOption';
-import TweetButton from '../../common/TweetButton';
+import TwitterMenuOptions from "../TwitterMenuOptions";
+import AccountOption from "../AccountOption";
+import TweetButton from "../../common/TweetButton";
 
 const TwitterMenu = () => (
   <Styled.MainContainer>

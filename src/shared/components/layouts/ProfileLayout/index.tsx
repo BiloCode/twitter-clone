@@ -1,6 +1,5 @@
 import React, { FC } from "react";
 import { RouteComponentProps } from "@reach/router";
-import * as S from "./styles";
 
 import { useStore } from "effector-react";
 import currentAccountSelector from "store/accounts/selectors/currentAccountSelector";
