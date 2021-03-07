@@ -1,23 +1,22 @@
 import { FC, useState } from "react";
-import Follow from "./Follow";
+
 import Follower from "./Follower";
+import TwitterButton from "shared/components/common/TwitterButton";
 
-interface IProps {
+type FollowManagerProps = {
   isFollow: boolean;
-}
+};
 
-const FollowButton: FC<IProps> = ({ isFollow }) => {
+const FollowButton: FC<FollowManagerProps> = ({ isFollow }) => {
   const [follow, setFollow] = useState<boolean>(isFollow);
-  const ChangeStateFollow = () => {
-    setFollow((f) => !f);
-  };
+  const ChangeStateFollow = () => setFollow((f) => !f);
 
   return (
     <>
       {follow ? (
         <Follower onClick={ChangeStateFollow} />
       ) : (
-        <Follow onClick={ChangeStateFollow} />
+        <TwitterButton onClick={ChangeStateFollow}>Follow</TwitterButton>
       )}
     </>
   );

@@ -1,4 +1,4 @@
-import React, { FC, memo } from "react";
+import { FC, memo } from "react";
 import * as Styled from "./styles";
 
 import ShadedContainer from "shared/components/common/ShadedContainer";
@@ -9,12 +9,15 @@ import { TCoords } from "store/float_user_profile/types";
 import { TAccountState } from "store/accounts/types";
 import { SetActive } from "store/float_user_profile";
 
-interface IProps {
+type TwitterUserFloatProps = {
   coords: TCoords;
   user_profile: TAccountState;
-}
+};
 
-const TwitterUserFloat: FC<IProps> = ({ coords, user_profile }) => {
+const TwitterUserFloat: FC<TwitterUserFloatProps> = ({
+  coords,
+  user_profile,
+}) => {
   const onMouseLeave = () => SetActive(false);
 
   return (
@@ -25,7 +28,7 @@ const TwitterUserFloat: FC<IProps> = ({ coords, user_profile }) => {
     >
       <ShadedContainer>
         <UserProfileDesign.Basic twitterUser={user_profile}>
-          <FollowButton isFollow={false} />
+          <FollowButton isFollow={false}>Seguir</FollowButton>
         </UserProfileDesign.Basic>
       </ShadedContainer>
     </Styled.RootContainer>

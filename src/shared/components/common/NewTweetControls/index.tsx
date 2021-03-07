@@ -1,21 +1,23 @@
-import { BiImage } from "react-icons/bi";
-import { AiOutlineGif } from "react-icons/ai";
-import { BsBarChart } from "react-icons/bs";
-import { GrEmoji } from "react-icons/gr";
-import { HiOutlineCalendar } from "react-icons/hi";
+import classnames from "classnames";
 import * as S from "./styles";
 
-import { TweetImageContainer } from "../TweetImageContainer";
+import { BiImage } from "react-icons/bi";
+import { AiOutlineGif } from "react-icons/ai";
+import { BsBarChart, BsPlusCircle } from "react-icons/bs";
+import { GrEmoji } from "react-icons/gr";
+import { HiOutlineCalendar } from "react-icons/hi";
+
 import UserAvatar from "../UserAvatar";
+import HoverableIcon from "../HoverableIcon";
+import TwitterButton from "../TwitterButton";
+import { TweetImageContainer } from "../TweetImageContainer";
 
 import { useStore } from "effector-react";
 import currentAccountSelector from "store/accounts/selectors/currentAccountSelector";
-import HoverableIcon from "../HoverableIcon";
-import TweetButton from "../TweetButton";
-import FollowButton from "../FollowButton";
 
 const NewTweetControls = () => {
   const current_account = useStore(currentAccountSelector);
+  const emptyInput = true;
 
   return (
     <S.Container>
@@ -26,9 +28,9 @@ const NewTweetControls = () => {
         />
       </TweetImageContainer>
       <S.RightContent>
-        <S.DivContainer>
+        <S.InputContainer>
           <S.Input type="text" placeholder="¿Que esta pasando?" />
-        </S.DivContainer>
+        </S.InputContainer>
         <S.ActionsContainer>
           <S.Icons>
             <HoverableIcon>
@@ -47,7 +49,19 @@ const NewTweetControls = () => {
               <HiOutlineCalendar />
             </HoverableIcon>
           </S.Icons>
-          <FollowButton isFollow={false}>Publicar</FollowButton>
+          <S.TweetActions className={classnames({ "empty-input": emptyInput })}>
+            {!emptyInput && (
+              <>
+                <S.TweetTextLimitContainer>
+                  <S.TweetTextLimitIndicator />
+                </S.TweetTextLimitContainer>
+                <HoverableIcon>
+                  <BsPlusCircle />
+                </HoverableIcon>
+              </>
+            )}
+            <TwitterButton filled>Publicar</TwitterButton>
+          </S.TweetActions>
         </S.ActionsContainer>
       </S.RightContent>
     </S.Container>

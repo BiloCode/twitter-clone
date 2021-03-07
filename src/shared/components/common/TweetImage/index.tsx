@@ -1,9 +1,13 @@
-import React from 'react';
-import * as S from './styles';
+import { FC } from "react";
+import * as S from "./styles";
 
-const TweetImage = () => (
+type TweetImageProps = {
+  image: string;
+};
+
+const TweetImage: FC<TweetImageProps> = ({ image }) => (
   <S.Container>
-    <S.ImageTweet src="https://esports.as.com/2020/04/21/bonus/Minecraft-puede-manera-gratuita-navegador_1348085179_378891_660x371.jpg" />
+    <S.ImageTweet src={image} />
   </S.Container>
 );
 

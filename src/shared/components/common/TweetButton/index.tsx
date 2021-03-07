@@ -1,9 +1,9 @@
-import * as Styled from './styles';
+import * as S from './styles';
 
 const TweetButton = () => (
-  <Styled.Container>
-    <Styled.Text>Tweet</Styled.Text>
-  </Styled.Container>
+  <S.Container>
+    <S.Text>Tweet</S.Text>
+  </S.Container>
 );
 
 export default TweetButton;
