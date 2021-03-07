@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import { FC } from "react";
 import { AiOutlineArrowLeft } from "react-icons/ai";
 
 import * as S from "./styles";
@@ -11,15 +11,26 @@ type Icon = {
   onClick?(): void;
 };
 
-interface IProps {
+interface PushProps {
   title: string;
   icons?: Icon[];
   subtitle?: string;
+  styles?: GS.ContainerStylesType;
   onClickBack?(): void;
 }
 
-const Push: FC<IProps> = ({ title, subtitle, icons, onClickBack }) => (
-  <GS.Container spaceBetween>
+const Push: FC<PushProps> = ({
+  title,
+  subtitle,
+  icons,
+  styles,
+  onClickBack,
+}) => (
+  <GS.Container
+    spaceBetween
+    sticky={styles?.sticky}
+    activeBorder={styles?.activeBorder}
+  >
     <S.RowContent>
       <S.BackIconContainer>
         <HoverableIcon onClick={onClickBack}>

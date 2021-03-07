@@ -36,8 +36,9 @@ const Profile: FC<RouteComponentProps> = ({ children }) => {
   return (
     <DesignColumns>
       <TitleBar.Push
-        title={current_account?.personalInformation.nickname!}
         subtitle={"15 Tweets"}
+        title={current_account?.personalInformation.nickname!}
+        styles={{ activeBorder: true, sticky: true }}
       />
       <UserProfileDesign.Extend twitterUser={current_account} />
       <TabLayout

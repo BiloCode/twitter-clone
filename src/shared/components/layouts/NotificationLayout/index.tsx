@@ -23,11 +23,7 @@ const tabs: ITab[] = [
 const NotificationsLayout: FC<RouteComponentProps> = ({ children }) => (
   <DesignColumns>
     <div>
-      <TitleBar.Simple
-        activeBorder={false}
-        title="Notifications"
-        icon={<HiOutlineCog />}
-      />
+      <TitleBar.Simple title="Notifications" icon={<HiOutlineCog />} />
       <NotificationTabLayout tabs={tabs} />
     </div>
     {children}

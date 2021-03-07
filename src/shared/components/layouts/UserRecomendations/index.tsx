@@ -9,7 +9,7 @@ const users = new Array(3).fill("");
 
 const UserRecomendations = () => (
   <div>
-    <TitleBar.Simple title="Who to follow" padding="1em 1.5em" />
+    <TitleBar.Simple title="Who to follow" styles={{ padding: "1em 1.5em" }} />
     <S.ContainerUsers>
       {users.map((v, i) => (
         <S.UserRecomendated key={i}>

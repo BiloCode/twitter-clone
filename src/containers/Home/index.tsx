@@ -14,7 +14,11 @@ import TweetCommentBig from "shared/components/layouts/TweetCommentBig";
 
 const Home: FC<RouteComponentProps> = () => (
   <DesignColumns>
-    <TitleBar.Simple title="Inicio" icon={<GiStarsStack />} />
+    <TitleBar.Simple
+      title="Inicio"
+      icon={<GiStarsStack />}
+      styles={{ sticky: true, activeBorder: true }}
+    />
     <Styled.ContainerTweets>
       <NewTweetControls />
       <SeparatorBar />

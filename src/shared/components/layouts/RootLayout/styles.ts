@@ -18,7 +18,6 @@ export const MenuSection = styled.header({
 });
 
 export const MainSection = styled.main`
-  height: 100vh;
   overflow-y: auto;
   flex-grow: 1;
   flex-shrink: 1;

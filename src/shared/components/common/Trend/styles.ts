@@ -5,7 +5,7 @@ export const PrevTitle = styled.span``;
 
 export const Title = styled.span`
   font-size: 15px;
-  font-weight: bold;
+  font-weight: 700;
 `;
 
 export const TweetsNumber = styled.span``;
@@ -19,14 +19,14 @@ export const AbsoluteContainer = styled.span`
 export const Container = styled.div`
   width: 100%;
   display: grid;
-  row-gap: 4px;
+  row-gap: 5px;
   padding: 1em 1.5em;
   border-bottom: 1px solid rgb(230, 230, 230);
   position: relative;
 
   &:hover {
     cursor: pointer;
-    background-color: rgba(0, 0, 0, 0.05);
+    background-color: rgb(245, 245, 245);
   }
 
   ${PrevTitle}, ${TweetsNumber} {
