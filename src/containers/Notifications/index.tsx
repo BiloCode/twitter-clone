@@ -7,7 +7,7 @@ import { Spinner } from "shared/components/common/Spinner";
 const Notifications: FC<RouteComponentProps> = () => (
   <div>
     <S.SpinnerContainer>
-      <Spinner size={32} borderSize={4} />
+      <Spinner size={24} borderSize={3} />
     </S.SpinnerContainer>
   </div>
 );

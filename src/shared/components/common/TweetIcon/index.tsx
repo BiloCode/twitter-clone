@@ -2,7 +2,6 @@ import { FC, memo, useState } from "react";
 import * as S from "./styles";
 
 import classnames from "classnames";
-import { colors } from "config/colors";
 
 export type TIconColor = {
   background?: string;
@@ -15,25 +14,37 @@ export type TIconType = {
 };
 
 type TProps = {
+  isMountable?: boolean;
   amount?: number;
-  isBig?: boolean;
-  colors?: TIconColor;
-  onClick?(): void;
   icons: TIconType;
+  onClick?(): void;
+  styles?: {
+    isBig?: boolean;
+    colors?: TIconColor;
+  };
 };
 
-const TweetIcon: FC<TProps> = ({ icons, amount, colors, isBig }) => {
+const TweetIcon: FC<TProps> = ({
+  icons,
+  amount,
+  styles,
+  isMountable,
+  onClick,
+}) => {
   const [selected, setSelect] = useState<boolean>(false);
 
   const currentAmount = (amount || 0) + (selected ? 1 : 0);
-  const toggleTweetIcon = () => setSelect((selected) => !selected);
+  const toggleTweetIcon = () => {
+    onClick && onClick();
+    isMountable && setSelect((selected) => !selected);
+  };
 
   return (
     <S.Container
-      text={colors?.text}
+      text={styles?.colors?.text}
       onClick={toggleTweetIcon}
-      background={colors?.background}
-      className={classnames({ selected, big: isBig })}
+      background={styles?.colors?.background}
+      className={classnames({ selected, big: styles?.isBig })}
     >
       <S.IconContainer>
         {!selected ? icons.basic : icons.selected}
@@ -48,10 +59,7 @@ const TweetIcon: FC<TProps> = ({ icons, amount, colors, isBig }) => {
 };
 
 TweetIcon.defaultProps = {
-  colors: {
-    background: colors.skyblueSmooth2,
-    text: colors.skyblue,
-  },
+  isMountable: true,
 };
 
 export default memo(TweetIcon);

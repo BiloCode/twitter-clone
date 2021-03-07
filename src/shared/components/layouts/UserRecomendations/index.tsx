@@ -1,3 +1,4 @@
+import faker from "faker";
 import * as S from "./styles";
 
 import FollowButton from "shared/components/common/FollowButton";
@@ -14,10 +15,10 @@ const UserRecomendations = () => (
       {users.map((v, i) => (
         <S.UserRecomendated key={i}>
           <UserBasicData
-            username="Manuel"
-            nickname="Diablillo"
-            image="https://concepto.de/wp-content/uploads/2018/08/persona-e1533759204552.jpg"
             imageSize={48}
+            image={faker.random.image()}
+            nickname={faker.name.firstName()}
+            username={faker.name.lastName()}
           >
             <FollowButton isFollow={false} />
           </UserBasicData>

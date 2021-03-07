@@ -1,5 +1,6 @@
 import { FC } from "react";
 import { RouteComponentProps } from "@reach/router";
+import * as S from "./styles";
 
 import { HiOutlineCog } from "react-icons/hi";
 
@@ -22,10 +23,14 @@ const tabs: ITab[] = [
 
 const NotificationsLayout: FC<RouteComponentProps> = ({ children }) => (
   <DesignColumns>
-    <div>
-      <TitleBar.Simple title="Notifications" icon={<HiOutlineCog />} />
+    <S.NavigationSticky>
+      <TitleBar.Simple
+        title="Notifications"
+        icon={<HiOutlineCog />}
+        styles={{ activeBorder: false }}
+      />
       <NotificationTabLayout tabs={tabs} />
-    </div>
+    </S.NavigationSticky>
     {children}
   </DesignColumns>
 );

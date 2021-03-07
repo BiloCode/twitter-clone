@@ -16,14 +16,14 @@ const TweetReactions: FC<TProps> = ({ isBig }) => {
       {configurationIcons(15, 105, 10).map((v, i) => (
         <TweetIcon
           key={i}
-          isBig={isBig}
           icons={v.icons}
           amount={v.amount}
-          colors={v.colors}
+          styles={{ isBig, colors: v.colors }}
         />
       ))}
       <TweetIcon
-        isBig={isBig}
+        isMountable={false}
+        styles={{ isBig }}
         icons={{
           basic: <BsUpload />,
           selected: <BsUpload />,

@@ -10,9 +10,11 @@ const RootLayout: FC<RouteComponentProps> = ({ children }) => {
   const { rightElementRef } = useScrollableRightContent();
 
   const onScroll = (ev: UIEvent<HTMLElement>) => {
+    if (!rightElementRef.current) return;
+
     let scroll, scroll_max;
     scroll = ev.currentTarget.scrollTop;
-    scroll_max = 250;
+    scroll_max = 300;
 
     if (scroll >= scroll_max) {
       rightElementRef.current!.style.position = "absolute";

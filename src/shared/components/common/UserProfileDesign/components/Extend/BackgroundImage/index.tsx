@@ -1,15 +1,13 @@
-import React, { FC, memo } from 'react';
-import * as Styled from './styles';
+import { FC, memo } from "react";
+import * as Styled from "./styles";
 
 interface IProps {
-  url? : string;
+  url?: string;
 }
 
-const BackgroundImage : FC<IProps> = ({ url }) => (
+const BackgroundImage: FC<IProps> = ({ url }) => (
   <Styled.Container>
-    { url && (
-      <Styled.BackgroundImage src={url} alt='user-profile-image' />
-    )}
+    {url && <Styled.BackgroundImage src={url} alt="user-profile-image" />}
   </Styled.Container>
 );
 

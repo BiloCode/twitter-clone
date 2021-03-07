@@ -58,3 +58,8 @@ export const Container = styled.div<TIconColor>`
     }
   }
 `;
+
+Container.defaultProps = {
+  background: colors.skyblueSmooth2,
+  text: colors.skyblue,
+};
