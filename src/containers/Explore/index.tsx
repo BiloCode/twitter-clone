@@ -1,10 +1,13 @@
-import React, { FC } from 'react';
-import { RouteComponentProps } from '@reach/router'
-import DesignColumns from 'shared/components/layouts/DesignColumns';
+import { FC } from "react";
+import { RouteComponentProps } from "@reach/router";
+import DesignColumns from "shared/components/layouts/DesignColumns";
+import UserTrends from "shared/components/layouts/UserTrends";
+import MainTrendExplore from "shared/components/common/MainTrendExplore";
 
-const Explore : FC<RouteComponentProps> = () => (
+const Explore: FC<RouteComponentProps> = () => (
   <DesignColumns>
-    <h1>Explorar</h1>
+    <MainTrendExplore />
+    <UserTrends />
   </DesignColumns>
 );
 

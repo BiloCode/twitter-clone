@@ -1,4 +1,5 @@
 import { FC } from "react";
+import faker from "faker";
 import * as S from "./styles";
 
 import UserAvatar from "../UserAvatar";
@@ -31,7 +32,9 @@ const Notification: FC<NotificationProps> = ({ type }) => {
       <S.IconContainer>{GetIcon()}</S.IconContainer>
       <S.NotificationContent>
         <S.UserAvatars>
-          <UserAvatar borderWidth={0} size={32} />
+          <UserAvatar borderWidth={0} size={32} image={faker.random.image()} />
+          <UserAvatar borderWidth={0} size={32} image={faker.random.image()} />
+          <UserAvatar borderWidth={0} size={32} image={faker.random.image()} />
         </S.UserAvatars>
         <S.NotificationText>
           <S.Title>
