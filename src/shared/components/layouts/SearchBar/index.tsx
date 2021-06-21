@@ -1,8 +1,10 @@
 import { useState } from "react";
+import classNames from "classnames";
 import * as S from "./styles";
 
 import { AiOutlineSearch } from "react-icons/ai";
-import classNames from "classnames";
+import SearchBarItem from "shared/components/common/SearchBarItem";
+import SearchBarItemSimple from "shared/components/common/SearchBarItemSimple";
 
 const SearchBar = () => {
   const [active, setActive] = useState<boolean>(false);
@@ -17,14 +19,29 @@ const SearchBar = () => {
           <AiOutlineSearch />
         </S.Icon>
         <S.Input
-          id="search-bar"
-          placeholder="Search Twitter"
           type="text"
+          id="search-bar"
           onFocus={onFocus}
           onBlur={onBlur}
+          placeholder="Search Twitter"
         />
       </S.InputContainer>
-      {active && <S.FloatContainer></S.FloatContainer>}
+      {active && (
+        <S.FloatContainer>
+          <div>
+            <SearchBarItemSimple />
+
+            <SearchBarItemSimple />
+            <SearchBarItemSimple />
+          </div>
+          <div>
+            <SearchBarItem isFollowing />
+            <SearchBarItem />
+            <SearchBarItem />
+            <SearchBarItem />
+          </div>
+        </S.FloatContainer>
+      )}
     </S.MainContainer>
   );
 };

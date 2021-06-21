@@ -8,6 +8,7 @@ import DropDown from "./DropDown";
 import { useStore } from "effector-react";
 import currentAccountSelector from "store/accounts/selectors/currentAccountSelector";
 import haveNotificationSelector from "store/accounts/selectors/haveNotificationSelector";
+import classNames from "classnames";
 
 const AccountOption: FC = () => {
   const current_account = useStore(currentAccountSelector);
@@ -17,7 +18,7 @@ const AccountOption: FC = () => {
   const ToggleDropdown = () => setIsDropdownHide((isHide) => !isHide);
 
   return (
-    <Styled.Container>
+    <Styled.Container className={classNames({ "not-active": !is_dropdown_hide })}>
       <UserBasicData
         image={current_account?.personalInformation.profileImage!}
         username={current_account?.personalInformation.username!}

@@ -22,6 +22,7 @@ export const InputContainer = styled.label`
   border: 1px solid var(--border);
 
   &.active {
+    --bg: #fff;
     --border: ${colors.skyblue};
   }
 `;
@@ -47,14 +48,19 @@ export const Input = styled.input`
   font-size: 15px;
   border-radius: calc(${height} / 2);
 `;
+
 export const FloatContainer = styled.div`
   width: 100%;
   min-height: 200px;
-  max-height: 300px;
+  max-height: 460px;
+  overflow: auto;
   background-color: #fff;
   position: absolute;
   top: calc(${height} + 10px);
   left: 0;
   z-index: 1;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  display: grid;
+  row-gap: 5px;
+  background-color: rgb(245, 245, 245);
 `;
