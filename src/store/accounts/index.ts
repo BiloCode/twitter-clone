@@ -12,7 +12,7 @@ const initialState: TAccountState[] = [
       nickname: "TheBilo16",
       username: "TBilo16",
       profileImage:
-        "https://cloudfront-us-east-1.images.arcpublishing.com/eluniverso/7LNSW6EEENFQVBJUFOWWYRGJYU.png",
+        "https://i1.wp.com/polvora.com.mx/wp-content/uploads/2020/07/Bugs-bunny-80-10.jpg?fit=1600%2C900&ssl=1",
       backgroundImage: "",
       description: "I am Programmer and Gamer",
     },

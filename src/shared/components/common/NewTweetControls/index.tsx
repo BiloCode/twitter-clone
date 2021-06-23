@@ -7,7 +7,7 @@ import { BsBarChart, BsPlusCircle } from "react-icons/bs";
 import { GrEmoji } from "react-icons/gr";
 import { HiOutlineCalendar } from "react-icons/hi";
 
-import UserAvatar from "../UserAvatar";
+import UserAvatar from "../../molecules/UserAvatar";
 import HoverableIcon from "../HoverableIcon";
 import TwitterButton from "../TwitterButton";
 import { TweetImageContainer } from "../TweetImageContainer";
@@ -22,10 +22,7 @@ const NewTweetControls = () => {
   return (
     <S.Container>
       <TweetImageContainer>
-        <UserAvatar
-          size={49}
-          image={current_account?.personalInformation.profileImage}
-        />
+        <UserAvatar image={current_account?.personalInformation.profileImage} />
       </TweetImageContainer>
       <S.RightContent>
         <S.InputContainer>

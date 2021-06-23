@@ -15,7 +15,7 @@ interface IProps {
 const Simple: FC<IProps> = ({ title, icon, subtitle, styles }) => (
   <GS.Container
     spaceBetween
-    sticky={styles?.sticky}
+    // sticky={styles?.sticky}
     padding={styles?.padding}
     activeBorder={styles?.activeBorder}
   >

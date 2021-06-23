@@ -49,24 +49,13 @@ export const Icon = styled.div`
   right: 0;
 `;
 
-// Comment Indicator
-type IndicatorCommentProps = {
-  imageSize: number;
-};
-
-export const IndicatorComment = styled.div<IndicatorCommentProps>`
+export const IndicatorComment = styled.div`
   width: 2px;
   background-color: rgb(230, 230, 230);
   position: absolute;
-  left: calc(${({ imageSize }) => imageSize}px / 2);
 
   &.top {
     height: ${paddingTop}px;
     top: 0;
-  }
-
-  &.bottom {
-    top: ${({ imageSize }) => imageSize + paddingTop}px;
-    height: calc(100% - ${({ imageSize }) => imageSize + paddingTop}px);
   }
 `;

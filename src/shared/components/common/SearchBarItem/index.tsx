@@ -24,7 +24,6 @@ const SearchBarItem = ({ isFollowing }: IProps) => (
       image={faker.random.image()}
       nickname={faker.name.findName()}
       username={faker.name.findName()}
-      bordeable={false}
     />
   </S.MainContainer>
 );

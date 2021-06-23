@@ -19,18 +19,8 @@ interface PushProps {
   onClickBack?(): void;
 }
 
-const Push: FC<PushProps> = ({
-  title,
-  subtitle,
-  icons,
-  styles,
-  onClickBack,
-}) => (
-  <GS.Container
-    spaceBetween
-    sticky={styles?.sticky}
-    activeBorder={styles?.activeBorder}
-  >
+const Push: FC<PushProps> = ({ title, subtitle, icons, styles, onClickBack }) => (
+  <GS.Container spaceBetween activeBorder={styles?.activeBorder}>
     <S.RowContent>
       <S.BackIconContainer>
         <HoverableIcon onClick={onClickBack}>

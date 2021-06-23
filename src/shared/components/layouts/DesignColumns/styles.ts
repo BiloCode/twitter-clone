@@ -22,3 +22,7 @@ export const AsideContent = styled.div`
   width: 350px;
   height: 100%;
 `;
+
+export const ScrollableContainer = styled.div`
+  width: 350px;
+`;

@@ -3,7 +3,7 @@ import { colors } from "config/colors";
 
 export type ContainerStylesType = {
   padding?: string;
-  sticky?: boolean;
+  // sticky?: boolean;
   activeBorder?: boolean;
 };
 
@@ -14,10 +14,7 @@ type IContainerProps = ContainerStylesType & {
 export const Container = styled.div<IContainerProps>`
   width: 100%;
   padding: ${({ padding }) => (padding ? padding : "5px 15px")};
-  position: ${({ sticky }) => (sticky ? "sticky" : "static")};
-  top: ${({ sticky }) => (sticky ? 0 : "initial")};
-  z-index: 1;
-  background-color: #fff;
+
   display: flex;
   justify-content: ${({ spaceBetween }) =>
     spaceBetween ? "space-between" : "flex-start"};

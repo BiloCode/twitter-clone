@@ -2,7 +2,7 @@ import { FC } from "react";
 import faker from "faker";
 import * as S from "./styles";
 
-import UserAvatar from "../UserAvatar";
+import UserAvatar from "../../molecules/UserAvatar";
 
 import { colors } from "config/colors";
 import { AiOutlineRetweet } from "react-icons/ai";
@@ -32,17 +32,17 @@ const Notification: FC<NotificationProps> = ({ type }) => {
       <S.IconContainer>{GetIcon()}</S.IconContainer>
       <S.NotificationContent>
         <S.UserAvatars>
-          <UserAvatar borderWidth={0} size={32} image={faker.random.image()} />
-          <UserAvatar borderWidth={0} size={32} image={faker.random.image()} />
-          <UserAvatar borderWidth={0} size={32} image={faker.random.image()} />
+          <UserAvatar imageSize="small" image={faker.random.image()} />
+          <UserAvatar imageSize="small" image={faker.random.image()} />
+          <UserAvatar imageSize="small" image={faker.random.image()} />
         </S.UserAvatars>
         <S.NotificationText>
           <S.Title>
             <span>Escuela de Juegos</span> Retwiteo
           </S.Title>
           <S.Description>
-            Hace un par de semanas realize un proyecto web y este es el
-            resultado, gracias por comentar nuevamente.
+            Hace un par de semanas realize un proyecto web y este es el resultado,
+            gracias por comentar nuevamente.
           </S.Description>
         </S.NotificationText>
       </S.NotificationContent>

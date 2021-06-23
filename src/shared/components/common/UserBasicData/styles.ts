@@ -5,9 +5,11 @@ export const Container = styled.div({
   justifyContent: "space-between",
 });
 
-export const UserDataContainer = styled.div({
-  display: "flex",
-});
+export const UserDataContainer = styled.div`
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
+  column-gap: 10px;
+`;
 
 export const ChildrenContainer = styled.div({
   display: "flex",

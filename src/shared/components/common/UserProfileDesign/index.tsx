@@ -1,9 +1,9 @@
-import Extend from './components/Extend';
-import Basic from './components/Basic'
+import Extend from "./Extend";
+import Basic from "./Basic";
 
 const UserProfileDesign = {
   Extend,
-  Basic
-}
+  Basic,
+};
 
 export default UserProfileDesign;

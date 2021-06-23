@@ -12,7 +12,7 @@ import { TweetImageContainer } from "shared/components/common/TweetImageContaine
 import TweetOptions from "../TweetOptions";
 import TweetReactions from "../TweetReactions";
 import TweetImage from "shared/components/common/TweetImage";
-import UserAvatar from "shared/components/common/UserAvatar";
+import UserAvatar from "shared/components/molecules/UserAvatar";
 import TweetUserInformation from "shared/components/common/TweetUserInformation";
 
 export type TweetStyles = {
@@ -28,7 +28,6 @@ export type TweetProps = {
 const Tweet: FC<TweetProps> = ({ image, styles }) => {
   const { onMouseEnter, onMouseLeave } = usePositionFloatProfile();
   const current_account = useStore(currentAccountSelector);
-  const avatar_size = 49;
 
   return (
     <S.TweetContainer
@@ -41,7 +40,6 @@ const Tweet: FC<TweetProps> = ({ image, styles }) => {
         >
           <UserAvatar
             hoverable
-            size={avatar_size}
             image={current_account?.personalInformation.profileImage}
           />
         </TweetImageContainer>
@@ -56,7 +54,6 @@ const Tweet: FC<TweetProps> = ({ image, styles }) => {
         </S.InformationContainer>
         {styles && (
           <S.IndicatorComment
-            imageSize={avatar_size}
             className={classnames({
               top: styles?.drawLine === "top",
               bottom: styles?.drawLine === "bottom",

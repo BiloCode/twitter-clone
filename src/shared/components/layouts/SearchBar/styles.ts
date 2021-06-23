@@ -6,7 +6,9 @@ const height = "42px";
 
 export const MainContainer = styled.div`
   position: relative;
-  margin: 8px 0;
+  padding: 8px 0;
+  box-sizing: border-box;
+  background-color: #fff;
 `;
 
 export const InputContainer = styled.label`
@@ -52,7 +54,7 @@ export const Input = styled.input`
 export const FloatContainer = styled.div`
   width: 100%;
   min-height: 200px;
-  max-height: 460px;
+  max-height: 560px;
   overflow: auto;
   background-color: #fff;
   position: absolute;

@@ -9,7 +9,9 @@ const provicionalTrends = new Array(5).fill("");
 
 const UserTrends = () => (
   <S.Container>
-    <TitleBar.Simple title="Trends for you" icon={<BiCog />} />
+    <S.TitleBarContainer>
+      <TitleBar.Simple title="Trends for you" icon={<BiCog />} />
+    </S.TitleBarContainer>
     {provicionalTrends.map((v, i) => (
       <Trend key={i} />
     ))}

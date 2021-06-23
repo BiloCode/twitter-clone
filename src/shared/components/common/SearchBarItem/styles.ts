@@ -5,7 +5,7 @@ import { colors } from "config/colors";
 export const MainContainer = styled.div`
   cursor: pointer;
   box-sizing: border-box;
-  padding: 10px 1em;
+  padding: 12px 1em;
   border-top: 1px solid rgb(245, 245, 245);
   background-color: #fff;
   &:hover {

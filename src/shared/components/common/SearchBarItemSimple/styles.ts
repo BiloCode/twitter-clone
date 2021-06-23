@@ -7,13 +7,20 @@ export const MainContainer = styled.div`
   padding: 1em;
   background-color: #fff;
   border-top: 1px solid rgb(245, 245, 245);
+  display: grid;
+  row-gap: 4px;
+
   &:hover {
     background-color: rgb(245, 245, 245);
   }
 `;
 
 export const Text = styled.div`
-  font-weight: bold;
-  font-size: 0.95em;
+  font-weight: 600;
+  font-size: 0.9em;
   color: ${colors.textLight};
+
+  &.light {
+    font-weight: 300;
+  }
 `;

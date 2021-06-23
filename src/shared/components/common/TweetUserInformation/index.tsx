@@ -12,12 +12,14 @@ interface IProps {
 const TweetUserInformation: FC<IProps> = ({ nickname, username }) => {
   const { onMouseEnter, onMouseLeave } = usePositionFloatProfile();
 
+  const navigateToProfile = () => null;
+
   return (
     <Styled.Container>
       <UserTextInformation
-        isTweet
         username={username}
         nickname={nickname}
+        onClick={navigateToProfile}
         onMouseEnter={onMouseEnter}
         onMouseLeave={onMouseLeave}
       />
