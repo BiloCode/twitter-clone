@@ -1,4 +1,4 @@
-import FloatPortal from "shared/components/common/FloatPortal";
+import Portals from "shared/components/atoms/Portals";
 import TwitterUserFloat from "../TwitterUserFloat";
 
 import { useStore } from "effector-react";
@@ -12,12 +12,12 @@ const FloatContent = () => {
   const { isActive, coords } = useStore(floatUserProfileStore);
 
   return (
-    <FloatPortal>
+    <Portals>
       {isActive && (
         <TwitterUserFloat coords={coords} user_profile={current_account!} />
       )}
       {/* <ImageViewer /> */}
-    </FloatPortal>
+    </Portals>
   );
 };
 

@@ -1,12 +1,12 @@
 import { FC } from "react";
 import { RouteComponentProps } from "@reach/router";
 
-import TitleBar from "shared/components/layouts/TitleBar";
 import DesignColumns from "shared/components/layouts/DesignColumns";
+import TitleBarSimple from "shared/components/molecules/TitleBarSimple";
 
 const Saves: FC<RouteComponentProps> = () => (
   <DesignColumns>
-    <TitleBar.Simple title="Bookmarks" subtitle="@BillyAlex" />
+    <TitleBarSimple title="Bookmarks" subtitle="@BillyAlex" />
   </DesignColumns>
 );
 

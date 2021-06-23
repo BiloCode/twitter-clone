@@ -4,13 +4,13 @@ import * as S from "./styles";
 import FollowButton from "shared/components/common/FollowButton";
 import UserBasicData from "shared/components/common/UserBasicData";
 import TouchableText from "shared/components/common/TouchableText";
-import TitleBar from "shared/components/layouts/TitleBar";
+import TitleBarSimple from "shared/components/molecules/TitleBarSimple";
 
 const users = new Array(3).fill("");
 
 const UserRecomendations = () => (
   <div>
-    <TitleBar.Simple title="Who to follow" styles={{ padding: "1em 1.5em" }} />
+    <TitleBarSimple title="Who to follow" />
     <S.ContainerUsers>
       {users.map((v, i) => (
         <S.UserRecomendated key={i}>

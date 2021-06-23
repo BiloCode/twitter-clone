@@ -16,7 +16,7 @@ export const Container = styled.span`
   }
 
   &.medium {
-    font-size: 1.2em;
+    font-size: 1.4em;
   }
 
   &.big {

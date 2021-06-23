@@ -1,13 +1,13 @@
-import React, { FC } from "react";
+import { FC } from "react";
 import { RouteComponentProps } from "@reach/router";
 
 import { useStore } from "effector-react";
 import currentAccountSelector from "store/accounts/selectors/currentAccountSelector";
 
-import TitleBar from "shared/components/layouts/TitleBar";
 import DesignColumns from "shared/components/layouts/DesignColumns";
 import UserProfileDesign from "shared/components/common/UserProfileDesign";
 import TabLayout from "../TabLayout";
+import TitleBarPush from "shared/components/molecules/TitleBarPush";
 
 function ProfileTabs(username: string) {
   return [
@@ -35,10 +35,9 @@ const Profile: FC<RouteComponentProps> = ({ children }) => {
 
   return (
     <DesignColumns>
-      <TitleBar.Push
+      <TitleBarPush
         subtitle={"15 Tweets"}
         title={current_account?.personalInformation.nickname!}
-        styles={{ activeBorder: true }}
       />
       <UserProfileDesign.Extend twitterUser={current_account} />
       <TabLayout

@@ -7,7 +7,7 @@ import {
   AiOutlineDoubleLeft,
 } from "react-icons/ai";
 
-import HoverableIcon from "shared/components/common/HoverableIcon";
+import HoverableIcon from "shared/components/atoms/HoverableIcon";
 import TweetReactions from "../TweetReactions";
 
 const ImageViewer = () => {

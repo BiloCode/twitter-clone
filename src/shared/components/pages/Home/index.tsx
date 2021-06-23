@@ -5,22 +5,21 @@ import { GiStarsStack } from "react-icons/gi";
 import faker from "faker";
 import * as S from "./styles";
 
-import TitleBar from "shared/components/layouts/TitleBar";
 import DesignColumns from "shared/components/layouts/DesignColumns";
 import SeparatorBar from "shared/components/common/SeparatorBar";
 import Tweet from "shared/components/layouts/Tweet";
 import NewTweetControls from "shared/components/common/NewTweetControls";
 import TweetCommentBig from "shared/components/layouts/TweetCommentBig";
+import TitleBarSimple from "shared/components/molecules/TitleBarSimple";
+import StickyContainer from "shared/components/atoms/StickyContainer";
 
 const Home: FC<RouteComponentProps> = () => (
   <DesignColumns>
-    <S.TitleBarContainer>
-      <TitleBar.Simple
-        title="Inicio"
-        icon={<GiStarsStack />}
-        styles={{ activeBorder: true }}
-      />
-    </S.TitleBarContainer>
+    <StickyContainer>
+      <S.TitleBarContainer>
+        <TitleBarSimple title="Inicio" icon={GiStarsStack} />
+      </S.TitleBarContainer>
+    </StickyContainer>
     <S.ContainerTweets>
       <NewTweetControls />
       <SeparatorBar />

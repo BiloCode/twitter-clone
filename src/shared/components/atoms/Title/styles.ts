@@ -10,7 +10,8 @@ export const MainText = styled.span`
 
   &.black-big,
   &.black-medium,
-  &.black-small {
+  &.black-small,
+  &.black {
     font-weight: 900;
   }
 

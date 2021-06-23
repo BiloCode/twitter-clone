@@ -1,25 +1,25 @@
-import React, { FC } from "react";
+import { FC } from "react";
 import { RouteComponentProps } from "@reach/router";
 
 import DesignColumns from "shared/components/layouts/DesignColumns";
-import TitleBar from "shared/components/layouts/TitleBar";
+import TitleBarPush from "shared/components/molecules/TitleBarPush";
 
 import { BsThreeDots } from "react-icons/bs";
 import { MdPlaylistAdd } from "react-icons/md";
 
-const Lists: FC<RouteComponentProps> = () => {
-  const icons = [
-    {
-      element: <MdPlaylistAdd />,
-    },
-    {
-      element: <BsThreeDots />,
-    },
-  ];
+const icons = [
+  {
+    element: <MdPlaylistAdd />,
+  },
+  {
+    element: <BsThreeDots />,
+  },
+];
 
+const Lists: FC<RouteComponentProps> = () => {
   return (
     <DesignColumns>
-      <TitleBar.Push title="Lists" subtitle="@AychoBilly" icons={icons} />
+      <TitleBarPush title="Lists" subtitle="@AychoBilly" icons={icons} />
     </DesignColumns>
   );
 };

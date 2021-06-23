@@ -5,10 +5,8 @@ import * as S from "./styles";
 import { HiOutlineCog } from "react-icons/hi";
 
 import DesignColumns from "shared/components/layouts/DesignColumns";
-import TitleBar from "shared/components/layouts/TitleBar";
-import NotificationTabLayout, {
-  ITab,
-} from "shared/components/layouts/TabLayout";
+import TitleBarSimple from "shared/components/molecules/TitleBarSimple";
+import NotificationTabLayout, { ITab } from "shared/components/layouts/TabLayout";
 
 const tabs: ITab[] = [
   {
@@ -24,11 +22,7 @@ const tabs: ITab[] = [
 const NotificationsLayout: FC<RouteComponentProps> = ({ children }) => (
   <DesignColumns>
     <S.NavigationSticky>
-      <TitleBar.Simple
-        title="Notifications"
-        icon={<HiOutlineCog />}
-        styles={{ activeBorder: false }}
-      />
+      <TitleBarSimple title="Notifications" icon={HiOutlineCog} />
       <NotificationTabLayout tabs={tabs} />
     </S.NavigationSticky>
     {children}

@@ -35,9 +35,6 @@ export const Icon = styled.span`
   display: flex;
   justify-content: center;
   align-items: center;
-  line-height: 0;
-  color: ${colors.textLight};
-  font-size: 1.4em;
 `;
 
 export const Input = styled.input`

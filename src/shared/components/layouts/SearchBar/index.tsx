@@ -5,6 +5,7 @@ import * as S from "./styles";
 import { AiOutlineSearch } from "react-icons/ai";
 import SearchBarItem from "shared/components/common/SearchBarItem";
 import SearchBarItemSimple from "shared/components/common/SearchBarItemSimple";
+import Icon from "shared/components/atoms/Icon";
 
 const SearchBar = () => {
   const [active, setActive] = useState<boolean>(false);
@@ -16,7 +17,7 @@ const SearchBar = () => {
     <S.MainContainer>
       <S.InputContainer className={classNames({ active })} htmlFor="search-bar">
         <S.Icon>
-          <AiOutlineSearch />
+          <Icon type={AiOutlineSearch} size="medium" />
         </S.Icon>
         <S.Input
           type="text"

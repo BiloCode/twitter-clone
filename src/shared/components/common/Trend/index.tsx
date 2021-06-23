@@ -1,7 +1,7 @@
 import { BsThreeDots } from "react-icons/bs";
 import * as S from "./styles";
 
-import HoverableIcon from "../HoverableIcon";
+import HoverableIcon from "../../atoms/HoverableIcon";
 import { colors } from "config/colors";
 
 const Trend = () => (

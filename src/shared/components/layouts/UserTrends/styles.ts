@@ -9,4 +9,6 @@ export const Container = styled.div`
 
 export const TitleBarContainer = styled.div`
   background-color: rgb(250, 250, 250);
+  padding: 5px 12px;
+  box-sizing: border-box;
 `;

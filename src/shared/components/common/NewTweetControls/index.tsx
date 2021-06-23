@@ -8,7 +8,7 @@ import { GrEmoji } from "react-icons/gr";
 import { HiOutlineCalendar } from "react-icons/hi";
 
 import UserAvatar from "../../molecules/UserAvatar";
-import HoverableIcon from "../HoverableIcon";
+import HoverableIcon from "../../atoms/HoverableIcon";
 import TwitterButton from "../TwitterButton";
 import { TweetImageContainer } from "../TweetImageContainer";
 
