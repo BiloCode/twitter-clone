@@ -5,11 +5,10 @@ import { GiStarsStack } from "react-icons/gi";
 import faker from "faker";
 import * as S from "./styles";
 
-import DesignColumns from "shared/components/layouts/DesignColumns";
-import SeparatorBar from "shared/components/common/SeparatorBar";
-import Tweet from "shared/components/layouts/Tweet";
-import NewTweetControls from "shared/components/common/NewTweetControls";
-import TweetCommentBig from "shared/components/layouts/TweetCommentBig";
+import Tweet from "shared/components/organisms/Tweet";
+import DesignColumns from "shared/components/templates/DesignColumns";
+import NewTweetControls from "shared/components/organisms/NewTweetControls";
+import TweetCommentBig from "shared/components/templates/TweetCommentBig";
 import TitleBarSimple from "shared/components/molecules/TitleBarSimple";
 import StickyContainer from "shared/components/atoms/StickyContainer";
 
@@ -22,7 +21,7 @@ const Home: FC<RouteComponentProps> = () => (
     </StickyContainer>
     <S.ContainerTweets>
       <NewTweetControls />
-      <SeparatorBar />
+      <S.SeparatorBar />
       <TweetCommentBig />
       <Tweet image={faker.random.image()} />
       <Tweet />

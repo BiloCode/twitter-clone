@@ -1,7 +1,7 @@
 import { FC } from "react";
 import { RouteComponentProps } from "@reach/router";
 
-import DesignColumns from "shared/components/layouts/DesignColumns";
+import DesignColumns from "shared/components/templates/DesignColumns";
 import TitleBarPush from "shared/components/molecules/TitleBarPush";
 
 import { BsThreeDots } from "react-icons/bs";

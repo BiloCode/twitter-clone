@@ -1,13 +1,19 @@
 import { FC } from "react";
 import { RouteComponentProps } from "@reach/router";
-import DesignColumns from "shared/components/layouts/DesignColumns";
-import UserTrends from "shared/components/layouts/UserTrends";
-import MainTrendExplore from "shared/components/common/MainTrendExplore";
+
+import UserTrends from "shared/components/organisms/UserTrends";
+import DesignColumns from "shared/components/templates/DesignColumns";
+import MainTrendExplore from "shared/components/molecules/MainTrendExplore";
+import TitleBarSearch from "shared/components/molecules/TitleBarSearch";
+import StickyContainer from "shared/components/atoms/StickyContainer";
 
 const Explore: FC<RouteComponentProps> = () => (
   <DesignColumns>
+    <StickyContainer>
+      <TitleBarSearch />
+    </StickyContainer>
     <MainTrendExplore />
-    <UserTrends />
+    <UserTrends page />
   </DesignColumns>
 );
 

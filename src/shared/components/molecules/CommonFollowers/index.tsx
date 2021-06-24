@@ -2,7 +2,7 @@ import { memo } from "react";
 import faker from "faker";
 import * as Styled from "./styles";
 
-import UserAvatar from "shared/components/molecules/UserAvatar";
+import UserAvatar from "shared/components/atoms/UserAvatar";
 import Text from "shared/components/atoms/Text";
 
 const followers = new Array(3).fill(() => faker.random.image());

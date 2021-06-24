@@ -2,7 +2,7 @@ import { GlobalStyle } from "./globalStyles";
 import "./store/init";
 
 import DefaultRouter from "router";
-import FloatContent from "shared/components/layouts/FloatContent";
+import FloatContent from "shared/components/templates/FloatContent";
 
 function App() {
   return (
