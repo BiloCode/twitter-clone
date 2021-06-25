@@ -4,6 +4,7 @@ import * as S from "./styles";
 import Title from "shared/components/atoms/Title";
 import classNames from "classnames";
 import Text from "shared/components/atoms/Text";
+import TextLimiter from "application/utils/TextLimiter";
 
 type TProps = {
   nickname: string;
@@ -14,7 +15,7 @@ type TProps = {
   onMouseLeave?(event: MouseEvent): void;
 };
 
-const UserTextInformation: FC<TProps> = ({
+const UserAllNames: FC<TProps> = ({
   onClick,
   nickname,
   username,
@@ -28,10 +29,10 @@ const UserTextInformation: FC<TProps> = ({
     className={classNames({ horizontal })}
   >
     <Title type="small" onClick={onClick}>
-      {nickname}
+      {TextLimiter.exec(nickname)}
     </Title>
     <Text>@{username}</Text>
   </S.TextContainer>
 );
 
-export default UserTextInformation;
+export default UserAllNames;

@@ -2,7 +2,7 @@ import { FC } from "react";
 import * as S from "./styles";
 
 import UserAvatar from "shared/components/atoms/UserAvatar";
-import UserTextInformation from "../../molecules/UserTextInformation";
+import UserAllNames from "../../molecules/UserAllNames";
 
 interface IProps {
   image: string;
@@ -21,7 +21,7 @@ const UserBasicData: FC<IProps> = ({
   <S.Container onClick={onClick}>
     <S.UserDataContainer>
       <UserAvatar image={image} />
-      <UserTextInformation nickname={nickname} username={username} />
+      <UserAllNames nickname={nickname} username={username} />
     </S.UserDataContainer>
     <S.ChildrenContainer>{children}</S.ChildrenContainer>
   </S.Container>

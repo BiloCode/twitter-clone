@@ -1,7 +1,7 @@
 import { FC } from "react";
 import * as Styled from "./styles";
 
-import UserTextInformation from "../UserTextInformation";
+import UserAllNames from "../UserAllNames";
 import usePositionFloatProfile from "shared/hooks/usePositionFloatProfile";
 
 interface IProps {
@@ -16,7 +16,7 @@ const TweetUserInformation: FC<IProps> = ({ nickname, username }) => {
 
   return (
     <Styled.Container>
-      <UserTextInformation
+      <UserAllNames
         horizontal
         username={username}
         nickname={nickname}

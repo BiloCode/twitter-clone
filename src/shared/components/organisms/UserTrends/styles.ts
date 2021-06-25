@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const TitleBarContainer = styled.div`
   background-color: rgb(250, 250, 250);
-  padding: 5px 12px;
+  padding: 5px 8px;
   box-sizing: border-box;
 `;
 

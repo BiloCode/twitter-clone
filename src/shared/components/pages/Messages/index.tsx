@@ -3,14 +3,15 @@ import { RouteComponentProps } from "@reach/router";
 import * as S from "./styles";
 
 import TitleBarPush from "shared/components/molecules/TitleBarPush";
-import SearchBar from "shared/components/molecules/SearchBar";
+import UserSearchChat from "shared/components/templates/UserSearchChat";
+import UserChatConversation from "shared/components/organisms/UserChatConversation";
 
 import { HiOutlineCog } from "react-icons/hi";
 import { RiMailAddLine } from "react-icons/ri";
 
 const Messages: FC<RouteComponentProps> = () => (
   <S.MainContainer>
-    <div>
+    <S.LeftContent>
       <TitleBarPush
         title="Messages"
         icons={[
@@ -22,11 +23,9 @@ const Messages: FC<RouteComponentProps> = () => (
           },
         ]}
       />
-      <S.SearchBarContainer>
-        <SearchBar />
-      </S.SearchBarContainer>
-    </div>
-    <div></div>
+      <UserSearchChat />
+    </S.LeftContent>
+    <UserChatConversation />
   </S.MainContainer>
 );
 

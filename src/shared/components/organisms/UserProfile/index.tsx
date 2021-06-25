@@ -4,7 +4,7 @@ import { TAccountState } from "store/accounts/types";
 
 import CommonFollowers from "shared/components/molecules/CommonFollowers";
 import UserAvatar from "shared/components/atoms/UserAvatar";
-import FollowSection from "shared/components/molecules/FollowSection";
+import UserFollowSection from "shared/components/molecules/UserFollowSection";
 import UserProfileInformation from "shared/components/molecules/UserProfileInformation";
 
 interface IProps {
@@ -31,7 +31,10 @@ const UserProfile: FC<IProps> = ({ children, twitterUser }) => {
           username={username}
           description={description}
         />
-        <FollowSection followers={followers.length} following={following.length} />
+        <UserFollowSection
+          followers={followers.length}
+          following={following.length}
+        />
         <CommonFollowers />
       </Styled.BottomContent>
     </>

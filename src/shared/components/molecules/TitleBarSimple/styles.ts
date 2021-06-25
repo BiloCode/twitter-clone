@@ -1,8 +1,11 @@
 import styled from "styled-components";
 
+import { TITLE_BAR_HEIGHT } from "config/constants";
+
 export const Container = styled.div`
   width: 100%;
-  padding: 6px 1em;
+  height: ${TITLE_BAR_HEIGHT};
+  padding: 0 1em;
   display: flex;
   user-select: none;
   justify-content: space-between;

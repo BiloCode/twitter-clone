@@ -3,7 +3,7 @@ import * as S from "./styles";
 
 import UserAvatar from "shared/components/atoms/UserAvatar";
 import TextWithIcon from "shared/components/molecules/TextWithIcon";
-import FollowSection from "shared/components/molecules/FollowSection";
+import UserFollowSection from "shared/components/molecules/UserFollowSection";
 import BackgroundImage from "shared/components/molecules/BackgroundImage";
 import UserProfileInformation from "shared/components/molecules/UserProfileInformation";
 
@@ -57,7 +57,10 @@ const UserProfileExtends: FC<IProps> = ({ children, twitterUser }) => {
           <TextWithIcon icon={HiOutlineLocationMarker} text="Lima, Peru" />
           <TextWithIcon icon={BiCalendar} text={`Se unio el ${dateNow}`} />
         </S.UserCreateData>
-        <FollowSection followers={followers.length} following={following.length} />
+        <UserFollowSection
+          followers={followers.length}
+          following={following.length}
+        />
       </S.BottomContent>
     </>
   );

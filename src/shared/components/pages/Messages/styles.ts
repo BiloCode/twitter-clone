@@ -1,11 +1,14 @@
 import styled from "styled-components";
 
+import { WHITE_LIGHT } from "config/colors";
+
 export const MainContainer = styled.div`
   display: grid;
-  grid-template-columns: 390px 1fr;
+  grid-template-columns: 400px 1fr;
+  grid-auto-rows: max-content;
 `;
 
-export const SearchBarContainer = styled.div`
-  padding: 10px 1em;
-  box-sizing: border-box;
+export const LeftContent = styled.div`
+  height: 100vh;
+  border-right: 1px solid ${WHITE_LIGHT};
 `;

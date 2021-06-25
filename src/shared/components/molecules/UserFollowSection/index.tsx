@@ -9,7 +9,7 @@ interface IProps {
   followers: number;
 }
 
-const FollowSection: FC<IProps> = ({ followers, following }) => (
+const UserFollowSection: FC<IProps> = ({ followers, following }) => (
   <S.Container>
     <S.ContainerText>
       <Title type="small">{following}</Title>
@@ -22,4 +22,4 @@ const FollowSection: FC<IProps> = ({ followers, following }) => (
   </S.Container>
 );
 
-export default memo(FollowSection);
+export default memo(UserFollowSection);
