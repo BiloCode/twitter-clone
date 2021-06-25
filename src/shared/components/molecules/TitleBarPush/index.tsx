@@ -15,18 +15,21 @@ type Props = {
   title: string;
   icons?: Icon[];
   subtitle?: string;
+  viewIconBack?: boolean;
 };
 
-const TitleBarPush = ({ title, subtitle, icons }: Props) => {
+const TitleBarPush = ({ title, viewIconBack, subtitle, icons }: Props) => {
   const navigate = useNavigate();
   const onClickBack = () => navigate("/home");
 
   return (
     <S.Container>
-      <S.ColumnContainer columns={2}>
-        <HoverableIcon onClick={onClickBack}>
-          <AiOutlineArrowLeft />
-        </HoverableIcon>
+      <S.ColumnContainer columns={viewIconBack ? 2 : 1}>
+        {viewIconBack && (
+          <HoverableIcon onClick={onClickBack}>
+            <AiOutlineArrowLeft />
+          </HoverableIcon>
+        )}
         <S.TextContainer>
           <Title type="black">{title}</Title>
           {subtitle && <Text size="e-small">{subtitle}</Text>}

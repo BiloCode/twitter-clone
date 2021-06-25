@@ -19,7 +19,12 @@ const icons = [
 const Lists: FC<RouteComponentProps> = () => {
   return (
     <DesignColumns>
-      <TitleBarPush title="Lists" subtitle="@AychoBilly" icons={icons} />
+      <TitleBarPush
+        viewIconBack
+        title="Lists"
+        subtitle="@AychoBilly"
+        icons={icons}
+      />
     </DesignColumns>
   );
 };

@@ -1,7 +1,7 @@
 import { FC } from "react";
 import * as S from "./styles";
 
-import SearchBar from "../../organisms/SearchBar";
+import SearchBar from "../../organisms/SearchBarFloatResults";
 import UserTrends from "../../organisms/UserTrends";
 import UserRecomendations from "../../organisms/UserRecomendations";
 import StickyContainer from "shared/components/atoms/StickyContainer";

@@ -1,21 +1,14 @@
 import styled from "styled-components";
 
 import { colors } from "config/colors";
-
-const height = "42px";
-
-export const MainContainer = styled.div`
-  position: relative;
-  box-sizing: border-box;
-  background-color: #fff;
-`;
+import { INPUT_SEARCH_HEIGHT } from "config/constants";
 
 export const InputContainer = styled.label`
   --bg: rgb(245, 245, 245);
   --border: rgb(245, 245, 245);
 
-  height: ${height};
-  border-radius: calc(${height} / 2);
+  height: ${INPUT_SEARCH_HEIGHT};
+  border-radius: calc(${INPUT_SEARCH_HEIGHT} / 2);
   display: grid;
   cursor: text;
   grid-template-columns: 64px 1fr;
@@ -44,22 +37,5 @@ export const Input = styled.input`
   color: ${colors.textLight};
   background-color: var(--bg);
   font-size: 15px;
-  border-radius: calc(${height} / 2);
-`;
-
-export const FloatContainer = styled.div`
-  width: 100%;
-  min-height: 200px;
-  max-height: 600px;
-  overflow: auto;
-  background-color: #fff;
-  position: absolute;
-  top: calc(${height} + 10px);
-  left: 0;
-  z-index: 1;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  display: grid;
-  grid-auto-rows: max-content;
-  row-gap: 5px;
-  background-color: rgb(245, 245, 245);
+  border-radius: calc(${INPUT_SEARCH_HEIGHT} / 2);
 `;

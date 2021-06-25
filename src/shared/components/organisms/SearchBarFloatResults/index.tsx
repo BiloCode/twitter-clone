@@ -1,13 +1,11 @@
 import { useState } from "react";
-import classNames from "classnames";
 import * as S from "./styles";
 
-import { AiOutlineSearch } from "react-icons/ai";
 import SearchBarItem from "shared/components/molecules/SearchBarItem";
 import SearchBarItemSimple from "shared/components/molecules/SearchBarItemSimple";
-import Icon from "shared/components/atoms/Icon";
+import SearchBar from "shared/components/molecules/SearchBar";
 
-const SearchBar = () => {
+const SearchBarFloatResults = () => {
   const [active, setActive] = useState<boolean>(false);
 
   const onFocus = () => setActive(true);
@@ -15,18 +13,7 @@ const SearchBar = () => {
 
   return (
     <S.MainContainer>
-      <S.InputContainer className={classNames({ active })} htmlFor="search-bar">
-        <S.Icon>
-          <Icon type={AiOutlineSearch} size="medium" />
-        </S.Icon>
-        <S.Input
-          type="text"
-          id="search-bar"
-          onFocus={onFocus}
-          onBlur={onBlur}
-          placeholder="Search Twitter"
-        />
-      </S.InputContainer>
+      <SearchBar isActive={active} onFocus={onFocus} onBlur={onBlur} />
       {active && (
         <S.FloatContainer>
           <div>
@@ -49,4 +36,4 @@ const SearchBar = () => {
   );
 };
 
-export default SearchBar;
+export default SearchBarFloatResults;
