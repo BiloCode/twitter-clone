@@ -1,7 +1,9 @@
 import styled from "styled-components";
 
+import { AVATAR_SIZE } from "config/constants";
+
 export const Container = styled.div`
-  --size: 48px;
+  --size: ${AVATAR_SIZE.DEFAULT};
 
   width: var(--size);
   height: var(--size);
@@ -9,23 +11,23 @@ export const Container = styled.div`
   background-color: rgb(230, 230, 230);
 
   &.big {
-    --size: 64px;
+    --size: ${AVATAR_SIZE.BIG};
   }
 
   &.small {
-    --size: 32px;
+    --size: ${AVATAR_SIZE.SMALL};
   }
 
   &.e-small {
-    --size: 20px;
+    --size: ${AVATAR_SIZE.E_SMALL};
   }
 
   &.e-big {
-    --size: 80px;
+    --size: ${AVATAR_SIZE.E_BIG};
   }
 
   &.ee-big {
-    --size: 120px;
+    --size: ${AVATAR_SIZE.EE_BIG};
   }
 
   &.hoverable {

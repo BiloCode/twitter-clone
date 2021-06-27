@@ -5,7 +5,7 @@ const size = "38px";
 
 export const Icon = styled.span`
   line-height: 0;
-  font-size: 1.4em;
+  font-size: 1.3em;
   color: ${colors.skyblue};
 `;
 

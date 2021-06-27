@@ -1,7 +1,9 @@
 import { useState } from "react";
 import * as S from "./styles";
 
-import SearchBar from "shared/components/molecules/SearchBar";
+import { AiOutlineSearch } from "react-icons/ai";
+
+import SearchBar from "shared/components/molecules/InputWithIcon";
 import TwitterUserChat from "shared/components/organisms/TwitterUserChat";
 
 import messages from "application/mocks/messages";
@@ -15,7 +17,13 @@ const UserSearchChat = () => {
   return (
     <div>
       <S.SearchBarContainer>
-        <SearchBar isActive={focus} onFocus={onFocus} onBlur={onBlur} />
+        <SearchBar
+          onBlur={onBlur}
+          isActive={focus}
+          onFocus={onFocus}
+          placeholder="Write any name"
+          icon={{ type: AiOutlineSearch }}
+        />
       </S.SearchBarContainer>
       <div>
         {messages.map((v) => (

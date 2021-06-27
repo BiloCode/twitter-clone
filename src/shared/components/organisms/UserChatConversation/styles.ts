@@ -7,17 +7,6 @@ export const MainContainer = styled.div`
   height: 100vh;
 `;
 
-export const MessageArea = styled.div`
-  height: calc(100% - ${MESSAGE_INPUT_AREA_HEIGHT});
-`;
-
-export const MessagesContainer = styled.div`
-  height: calc(100% - ${TITLE_BAR_HEIGHT});
-  overflow: auto;
-  padding: 1em;
-  box-sizing: border-box;
-`;
-
 export const UserBasicProfile = styled.div`
   display: grid;
   justify-items: center;
@@ -41,12 +30,17 @@ export const ListMessage = styled.div`
   box-sizing: border-box;
 `;
 
-export const MessageInputContainer = styled.div`
-  height: ${MESSAGE_INPUT_AREA_HEIGHT};
-  display: flex;
-  align-items: center;
+export const MessagesContainer = styled.div`
+  height: calc(100% - ${MESSAGE_INPUT_AREA_HEIGHT} - ${TITLE_BAR_HEIGHT});
+  overflow: auto;
+  padding: 1em;
+  box-sizing: border-box;
 `;
 
-export const UserActionsContainer = styled.div`
-  display: flex;
+export const MessageInputContainer = styled.div`
+  width: 100%;
+  height: ${MESSAGE_INPUT_AREA_HEIGHT};
+  display: grid;
+  grid-template-columns: max-content max-content 1fr max-content;
+  align-items: center;
 `;

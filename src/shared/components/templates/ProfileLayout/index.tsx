@@ -36,6 +36,7 @@ const Profile: FC<RouteComponentProps> = ({ children }) => {
   return (
     <DesignColumns>
       <TitleBarPush
+        viewIconBack
         subtitle={"15 Tweets"}
         title={current_account?.personalInformation.nickname!}
       />

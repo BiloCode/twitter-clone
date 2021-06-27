@@ -1,9 +1,11 @@
 import { useState } from "react";
 import * as S from "./styles";
 
+import { AiOutlineSearch } from "react-icons/ai";
+
 import SearchBarItem from "shared/components/molecules/SearchBarItem";
 import SearchBarItemSimple from "shared/components/molecules/SearchBarItemSimple";
-import SearchBar from "shared/components/molecules/SearchBar";
+import InputWithIcon from "shared/components/molecules/InputWithIcon";
 
 const SearchBarFloatResults = () => {
   const [active, setActive] = useState<boolean>(false);
@@ -13,7 +15,13 @@ const SearchBarFloatResults = () => {
 
   return (
     <S.MainContainer>
-      <SearchBar isActive={active} onFocus={onFocus} onBlur={onBlur} />
+      <InputWithIcon
+        onBlur={onBlur}
+        onFocus={onFocus}
+        isActive={active}
+        placeholder="Write any name"
+        icon={{ type: AiOutlineSearch }}
+      />
       {active && (
         <S.FloatContainer>
           <div>
