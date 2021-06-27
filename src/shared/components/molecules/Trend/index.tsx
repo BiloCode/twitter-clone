@@ -1,10 +1,9 @@
 import { BsThreeDots } from "react-icons/bs";
 import * as S from "./styles";
 
-import HoverableIcon from "../../atoms/HoverableIcon";
-import { colors } from "config/colors";
-import Title from "shared/components/atoms/Title";
 import Text from "shared/components/atoms/Text";
+import Title from "shared/components/atoms/Title";
+import HoverableIcon from "../../atoms/HoverableIcon";
 
 const Trend = () => (
   <S.Container>
@@ -12,9 +11,7 @@ const Trend = () => (
     <Title type="small">Universitario</Title>
     <Text size="small">80.5K Tweets</Text>
     <S.AbsoluteContainer>
-      <HoverableIcon>
-        <BsThreeDots color={colors.textLight} />
-      </HoverableIcon>
+      <HoverableIcon icon={BsThreeDots} color="light" />
     </S.AbsoluteContainer>
   </S.Container>
 );

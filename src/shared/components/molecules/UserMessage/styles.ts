@@ -7,6 +7,7 @@ export const IconsContainer = styled.div`
   align-items: center;
   column-gap: 5px;
   visibility: hidden;
+  padding: 0 10px;
 `;
 
 export const TextContainer = styled.div`
@@ -18,8 +19,7 @@ export const TextContainer = styled.div`
 `;
 
 export const MainContainer = styled.div`
-  display: grid;
-  grid-template-columns: repeat(2, max-content);
+  display: flex;
   align-items: center;
   column-gap: 5px;
 
@@ -31,9 +31,9 @@ export const MainContainer = styled.div`
 
   &.user-auth {
     ${TextContainer} {
-      /* grid-column-end: 1; */
       background-color: ${SKYBLUE};
       text-align: right;
+      order: 2;
 
       & > span {
         color: #fff;
@@ -41,7 +41,7 @@ export const MainContainer = styled.div`
     }
 
     ${IconsContainer} {
-      /* grid-column-end: 0; */
+      order: 1;
     }
   }
 `;

@@ -1,8 +1,26 @@
+import classNames from "classnames";
 import { FC } from "react";
 import * as S from "./styles";
 
-const StickyContainer: FC = ({ children }) => (
-  <S.MainContainer>{children}</S.MainContainer>
+type StickyType = "top" | "bottom";
+
+type StickyProps = {
+  type?: StickyType;
+};
+
+const StickyContainer: FC<StickyProps> = ({ children, type }) => (
+  <S.MainContainer
+    className={classNames({
+      top: type === "top",
+      bottom: type === "bottom",
+    })}
+  >
+    {children}
+  </S.MainContainer>
 );
+
+StickyContainer.defaultProps = {
+  type: "bottom",
+};
 
 export default StickyContainer;

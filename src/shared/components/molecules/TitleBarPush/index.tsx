@@ -1,13 +1,15 @@
-import { AiOutlineArrowLeft } from "react-icons/ai";
+import { useNavigate } from "@reach/router";
 import * as S from "./styles";
 
-import { useNavigate } from "@reach/router";
 import HoverableIcon from "shared/components/atoms/HoverableIcon";
 import Title from "shared/components/atoms/Title";
 import Text from "shared/components/atoms/Text";
 
+import { AiOutlineArrowLeft } from "react-icons/ai";
+import { IconType } from "react-icons";
+
 type Icon = {
-  element: JSX.Element;
+  element: IconType;
   onClick?(): void;
 };
 
@@ -26,9 +28,7 @@ const TitleBarPush = ({ title, viewIconBack, subtitle, icons }: Props) => {
     <S.Container>
       <S.ColumnContainer columns={viewIconBack ? 2 : 1}>
         {viewIconBack && (
-          <HoverableIcon onClick={onClickBack}>
-            <AiOutlineArrowLeft />
-          </HoverableIcon>
+          <HoverableIcon icon={AiOutlineArrowLeft} onClick={onClickBack} />
         )}
         <S.TextContainer>
           <Title type="black">{title}</Title>
@@ -39,9 +39,7 @@ const TitleBarPush = ({ title, viewIconBack, subtitle, icons }: Props) => {
       {icons && (
         <S.ColumnContainer columns={icons.length}>
           {icons.map((v, i) => (
-            <HoverableIcon key={i} onClick={v.onClick}>
-              {v.element}
-            </HoverableIcon>
+            <HoverableIcon key={i} icon={v.element} onClick={v.onClick} />
           ))}
         </S.ColumnContainer>
       )}

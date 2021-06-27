@@ -1,14 +1,21 @@
-import React, { FC } from 'react';
-import * as Styled from './styles';
+import classNames from "classnames";
+import * as Styled from "./styles";
+
+import { IconType } from "react-icons";
 
 interface IProps {
-  onClick?() : void;
+  color?: "default" | "light";
+  icon: IconType;
+  onClick?(): void;
 }
 
-const HoverableIcon : FC<IProps> = ({ children , onClick }) => (
-  <Styled.Container onClick={onClick} >
+const HoverableIcon = ({ color, onClick, icon: Icon }: IProps) => (
+  <Styled.Container
+    onClick={onClick}
+    className={classNames({ light: color === "light" })}
+  >
     <Styled.Icon>
-      {children}
+      <Icon />
     </Styled.Icon>
   </Styled.Container>
 );

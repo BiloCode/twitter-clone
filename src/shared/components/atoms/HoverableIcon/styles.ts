@@ -1,27 +1,37 @@
 import styled from "styled-components";
-import { colors } from "config/colors";
+import { colors, TEXT_LIGHT, WHITE_LIGHT } from "config/colors";
 
-const size = 37;
+const size = "38px";
 
-export const Container = styled.div({
-  width : size,
-  height : size,
-  position : 'relative',
-  display : 'flex',
-  alignItems : 'center',
-  justifyContent : 'center',
-  borderRadius : size / 2,
-  cursor : 'pointer',
-  ':hover' : {
-    backgroundColor : colors.skyblueSmooth,
-  },
-  ':active' : {
-    backgroundColor : colors.skyblueSmooth2
+export const Icon = styled.span`
+  line-height: 0;
+  font-size: 1.4em;
+  color: ${colors.skyblue};
+`;
+
+export const Container = styled.div`
+  --bg: ${colors.skyblueSmooth};
+
+  width: ${size};
+  height: ${size};
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: calc(${size} / 2);
+  cursor: pointer;
+
+  &:hover {
+    background-color: var(--bg);
   }
-});
 
-export const Icon = styled.span({
-  color: colors.skyblue,
-  lineHeight : 0,
-  fontSize : '1.4em'
-});
+  &.light {
+    &:hover {
+      background-color: ${WHITE_LIGHT};
+    }
+
+    ${Icon} {
+      color: ${TEXT_LIGHT};
+    }
+  }
+`;

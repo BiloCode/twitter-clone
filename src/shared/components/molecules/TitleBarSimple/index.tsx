@@ -11,13 +11,13 @@ type IProps = {
   icon?: IconType;
 };
 
-const TitleBarSimple = ({ title, icon: Icon, subtitle }: IProps) => (
+const TitleBarSimple = ({ title, icon, subtitle }: IProps) => (
   <S.Container>
     <S.TextContainer>
       <Title type="black">{title}</Title>
       {subtitle && <Text size="e-small">{subtitle}</Text>}
     </S.TextContainer>
-    {Icon && <HoverableIcon>{<Icon />}</HoverableIcon>}
+    {icon && <HoverableIcon icon={icon} />}
   </S.Container>
 );
 

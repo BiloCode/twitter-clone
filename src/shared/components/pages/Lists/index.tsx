@@ -9,10 +9,10 @@ import { MdPlaylistAdd } from "react-icons/md";
 
 const icons = [
   {
-    element: <MdPlaylistAdd />,
+    element: MdPlaylistAdd,
   },
   {
-    element: <BsThreeDots />,
+    element: BsThreeDots,
   },
 ];
 

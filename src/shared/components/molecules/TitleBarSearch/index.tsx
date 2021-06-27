@@ -9,9 +9,7 @@ const TitleBarSearch = () => (
   <S.MainContainer>
     <SearchBarFloatResults />
     <S.IconContainer>
-      <HoverableIcon>
-        <BiCog />
-      </HoverableIcon>
+      <HoverableIcon icon={BiCog} />
     </S.IconContainer>
   </S.MainContainer>
 );

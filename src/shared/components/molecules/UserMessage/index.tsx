@@ -18,12 +18,14 @@ const UserMessage = ({ userAuthenticated, message }: TProps) => (
       <Text>{message}</Text>
     </S.TextContainer>
     <S.IconsContainer>
-      <HoverableIcon>
-        <RiHeartAddLine />
-      </HoverableIcon>
-      <HoverableIcon>
-        <BsThreeDots />
-      </HoverableIcon>
+      <HoverableIcon
+        icon={RiHeartAddLine}
+        color={!userAuthenticated ? "light" : "default"}
+      />
+      <HoverableIcon
+        icon={BsThreeDots}
+        color={!userAuthenticated ? "light" : "default"}
+      />
     </S.IconsContainer>
   </S.MainContainer>
 );

@@ -16,9 +16,7 @@ const TitleBarUserChat = () => (
         <Text size="small">@bot_kun</Text>
       </S.Names>
     </S.UserDataContainer>
-    <HoverableIcon>
-      <VscMegaphone />
-    </HoverableIcon>
+    <HoverableIcon icon={VscMegaphone} />
   </S.MainContainer>
 );
 

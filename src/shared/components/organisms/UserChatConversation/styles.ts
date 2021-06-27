@@ -1,8 +1,19 @@
 import styled from "styled-components";
 
 import { WHITE_LIGHT } from "config/colors";
+import { MESSAGE_INPUT_AREA_HEIGHT, TITLE_BAR_HEIGHT } from "config/constants";
+
+export const MainContainer = styled.div`
+  height: 100vh;
+`;
+
+export const MessageArea = styled.div`
+  height: calc(100% - ${MESSAGE_INPUT_AREA_HEIGHT});
+`;
 
 export const MessagesContainer = styled.div`
+  height: calc(100% - ${TITLE_BAR_HEIGHT});
+  overflow: auto;
   padding: 1em;
   box-sizing: border-box;
 `;
@@ -28,4 +39,14 @@ export const ListMessage = styled.div`
   grid-auto-rows: max-content;
   padding: 1.5em 0;
   box-sizing: border-box;
+`;
+
+export const MessageInputContainer = styled.div`
+  height: ${MESSAGE_INPUT_AREA_HEIGHT};
+  display: flex;
+  align-items: center;
+`;
+
+export const UserActionsContainer = styled.div`
+  display: flex;
 `;

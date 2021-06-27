@@ -16,10 +16,10 @@ const Messages: FC<RouteComponentProps> = () => (
         title="Messages"
         icons={[
           {
-            element: <HiOutlineCog />,
+            element: HiOutlineCog,
           },
           {
-            element: <RiMailAddLine />,
+            element: RiMailAddLine,
           },
         ]}
       />

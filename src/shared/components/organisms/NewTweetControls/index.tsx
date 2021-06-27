@@ -30,21 +30,11 @@ const NewTweetControls = () => {
         </S.InputContainer>
         <S.ActionsContainer>
           <S.Icons>
-            <HoverableIcon>
-              <BiImage />
-            </HoverableIcon>
-            <HoverableIcon>
-              <AiOutlineGif />
-            </HoverableIcon>
-            <HoverableIcon>
-              <BsBarChart />
-            </HoverableIcon>
-            <HoverableIcon>
-              <GrEmoji />
-            </HoverableIcon>
-            <HoverableIcon>
-              <HiOutlineCalendar />
-            </HoverableIcon>
+            <HoverableIcon icon={BiImage} />
+            <HoverableIcon icon={AiOutlineGif} />
+            <HoverableIcon icon={BsBarChart} />
+            <HoverableIcon icon={GrEmoji} />
+            <HoverableIcon icon={HiOutlineCalendar} />
           </S.Icons>
           <S.TweetActions className={classnames({ "empty-input": emptyInput })}>
             {!emptyInput && (
@@ -52,9 +42,7 @@ const NewTweetControls = () => {
                 <S.TweetTextLimitContainer>
                   <S.TweetTextLimitIndicator />
                 </S.TweetTextLimitContainer>
-                <HoverableIcon>
-                  <BsPlusCircle />
-                </HoverableIcon>
+                <HoverableIcon icon={BsPlusCircle} />
               </>
             )}
             <TwitterButton filled>Publicar</TwitterButton>
