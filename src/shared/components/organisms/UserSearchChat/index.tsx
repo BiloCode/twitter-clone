@@ -10,9 +10,10 @@ import messages from "application/mocks/messages";
 
 type ChatProps = {
   floating?: boolean;
+  onClickChat?(): void;
 };
 
-const UserSearchChat = ({ floating }: ChatProps) => {
+const UserSearchChat = ({ floating, onClickChat }: ChatProps) => {
   const [focus, setFocus] = useState<boolean>(false);
 
   const onFocus = () => setFocus(() => true);
@@ -34,6 +35,7 @@ const UserSearchChat = ({ floating }: ChatProps) => {
       <div>
         {messages.map((v) => (
           <TwitterUserChat
+            onClick={onClickChat}
             chat={{ lastUpdated: v.lastUpdated, message: v.message }}
             user={{
               username: v.username,

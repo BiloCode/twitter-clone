@@ -1,10 +1,12 @@
 import faker from "faker";
+import classNames from "classnames";
 import * as S from "./styles";
 
 import { BiCalendar } from "react-icons/bi";
-import { BsFillImageFill } from "react-icons/bs";
+import { BsFillImageFill, BsChevronDoubleDown } from "react-icons/bs";
 import { AiOutlineGif, AiOutlineSend } from "react-icons/ai";
 import { GrEmoji } from "react-icons/gr";
+import { VscMegaphone } from "react-icons/vsc";
 
 import Text from "shared/components/atoms/Text";
 import TextWithIcon from "shared/components/molecules/TextWithIcon";
@@ -53,9 +55,9 @@ type ChatProps = {
 };
 
 const UserChatConversation = ({ floating }: ChatProps) => (
-  <S.MainContainer>
+  <S.MainContainer className={classNames({ floating })}>
     <StickyContainer>
-      <TitleBarUserChat />
+      <TitleBarUserChat icon={floating ? BsChevronDoubleDown : VscMegaphone} />
     </StickyContainer>
     <S.MessagesContainer>
       <S.UserBasicProfile>

@@ -11,7 +11,7 @@ export const IconsContainer = styled.div`
 `;
 
 export const TextContainer = styled.div`
-  max-width: 340px;
+  width: 340px;
   padding: 12px 1.3em;
   background-color: ${WHITE_LIGHT};
   border-radius: 10px;
@@ -19,6 +19,7 @@ export const TextContainer = styled.div`
 `;
 
 export const MainContainer = styled.div`
+  width: 100%;
   display: flex;
   align-items: center;
   column-gap: 5px;

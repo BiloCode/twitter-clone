@@ -15,6 +15,8 @@ const UserMessageFloat = () => {
 
   const onClickSlideUp = () => setHidden((state) => !state);
 
+  const onClickInChat = () => setCurrentChat(1);
+
   return (
     <S.MainContainer className={classNames({ hidden })}>
       {!currentChat && (
@@ -35,7 +37,7 @@ const UserMessageFloat = () => {
         {currentChat ? (
           <UserChatConversation floating />
         ) : (
-          <UserSearchChat floating />
+          <UserSearchChat onClickChat={onClickInChat} floating />
         )}
       </div>
     </S.MainContainer>

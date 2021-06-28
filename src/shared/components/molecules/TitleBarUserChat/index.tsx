@@ -1,13 +1,16 @@
+import { IconType } from "react-icons";
 import * as S from "./styles";
-
-import { VscMegaphone } from "react-icons/vsc";
 
 import Text from "shared/components/atoms/Text";
 import Title from "shared/components/atoms/Title";
 import UserAvatar from "shared/components/atoms/UserAvatar";
 import HoverableIcon from "shared/components/atoms/HoverableIcon";
 
-const TitleBarUserChat = () => (
+type TitleBarProps = {
+  icon: IconType;
+};
+
+const TitleBarUserChat = ({ icon }: TitleBarProps) => (
   <S.MainContainer>
     <S.UserDataContainer>
       <UserAvatar imageSize="small" />
@@ -16,7 +19,7 @@ const TitleBarUserChat = () => (
         <Text size="small">@bot_kun</Text>
       </S.Names>
     </S.UserDataContainer>
-    <HoverableIcon icon={VscMegaphone} />
+    <HoverableIcon icon={icon} />
   </S.MainContainer>
 );
 

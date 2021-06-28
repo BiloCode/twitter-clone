@@ -5,6 +5,10 @@ import { MESSAGE_INPUT_AREA_HEIGHT, TITLE_BAR_HEIGHT } from "config/constants";
 
 export const MainContainer = styled.div`
   height: 100vh;
+
+  &.floating {
+    height: calc(500px - ${MESSAGE_INPUT_AREA_HEIGHT} + ${TITLE_BAR_HEIGHT});
+  }
 `;
 
 export const UserBasicProfile = styled.div`
