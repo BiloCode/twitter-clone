@@ -1,5 +1,5 @@
 import { FC, memo } from "react";
-import Image from "shared/components/atoms/Image";
+import Image from "@atoms/Image";
 import * as Styled from "./styles";
 
 interface IProps {

@@ -13,7 +13,7 @@ import TwitterButton from "../../atoms/TwitterButton";
 import { TweetImageContainer } from "../../atoms/TweetImageContainer";
 
 import { useStore } from "effector-react";
-import currentAccountSelector from "store/accounts/selectors/currentAccountSelector";
+import currentAccountSelector from "@store/accounts/selectors/currentAccountSelector";
 
 const NewTweetControls = () => {
   const current_account = useStore(currentAccountSelector);

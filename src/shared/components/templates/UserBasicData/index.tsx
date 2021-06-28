@@ -1,7 +1,7 @@
 import { FC } from "react";
 import * as S from "./styles";
 
-import UserAvatar from "shared/components/atoms/UserAvatar";
+import UserAvatar from "@atoms/UserAvatar";
 import UserAllNames from "../../molecules/UserAllNames";
 
 interface IProps {

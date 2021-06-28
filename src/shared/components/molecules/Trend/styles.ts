@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { colors } from "config/colors";
+import { colors } from "@style-config/colors";
 
 export const PrevTitle = styled.span``;
 

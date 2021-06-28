@@ -2,7 +2,7 @@ import React, { FC, memo } from "react";
 import * as Styled from "./styles";
 import { BsCheck } from "react-icons/bs";
 
-import UserBasicData from "shared/components/templates/UserBasicData";
+import UserBasicData from "@templates/UserBasicData";
 
 interface IProps {
   onClick?(): void;

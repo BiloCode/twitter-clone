@@ -1,11 +1,11 @@
 import { FC } from "react";
 import * as Styled from "./styles";
-import { TAccountState } from "store/accounts/types";
+import { TAccountState } from "@store/accounts/types";
 
-import CommonFollowers from "shared/components/molecules/CommonFollowers";
-import UserAvatar from "shared/components/atoms/UserAvatar";
-import UserFollowSection from "shared/components/molecules/UserFollowSection";
-import UserProfileInformation from "shared/components/molecules/UserProfileInformation";
+import CommonFollowers from "@molecules/CommonFollowers";
+import UserAvatar from "@atoms/UserAvatar";
+import UserFollowSection from "@molecules/UserFollowSection";
+import UserProfileInformation from "@molecules/UserProfileInformation";
 
 interface IProps {
   twitterUser?: TAccountState;

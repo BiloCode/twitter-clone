@@ -2,7 +2,7 @@ import { FC } from "react";
 import * as Styled from "./styles";
 
 import UserAllNames from "../UserAllNames";
-import usePositionFloatProfile from "shared/hooks/usePositionFloatProfile";
+import usePositionFloatProfile from "@hooks/usePositionFloatProfile";
 
 interface IProps {
   nickname: string;

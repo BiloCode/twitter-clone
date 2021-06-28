@@ -1,4 +1,4 @@
-import { TwitterUser } from "application/types/TwitterUser";
+import { TwitterUser } from "@application/types/TwitterUser";
 
 const users: TwitterUser[] = [
   {

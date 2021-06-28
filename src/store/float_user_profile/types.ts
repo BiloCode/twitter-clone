@@ -1,12 +1,12 @@
-import { TAccountState } from "store/accounts/types";
+import { TAccountState } from "@store/accounts/types";
 
 export type TCoords = {
-  x : number;
-  y : number;
-}
+  x: number;
+  y: number;
+};
 
 export type TUserProfileFloat = {
-  isActive : boolean;
-  profile : TAccountState;
-  coords : TCoords;
-}
+  isActive: boolean;
+  profile: TAccountState;
+  coords: TCoords;
+};

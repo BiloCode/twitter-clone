@@ -2,9 +2,9 @@ import { FC, UIEvent } from "react";
 import { RouteComponentProps } from "@reach/router";
 import * as Styled from "./styles";
 
-import TwitterMenu from "shared/components/templates/TwitterMenu";
+import TwitterMenu from "@templates/TwitterMenu";
 
-import { useScrollableRightContent } from "shared/context/ScrollableRightContent/context";
+import { useScrollableRightContent } from "@contexts/ScrollableRightContent/context";
 
 const RootLayout: FC<RouteComponentProps> = ({ children }) => {
   const { rightElementRef } = useScrollableRightContent();

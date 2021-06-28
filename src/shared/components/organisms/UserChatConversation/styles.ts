@@ -1,7 +1,10 @@
 import styled from "styled-components";
 
-import { WHITE_LIGHT } from "config/colors";
-import { MESSAGE_INPUT_AREA_HEIGHT, TITLE_BAR_HEIGHT } from "config/constants";
+import { WHITE_LIGHT } from "@style-config/colors";
+import {
+  MESSAGE_INPUT_AREA_HEIGHT,
+  TITLE_BAR_HEIGHT,
+} from "@style-config/constants";
 
 export const MainContainer = styled.div`
   height: 100vh;

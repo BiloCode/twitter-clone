@@ -1,9 +1,9 @@
 import { useNavigate } from "@reach/router";
 import * as S from "./styles";
 
-import HoverableIcon from "shared/components/atoms/HoverableIcon";
-import Title from "shared/components/atoms/Title";
-import Text from "shared/components/atoms/Text";
+import HoverableIcon from "@atoms/HoverableIcon";
+import Title from "@atoms/Title";
+import Text from "@atoms/Text";
 
 import { IconType } from "react-icons";
 import { AiOutlineArrowLeft } from "react-icons/ai";

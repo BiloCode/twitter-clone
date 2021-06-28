@@ -4,9 +4,9 @@ import * as S from "./styles";
 
 import { HiOutlineCog } from "react-icons/hi";
 
-import DesignColumns from "shared/components/templates/DesignColumns";
-import TitleBarSimple from "shared/components/molecules/TitleBarSimple";
-import NotificationTabLayout, { ITab } from "shared/components/molecules/TabLayout";
+import DesignColumns from "@templates/DesignColumns";
+import TitleBarSimple from "@molecules/TitleBarSimple";
+import NotificationTabLayout, { ITab } from "@molecules/TabLayout";
 
 const tabs: ITab[] = [
   {

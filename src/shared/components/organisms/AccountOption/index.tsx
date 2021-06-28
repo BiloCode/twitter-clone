@@ -2,12 +2,12 @@ import React, { FC, memo, useState } from "react";
 import * as Styled from "./styles";
 
 import ArrowDown from "../../atoms/ArrowDown";
-import UserBasicData from "shared/components/templates/UserBasicData";
+import UserBasicData from "@templates/UserBasicData";
 import DropDown from "./DropDown";
 
 import { useStore } from "effector-react";
-import currentAccountSelector from "store/accounts/selectors/currentAccountSelector";
-import haveNotificationSelector from "store/accounts/selectors/haveNotificationSelector";
+import currentAccountSelector from "@store/accounts/selectors/currentAccountSelector";
+import haveNotificationSelector from "@store/accounts/selectors/haveNotificationSelector";
 import classNames from "classnames";
 
 const AccountOption: FC = () => {

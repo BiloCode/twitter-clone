@@ -1,10 +1,10 @@
 import { FC, MouseEvent } from "react";
 import * as S from "./styles";
 
-import Title from "shared/components/atoms/Title";
+import Title from "@atoms/Title";
 import classNames from "classnames";
-import Text from "shared/components/atoms/Text";
-import TextLimiter from "application/utils/TextLimiter";
+import Text from "@atoms/Text";
+import TextLimiter from "@application/utils/TextLimiter";
 
 type TProps = {
   nickname: string;

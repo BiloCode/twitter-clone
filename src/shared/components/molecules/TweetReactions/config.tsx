@@ -1,13 +1,9 @@
 import { FaRegComment } from "react-icons/fa";
 import { MdRefresh } from "react-icons/md";
 import { AiOutlineHeart, AiFillHeart } from "react-icons/ai";
-import { colors } from "config/colors";
+import { colors } from "@style-config/colors";
 
-const configurationIcons = (
-  comments: number,
-  retweet: number,
-  hearts: number
-) => [
+const configurationIcons = (comments: number, retweet: number, hearts: number) => [
   {
     amount: comments,
     icons: {

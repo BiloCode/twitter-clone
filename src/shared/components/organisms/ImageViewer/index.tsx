@@ -7,8 +7,8 @@ import {
   AiOutlineDoubleLeft,
 } from "react-icons/ai";
 
-import HoverableIcon from "shared/components/atoms/HoverableIcon";
-import TweetReactions from "shared/components/molecules/TweetReactions";
+import HoverableIcon from "@atoms/HoverableIcon";
+import TweetReactions from "@molecules/TweetReactions";
 
 const ImageViewer = () => {
   const [isVisible, setIsVisible] = useState<boolean>(true);

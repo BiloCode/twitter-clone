@@ -1,7 +1,7 @@
 import React from "react";
 import { AiOutlineHome } from "react-icons/ai";
-import ContentDropDown from "shared/components/atoms/ContentDropdown";
-import ItemDropMenu from "shared/components/molecules/ItemDropMenu";
+import ContentDropDown from "@atoms/ContentDropdown";
+import ItemDropMenu from "@molecules/ItemDropMenu";
 
 const ListMenuDropdown = () => (
   <ContentDropDown right={6}>

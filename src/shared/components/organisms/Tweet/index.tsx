@@ -4,14 +4,15 @@ import classnames from "classnames";
 import * as S from "./styles";
 
 import { useStore } from "effector-react";
-import currentAccountSelector from "store/accounts/selectors/currentAccountSelector";
-import usePositionFloatProfile from "shared/hooks/usePositionFloatProfile";
 
-import UserAvatar from "shared/components/atoms/UserAvatar";
-import TweetImage from "shared/components/molecules/TweetImage";
-import TweetOptions from "shared/components/molecules/TweetOptions";
-import TweetReactions from "shared/components/molecules/TweetReactions";
-import TweetUserInformation from "shared/components/molecules/TweetUserInformation";
+import usePositionFloatProfile from "@hooks/usePositionFloatProfile";
+import currentAccountSelector from "@store/accounts/selectors/currentAccountSelector";
+
+import UserAvatar from "@atoms/UserAvatar";
+import TweetImage from "@molecules/TweetImage";
+import TweetOptions from "@molecules/TweetOptions";
+import TweetReactions from "@molecules/TweetReactions";
+import TweetUserInformation from "@molecules/TweetUserInformation";
 
 export type TweetProps = {
   image?: string;

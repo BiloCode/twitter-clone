@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { colors } from "config/colors";
+import { colors } from "@style-config/colors";
 
 import styled from "styled-components";
 import classnames from "classnames";
@@ -54,11 +54,7 @@ export type TwitterButtonProps = {
   onClick?(): void;
 };
 
-const TwitterButton: FC<TwitterButtonProps> = ({
-  children,
-  onClick,
-  filled,
-}) => (
+const TwitterButton: FC<TwitterButtonProps> = ({ children, onClick, filled }) => (
   <TwitterContainer className={classnames({ fill: filled })} onClick={onClick}>
     <TwitterText>{children}</TwitterText>
   </TwitterContainer>

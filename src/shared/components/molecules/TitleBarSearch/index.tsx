@@ -2,8 +2,8 @@ import * as S from "./styles";
 
 import { BiCog } from "react-icons/bi";
 
-import SearchBarFloatResults from "shared/components/organisms/SearchBarFloatResults";
-import HoverableIcon from "shared/components/atoms/HoverableIcon";
+import SearchBarFloatResults from "@organisms/SearchBarFloatResults";
+import HoverableIcon from "@atoms/HoverableIcon";
 
 const TitleBarSearch = () => (
   <S.MainContainer>

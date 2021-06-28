@@ -1,7 +1,7 @@
 import classNames from "classnames";
 import * as Styled from "./styles";
 
-import Image from "shared/components/atoms/Image";
+import Image from "@atoms/Image";
 
 type AvatarSize = "e-small" | "small" | "big" | "e-big" | "ee-big" | "default";
 type Props = {

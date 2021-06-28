@@ -4,10 +4,10 @@ import * as S from "./styles";
 
 import UserAvatar from "../../atoms/UserAvatar";
 
-import { colors } from "config/colors";
+import { colors } from "@style-config/colors";
 import { AiOutlineRetweet } from "react-icons/ai";
 import { BsBellFill, BsFillHeartFill, BsFillPersonFill } from "react-icons/bs";
-import Text from "shared/components/atoms/Text";
+import Text from "@atoms/Text";
 import { useMemo } from "react";
 
 export type NotificationType = "liked" | "retweet" | "follow" | "default";

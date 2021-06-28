@@ -8,15 +8,15 @@ import { AiOutlineGif, AiOutlineSend } from "react-icons/ai";
 import { GrEmoji } from "react-icons/gr";
 import { VscMegaphone } from "react-icons/vsc";
 
-import Text from "shared/components/atoms/Text";
-import TextWithIcon from "shared/components/molecules/TextWithIcon";
-import UserAllNames from "shared/components/molecules/UserAllNames";
-import UserFollowSection from "shared/components/molecules/UserFollowSection";
-import TitleBarUserChat from "shared/components/molecules/TitleBarUserChat";
-import UserMessageList from "shared/components/molecules/UserMessageList";
-import IconWithIcon from "shared/components/molecules/InputWithIcon";
-import HoverableIcon from "shared/components/atoms/HoverableIcon";
-import StickyContainer from "shared/components/atoms/StickyContainer";
+import Text from "@atoms/Text";
+import TextWithIcon from "@molecules/TextWithIcon";
+import UserAllNames from "@molecules/UserAllNames";
+import UserFollowSection from "@molecules/UserFollowSection";
+import TitleBarUserChat from "@molecules/TitleBarUserChat";
+import UserMessageList from "@molecules/UserMessageList";
+import IconWithIcon from "@molecules/InputWithIcon";
+import HoverableIcon from "@atoms/HoverableIcon";
+import StickyContainer from "@atoms/StickyContainer";
 
 const allMessages = [
   {

@@ -1,7 +1,7 @@
 import * as Styled from "./styles";
 
-import TwitterMenuOptions from "shared/components/molecules/TwitterMenuOptions";
-import AccountOption from "shared/components/organisms/AccountOption";
+import TwitterMenuOptions from "@molecules/TwitterMenuOptions";
+import AccountOption from "@organisms/AccountOption";
 import TweetButton from "../../atoms/TweetButton";
 
 const TwitterMenu = () => (

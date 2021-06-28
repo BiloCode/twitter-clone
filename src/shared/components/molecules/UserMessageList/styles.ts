@@ -1,4 +1,4 @@
-import { AVATAR_SIZE } from "config/constants";
+import { AVATAR_SIZE } from "@style-config/constants";
 import styled from "styled-components";
 
 export const MessagesContainer = styled.div`

@@ -1,10 +1,10 @@
 import classNames from "classnames";
 import * as S from "./styles";
 
-import Text from "shared/components/atoms/Text";
-import UserAvatar from "shared/components/atoms/UserAvatar";
-import UserMessage from "shared/components/molecules/UserMessage";
-import DateFormated from "application/utils/DateFormated";
+import Text from "@atoms/Text";
+import UserAvatar from "@atoms/UserAvatar";
+import UserMessage from "@molecules/UserMessage";
+import DateFormated from "@application/utils/DateFormated";
 
 type TProps = {
   sendDate: Date;

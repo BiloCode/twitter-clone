@@ -1,4 +1,4 @@
-import { colors } from "config/colors";
+import { colors } from "@style-config/colors";
 import styled from "styled-components";
 
 export const Container = styled.div`
@@ -15,6 +15,4 @@ export const Icon = styled.span`
   color: ${colors.textLight};
 `;
 
-export const Text = styled.span`
-
-`;
+export const Text = styled.span``;

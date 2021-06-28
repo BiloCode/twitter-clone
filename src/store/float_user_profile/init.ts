@@ -1,19 +1,19 @@
-import { floatUserProfileStore , SetActive, SetPosition, SetProfileData } from ".";
+import { floatUserProfileStore, SetActive, SetPosition, SetProfileData } from ".";
 
 import { TCoords } from "./types";
-import { TAccountState } from "store/accounts/types";
+import { TAccountState } from "@store/accounts/types";
 
-floatUserProfileStore.on(SetActive, (state, isActive : boolean) => ({
+floatUserProfileStore.on(SetActive, (state, isActive: boolean) => ({
   ...state,
-  isActive
+  isActive,
 }));
 
-floatUserProfileStore.on(SetPosition, (state, coords : TCoords) => ({
+floatUserProfileStore.on(SetPosition, (state, coords: TCoords) => ({
   ...state,
-  coords
+  coords,
 }));
 
-floatUserProfileStore.on(SetProfileData, (state, profile : TAccountState) => ({
+floatUserProfileStore.on(SetProfileData, (state, profile: TAccountState) => ({
   ...state,
-  profile
-}))
+  profile,
+}));

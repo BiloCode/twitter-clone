@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { colors } from "config/colors";
+import { colors } from "@style-config/colors";
 import { TIconColor } from ".";
 
 export const IconContainer = styled.div`

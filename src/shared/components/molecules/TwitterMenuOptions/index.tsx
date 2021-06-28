@@ -9,11 +9,11 @@ import MoreOptions from "./MoreOptions";
 import NotificationOption from "./NotificationContent";
 
 import { useStore } from "effector-react";
-import currentAccountSelector from "store/accounts/selectors/currentAccountSelector";
+import currentAccountSelector from "@store/accounts/selectors/currentAccountSelector";
 
-import useLinkNavigate from "shared/hooks/useLinkNavigate";
-import useRouteCheck from "shared/hooks/useRouteCheck";
-import { colors } from "config/colors";
+import useLinkNavigate from "@hooks/useLinkNavigate";
+import useRouteCheck from "@hooks/useRouteCheck";
+import { colors } from "@style-config/colors";
 
 const SelectableOptionList = () => {
   const current_account = useStore(currentAccountSelector);

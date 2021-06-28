@@ -1,8 +1,8 @@
 import { BsThreeDots } from "react-icons/bs";
 import * as S from "./styles";
 
-import Text from "shared/components/atoms/Text";
-import Title from "shared/components/atoms/Title";
+import Text from "@atoms/Text";
+import Title from "@atoms/Title";
 import HoverableIcon from "../../atoms/HoverableIcon";
 
 const Trend = () => (

@@ -2,8 +2,8 @@ import { FC, useEffect, useState } from "react";
 import { RouteComponentProps } from "@reach/router";
 import * as S from "./style";
 
-import { Spinner } from "shared/components/atoms/Spinner";
-import Notification from "shared/components/molecules/Notification";
+import { Spinner } from "@atoms/Spinner";
+import Notification from "@molecules/Notification";
 
 const Notifications: FC<RouteComponentProps> = () => {
   const [isLoading, setIsLoading] = useState<boolean>(true);

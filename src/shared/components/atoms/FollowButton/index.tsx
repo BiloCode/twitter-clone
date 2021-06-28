@@ -1,7 +1,7 @@
 import { FC, useState } from "react";
 
 import Follower from "./Follower";
-import TwitterButton from "shared/components/atoms/TwitterButton";
+import TwitterButton from "@atoms/TwitterButton";
 
 type FollowManagerProps = {
   isFollow: boolean;

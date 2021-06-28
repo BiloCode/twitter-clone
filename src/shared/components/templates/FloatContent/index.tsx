@@ -1,11 +1,12 @@
-import Portals from "shared/components/atoms/Portals";
+import Portals from "@atoms/Portals";
 import TwitterUserFloat from "../../organisms/TwitterUserFloat";
 
-import { useStore } from "effector-react";
-import { floatUserProfileStore } from "store/float_user_profile";
+import ImageViewer from "@organisms/ImageViewer";
 
-import currentAccountSelector from "store/accounts/selectors/currentAccountSelector";
-import ImageViewer from "../../organisms/ImageViewer";
+import { useStore } from "effector-react";
+
+import { floatUserProfileStore } from "@store/float_user_profile";
+import currentAccountSelector from "@store/accounts/selectors/currentAccountSelector";
 
 const FloatContent = () => {
   const current_account = useStore(currentAccountSelector);

@@ -5,12 +5,12 @@ import { GiStarsStack } from "react-icons/gi";
 import faker from "faker";
 import * as S from "./styles";
 
-import Tweet from "shared/components/organisms/Tweet";
-import DesignColumns from "shared/components/templates/DesignColumns";
-import NewTweetControls from "shared/components/organisms/NewTweetControls";
-import TweetCommentBig from "shared/components/templates/TweetCommentBig";
-import TitleBarSimple from "shared/components/molecules/TitleBarSimple";
-import StickyContainer from "shared/components/atoms/StickyContainer";
+import Tweet from "@organisms/Tweet";
+import DesignColumns from "@templates/DesignColumns";
+import NewTweetControls from "@organisms/NewTweetControls";
+import TweetCommentBig from "@templates/TweetCommentBig";
+import TitleBarSimple from "@molecules/TitleBarSimple";
+import StickyContainer from "@atoms/StickyContainer";
 
 const Home: FC<RouteComponentProps> = () => (
   <DesignColumns>

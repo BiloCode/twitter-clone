@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { colors } from "config/colors";
+import { colors } from "@style-config/colors";
 
 export const MainText = styled.span`
   font-weight: 400;

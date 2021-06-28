@@ -1,7 +1,7 @@
 import * as S from "./styles";
 import classNames from "classnames";
 
-import Icon from "shared/components/atoms/Icon";
+import Icon from "@atoms/Icon";
 
 import { IconType } from "react-icons/lib";
 

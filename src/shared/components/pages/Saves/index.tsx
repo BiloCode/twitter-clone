@@ -1,8 +1,8 @@
 import { FC } from "react";
 import { RouteComponentProps } from "@reach/router";
 
-import DesignColumns from "shared/components/templates/DesignColumns";
-import TitleBarSimple from "shared/components/molecules/TitleBarSimple";
+import DesignColumns from "@templates/DesignColumns";
+import TitleBarSimple from "@molecules/TitleBarSimple";
 
 const Saves: FC<RouteComponentProps> = () => (
   <DesignColumns>

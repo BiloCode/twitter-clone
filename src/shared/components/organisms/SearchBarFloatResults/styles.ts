@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { INPUT_SEARCH_HEIGHT } from "config/constants";
+import { INPUT_SEARCH_HEIGHT } from "@style-config/constants";
 
 export const MainContainer = styled.div`
   position: relative;

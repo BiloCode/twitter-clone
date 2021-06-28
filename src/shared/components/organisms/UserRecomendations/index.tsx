@@ -1,10 +1,10 @@
 import faker from "faker";
 import * as S from "./styles";
 
-import FollowButton from "shared/components/atoms/FollowButton";
-import UserBasicData from "shared/components/templates/UserBasicData";
-import HoverableText from "shared/components/atoms/HoverableText";
-import TitleBarSimple from "shared/components/molecules/TitleBarSimple";
+import FollowButton from "@atoms/FollowButton";
+import UserBasicData from "@templates/UserBasicData";
+import HoverableText from "@atoms/HoverableText";
+import TitleBarSimple from "@molecules/TitleBarSimple";
 
 const users = new Array(3).fill("");
 

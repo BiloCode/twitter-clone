@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { colors, TEXT_LIGHT, WHITE_LIGHT } from "config/colors";
+import { colors, TEXT_LIGHT, WHITE_LIGHT } from "@style-config/colors";
 
 const size = "38px";
 

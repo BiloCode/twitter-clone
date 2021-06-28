@@ -3,9 +3,9 @@ import * as S from "./styles";
 
 import { AiOutlineSearch } from "react-icons/ai";
 
-import SearchBarItem from "shared/components/molecules/SearchBarItem";
-import SearchBarItemSimple from "shared/components/molecules/SearchBarItemSimple";
-import InputWithIcon from "shared/components/molecules/InputWithIcon";
+import SearchBarItem from "@molecules/SearchBarItem";
+import SearchBarItemSimple from "@molecules/SearchBarItemSimple";
+import InputWithIcon from "@molecules/InputWithIcon";
 
 const SearchBarFloatResults = () => {
   const [active, setActive] = useState<boolean>(false);

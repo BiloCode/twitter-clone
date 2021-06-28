@@ -1,9 +1,9 @@
 import { IconType } from "react-icons/lib";
 import * as S from "./styles";
 
-import Text from "shared/components/atoms/Text";
-import Title from "shared/components/atoms/Title";
-import HoverableIcon from "shared/components/atoms/HoverableIcon";
+import Text from "@atoms/Text";
+import Title from "@atoms/Title";
+import HoverableIcon from "@atoms/HoverableIcon";
 
 type IProps = {
   title: string;

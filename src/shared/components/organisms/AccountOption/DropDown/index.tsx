@@ -3,13 +3,13 @@ import * as Styled from "./styles";
 
 import Item from "./Item";
 import UserAccountItem from "../../../molecules/UserAccountItem";
-import ShadedContainer from "shared/components/atoms/ShadedContainer";
+import ShadedContainer from "@atoms/ShadedContainer";
 
 import { useStore } from "effector-react";
-import { accountsStore } from "store/accounts";
-import { TPersonalInformation } from "store/accounts/types";
-import { AccountChange, selectedAccountStore } from "store/account_selected";
-import currentAccountSelector from "store/accounts/selectors/currentAccountSelector";
+import { accountsStore } from "@store/accounts";
+import { TPersonalInformation } from "@store/accounts/types";
+import { AccountChange, selectedAccountStore } from "@store/account_selected";
+import currentAccountSelector from "@store/accounts/selectors/currentAccountSelector";
 
 const DropDown: FC = () => {
   const selected_account = useStore(selectedAccountStore);

@@ -1,13 +1,13 @@
 import { FC } from "react";
 import * as S from "./styles";
 
-import UserAvatar from "shared/components/atoms/UserAvatar";
-import TextWithIcon from "shared/components/molecules/TextWithIcon";
-import UserFollowSection from "shared/components/molecules/UserFollowSection";
-import BackgroundImage from "shared/components/molecules/BackgroundImage";
-import UserProfileInformation from "shared/components/molecules/UserProfileInformation";
+import UserAvatar from "@atoms/UserAvatar";
+import TextWithIcon from "@molecules/TextWithIcon";
+import UserFollowSection from "@molecules/UserFollowSection";
+import BackgroundImage from "@molecules/BackgroundImage";
+import UserProfileInformation from "@molecules/UserProfileInformation";
 
-import { TAccountState } from "store/accounts/types";
+import { TAccountState } from "@store/accounts/types";
 
 import { BiCalendar } from "react-icons/bi";
 import { HiOutlineLocationMarker } from "react-icons/hi";

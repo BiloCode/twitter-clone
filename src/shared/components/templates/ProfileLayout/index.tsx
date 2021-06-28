@@ -2,12 +2,12 @@ import { FC } from "react";
 import { RouteComponentProps } from "@reach/router";
 
 import { useStore } from "effector-react";
-import currentAccountSelector from "store/accounts/selectors/currentAccountSelector";
+import currentAccountSelector from "@store/accounts/selectors/currentAccountSelector";
 
-import TabLayout from "shared/components/molecules/TabLayout";
-import DesignColumns from "shared/components/templates/DesignColumns";
-import TitleBarPush from "shared/components/molecules/TitleBarPush";
-import UserProfileExtends from "shared/components/organisms/UserProfileExtends";
+import TabLayout from "@molecules/TabLayout";
+import DesignColumns from "@templates/DesignColumns";
+import TitleBarPush from "@molecules/TitleBarPush";
+import UserProfileExtends from "@organisms/UserProfileExtends";
 
 function ProfileTabs(username: string) {
   return [

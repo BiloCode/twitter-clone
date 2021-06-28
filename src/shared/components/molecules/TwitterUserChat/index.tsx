@@ -1,9 +1,9 @@
 import classNames from "classnames";
 import * as S from "./styles";
 
-import Text from "shared/components/atoms/Text";
-import UserAvatar from "shared/components/atoms/UserAvatar";
-import UserAllNames from "shared/components/molecules/UserAllNames";
+import Text from "@atoms/Text";
+import UserAvatar from "@atoms/UserAvatar";
+import UserAllNames from "@molecules/UserAllNames";
 
 type TProps = {
   select?: boolean;

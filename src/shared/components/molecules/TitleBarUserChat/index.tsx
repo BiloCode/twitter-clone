@@ -1,10 +1,10 @@
 import { IconType } from "react-icons";
 import * as S from "./styles";
 
-import Text from "shared/components/atoms/Text";
-import Title from "shared/components/atoms/Title";
-import UserAvatar from "shared/components/atoms/UserAvatar";
-import HoverableIcon from "shared/components/atoms/HoverableIcon";
+import Text from "@atoms/Text";
+import Title from "@atoms/Title";
+import UserAvatar from "@atoms/UserAvatar";
+import HoverableIcon from "@atoms/HoverableIcon";
 
 type TitleBarProps = {
   icon: IconType;

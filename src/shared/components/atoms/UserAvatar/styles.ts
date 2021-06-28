@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { AVATAR_SIZE } from "config/constants";
+import { AVATAR_SIZE } from "@style-config/constants";
 
 export const Container = styled.div`
   --size: ${AVATAR_SIZE.DEFAULT};

@@ -3,10 +3,10 @@ import * as S from "./styles";
 
 import { AiOutlineSearch } from "react-icons/ai";
 
-import SearchBar from "shared/components/molecules/InputWithIcon";
-import TwitterUserChat from "shared/components/molecules/TwitterUserChat";
+import SearchBar from "@molecules/InputWithIcon";
+import TwitterUserChat from "@molecules/TwitterUserChat";
 
-import messages from "application/mocks/messages";
+import messages from "@application/mocks/messages";
 
 type ChatProps = {
   floating?: boolean;

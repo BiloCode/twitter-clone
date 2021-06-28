@@ -1,7 +1,7 @@
 import * as S from "./styles";
 
-import Text from "shared/components/atoms/Text";
-import HoverableIcon from "shared/components/atoms/HoverableIcon";
+import Text from "@atoms/Text";
+import HoverableIcon from "@atoms/HoverableIcon";
 
 import { BsThreeDots } from "react-icons/bs";
 import { RiHeartAddLine } from "react-icons/ri";

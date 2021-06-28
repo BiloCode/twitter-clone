@@ -1,4 +1,4 @@
-import { TITLE_BAR_HEIGHT } from "config/constants";
+import { TITLE_BAR_HEIGHT } from "@style-config/constants";
 import styled from "styled-components";
 
 export const MainContainer = styled.div`

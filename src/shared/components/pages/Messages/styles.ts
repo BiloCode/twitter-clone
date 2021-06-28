@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { WHITE_LIGHT } from "config/colors";
+import { WHITE_LIGHT } from "@style-config/colors";
 
 export const MainContainer = styled.div`
   display: grid;
