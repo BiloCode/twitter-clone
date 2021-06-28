@@ -1,8 +1,10 @@
 import { FC } from "react";
 import * as S from "./styles";
 
-import SearchBar from "../../organisms/SearchBarFloatResults";
+import UserMessageFloat from "../UserMessageFloat";
 import UserTrends from "../../organisms/UserTrends";
+import Portals from "shared/components/atoms/Portals";
+import SearchBar from "../../organisms/SearchBarFloatResults";
 import UserRecomendations from "../../organisms/UserRecomendations";
 import StickyContainer from "shared/components/atoms/StickyContainer";
 
@@ -32,6 +34,9 @@ const DesignColumns: FC = ({ children }) => {
           </S.ScrollableContainer>
         </S.AsideContent>
       </S.RightContainer>
+      <Portals>
+        <UserMessageFloat />
+      </Portals>
     </S.Container>
   );
 };

@@ -10,6 +10,10 @@ export const GlobalStyle = createGlobalStyle`
     font-family: 'Roboto', sans-serif;
   }
 
+  body {
+    overflow: hidden;
+  }
+
   input , button {
     border : none;
     outline: none;

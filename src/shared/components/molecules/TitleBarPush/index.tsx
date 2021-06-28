@@ -5,8 +5,8 @@ import HoverableIcon from "shared/components/atoms/HoverableIcon";
 import Title from "shared/components/atoms/Title";
 import Text from "shared/components/atoms/Text";
 
-import { AiOutlineArrowLeft } from "react-icons/ai";
 import { IconType } from "react-icons";
+import { AiOutlineArrowLeft } from "react-icons/ai";
 
 type Icon = {
   element: IconType;

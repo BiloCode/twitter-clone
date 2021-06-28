@@ -11,7 +11,7 @@ import TextWithIcon from "shared/components/molecules/TextWithIcon";
 import UserAllNames from "shared/components/molecules/UserAllNames";
 import UserFollowSection from "shared/components/molecules/UserFollowSection";
 import TitleBarUserChat from "shared/components/molecules/TitleBarUserChat";
-import UserMessageList from "shared/components/templates/UserMessageList";
+import UserMessageList from "shared/components/molecules/UserMessageList";
 import IconWithIcon from "shared/components/molecules/InputWithIcon";
 import HoverableIcon from "shared/components/atoms/HoverableIcon";
 import StickyContainer from "shared/components/atoms/StickyContainer";
@@ -48,7 +48,11 @@ const allMessages = [
   },
 ];
 
-const UserChatConversation = () => (
+type ChatProps = {
+  floating?: boolean;
+};
+
+const UserChatConversation = ({ floating }: ChatProps) => (
   <S.MainContainer>
     <StickyContainer>
       <TitleBarUserChat />

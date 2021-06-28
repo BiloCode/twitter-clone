@@ -4,11 +4,15 @@ import * as S from "./styles";
 import { AiOutlineSearch } from "react-icons/ai";
 
 import SearchBar from "shared/components/molecules/InputWithIcon";
-import TwitterUserChat from "shared/components/organisms/TwitterUserChat";
+import TwitterUserChat from "shared/components/molecules/TwitterUserChat";
 
 import messages from "application/mocks/messages";
 
-const UserSearchChat = () => {
+type ChatProps = {
+  floating?: boolean;
+};
+
+const UserSearchChat = ({ floating }: ChatProps) => {
   const [focus, setFocus] = useState<boolean>(false);
 
   const onFocus = () => setFocus(() => true);
@@ -16,15 +20,17 @@ const UserSearchChat = () => {
 
   return (
     <div>
-      <S.SearchBarContainer>
-        <SearchBar
-          onBlur={onBlur}
-          isActive={focus}
-          onFocus={onFocus}
-          placeholder="Write any name"
-          icon={{ type: AiOutlineSearch }}
-        />
-      </S.SearchBarContainer>
+      {!floating && (
+        <S.SearchBarContainer>
+          <SearchBar
+            onBlur={onBlur}
+            isActive={focus}
+            onFocus={onFocus}
+            placeholder="Write any name"
+            icon={{ type: AiOutlineSearch }}
+          />
+        </S.SearchBarContainer>
+      )}
       <div>
         {messages.map((v) => (
           <TwitterUserChat

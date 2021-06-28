@@ -3,7 +3,7 @@ import { RouteComponentProps } from "@reach/router";
 import * as S from "./styles";
 
 import TitleBarPush from "shared/components/molecules/TitleBarPush";
-import UserSearchChat from "shared/components/templates/UserSearchChat";
+import UserSearchChat from "shared/components/organisms/UserSearchChat";
 import UserChatConversation from "shared/components/organisms/UserChatConversation";
 
 import { HiOutlineCog } from "react-icons/hi";

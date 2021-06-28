@@ -20,7 +20,7 @@ const StickyContainer: FC<StickyProps> = ({ children, type }) => (
 );
 
 StickyContainer.defaultProps = {
-  type: "bottom",
+  type: "top",
 };
 
 export default StickyContainer;
