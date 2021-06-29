@@ -30,6 +30,7 @@ module.exports = {
   ],
   resolve : {
     extensions : [".js",".tsx",".jsx",".ts"],
+    preferRelative: true,
     alias : {
       "@templates" : path.resolve(__dirname, "../src/shared/components/templates"),
       "@atoms" : path.resolve(__dirname, "../src/shared/components/atoms"),
@@ -39,9 +40,10 @@ module.exports = {
       "@store" : path.resolve(__dirname, "../src/store"),
       "@router" : path.resolve(__dirname, "../src/router"),
       "@hooks" : path.resolve(__dirname, "../src/shared/hooks"),
-      "@contexts" : path.resolve(__dirname, "../src/shared/context"),
+      "@context" : path.resolve(__dirname, "../src/shared/context"),
       "@style-config": path.resolve(__dirname, "../src/config"),
-      "@application": path.resolve(__dirname, "../src/application")
+      "@application": path.resolve(__dirname, "../src/application"),
+      "@assets" : path.resolve(__dirname, "../src/assets")
     }
   }
 }

@@ -4,7 +4,7 @@ import * as Styled from "./styles";
 
 import TwitterMenu from "@templates/TwitterMenu";
 
-import { useScrollableRightContent } from "@contexts/ScrollableRightContent/context";
+import { useScrollableRightContent } from "@context/ScrollableRightContent/context";
 
 const RootLayout: FC<RouteComponentProps> = ({ children }) => {
   const { rightElementRef } = useScrollableRightContent();

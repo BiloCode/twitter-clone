@@ -33,8 +33,9 @@ const UserSearchChat = ({ floating, onClickChat }: ChatProps) => {
         </S.SearchBarContainer>
       )}
       <div>
-        {messages.map((v) => (
+        {messages.map((v, i) => (
           <TwitterUserChat
+            key={i}
             onClick={onClickChat}
             chat={{ lastUpdated: v.lastUpdated, message: v.message }}
             user={{
