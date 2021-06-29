@@ -1,8 +1,7 @@
-import * as Styled from "./styles";
-
-import TwitterMenuOptions from "@molecules/TwitterMenuOptions";
-import AccountOption from "@organisms/AccountOption";
-import TweetButton from "../../atoms/TweetButton";
+import TwitterMenuOptions from '@molecules/TwitterMenuOptions';
+import AccountOption from '@organisms/AccountOption';
+import * as Styled from './styles';
+import TweetButton from '../../atoms/TweetButton';
 
 const TwitterMenu = () => (
   <Styled.MainContainer>

@@ -1,21 +1,21 @@
-import { FC } from "react";
-import { RouteComponentProps } from "@reach/router";
-import * as S from "./styles";
+import { FC } from 'react';
+import { RouteComponentProps } from '@reach/router';
 
-import { HiOutlineCog } from "react-icons/hi";
+import { HiOutlineCog } from 'react-icons/hi';
 
-import DesignColumns from "@templates/DesignColumns";
-import TitleBarSimple from "@molecules/TitleBarSimple";
-import NotificationTabLayout, { ITab } from "@molecules/TabLayout";
+import DesignColumns from '@templates/DesignColumns';
+import TitleBarSimple from '@molecules/TitleBarSimple';
+import NotificationTabLayout, { ITab } from '@molecules/TabLayout';
+import * as S from './styles';
 
 const tabs: ITab[] = [
   {
-    title: "All",
-    link: "/notifications",
+    title: 'All',
+    link: '/notifications',
   },
   {
-    title: "Mentions",
-    link: "/notifications/mentions",
+    title: 'Mentions',
+    link: '/notifications/mentions',
   },
 ];
 

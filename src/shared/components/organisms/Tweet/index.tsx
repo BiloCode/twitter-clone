@@ -1,18 +1,18 @@
-import { FC, memo } from "react";
-import faker from "faker";
-import classnames from "classnames";
-import * as S from "./styles";
+import { FC, memo } from 'react';
+import faker from 'faker';
+import classnames from 'classnames';
 
-import { useStore } from "effector-react";
+import { useStore } from 'effector-react';
 
-import usePositionFloatProfile from "@hooks/usePositionFloatProfile";
-import currentAccountSelector from "@store/accounts/selectors/currentAccountSelector";
+import usePositionFloatProfile from '@hooks/usePositionFloatProfile';
+import currentAccountSelector from '@store/accounts/selectors/currentAccountSelector';
 
-import UserAvatar from "@atoms/UserAvatar";
-import TweetImage from "@molecules/TweetImage";
-import TweetOptions from "@molecules/TweetOptions";
-import TweetReactions from "@molecules/TweetReactions";
-import TweetUserInformation from "@molecules/TweetUserInformation";
+import UserAvatar from '@atoms/UserAvatar';
+import TweetImage from '@molecules/TweetImage';
+import TweetOptions from '@molecules/TweetOptions';
+import TweetReactions from '@molecules/TweetReactions';
+import TweetUserInformation from '@molecules/TweetUserInformation';
+import * as S from './styles';
 
 export type TweetProps = {
   image?: string;
@@ -24,7 +24,7 @@ const Tweet: FC<TweetProps> = ({ image, retweet }) => {
   const current_account = useStore(currentAccountSelector);
 
   return (
-    <S.TweetContainer className={classnames({ "hide-border": retweet })}>
+    <S.TweetContainer className={classnames({ 'hide-border': retweet })}>
       <S.Container>
         <S.ImageContainer onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
           <UserAvatar

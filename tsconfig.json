@@ -11,7 +11,7 @@
       "@router" : ["router"],
       "@hooks/*" : ["shared/hooks/*"],
       "@context/*" : ["shared/context/*"],
-      "@config/*": ["config/*"],
+      "@style-config/*": ["config/*"],
       "@application/*": ["application/*"],
       "@assets/*" : ["assets/*"],
       },

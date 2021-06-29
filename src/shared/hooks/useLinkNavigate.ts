@@ -5,7 +5,7 @@ const useLinkNavigate = () => {
 
   return (link : string) => () => {
     navigate(link);
-  }
-}
+  };
+};
 
 export default useLinkNavigate;

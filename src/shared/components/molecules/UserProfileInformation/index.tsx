@@ -1,8 +1,8 @@
-import { FC, memo } from "react";
-import * as Styled from "./styles";
+import { FC, memo } from 'react';
 
-import Text from "@atoms/Text";
-import Title from "@atoms/Title";
+import Text from '@atoms/Text';
+import Title from '@atoms/Title';
+import * as Styled from './styles';
 
 interface IProps {
   isModal?: boolean;
@@ -19,8 +19,11 @@ const UserProfileInformation: FC<IProps> = ({
 }) => (
   <Styled.Container>
     <Styled.UserText>
-      <Title type={isModal ? "black-small" : "black-medium"}>{nickname}</Title>
-      <Text size={isModal ? "small" : "default"}>@{username}</Text>
+      <Title type={isModal ? 'black-small' : 'black-medium'}>{nickname}</Title>
+      <Text size={isModal ? 'small' : 'default'}>
+        @
+        {username}
+      </Text>
     </Styled.UserText>
     <Styled.Description>{description}</Styled.Description>
   </Styled.Container>

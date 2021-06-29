@@ -1,16 +1,16 @@
-import { FC } from "react";
-import { RouteComponentProps } from "@reach/router";
-import { GiStarsStack } from "react-icons/gi";
+import { FC } from 'react';
+import { RouteComponentProps } from '@reach/router';
+import { GiStarsStack } from 'react-icons/gi';
 
-import faker from "faker";
-import * as S from "./styles";
+import faker from 'faker';
 
-import Tweet from "@organisms/Tweet";
-import DesignColumns from "@templates/DesignColumns";
-import NewTweetControls from "@organisms/NewTweetControls";
-import TweetCommentBig from "@templates/TweetCommentBig";
-import TitleBarSimple from "@molecules/TitleBarSimple";
-import StickyContainer from "@atoms/StickyContainer";
+import Tweet from '@organisms/Tweet';
+import DesignColumns from '@templates/DesignColumns';
+import NewTweetControls from '@organisms/NewTweetControls';
+import TweetCommentBig from '@templates/TweetCommentBig';
+import TitleBarSimple from '@molecules/TitleBarSimple';
+import StickyContainer from '@atoms/StickyContainer';
+import * as S from './styles';
 
 const Home: FC<RouteComponentProps> = () => (
   <DesignColumns>

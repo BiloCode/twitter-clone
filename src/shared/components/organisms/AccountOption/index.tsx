@@ -1,14 +1,14 @@
-import React, { FC, memo, useState } from "react";
-import * as Styled from "./styles";
+import React, { FC, memo, useState } from 'react';
 
-import ArrowDown from "../../atoms/ArrowDown";
-import UserBasicData from "@templates/UserBasicData";
-import DropDown from "./DropDown";
+import UserBasicData from '@templates/UserBasicData';
 
-import { useStore } from "effector-react";
-import currentAccountSelector from "@store/accounts/selectors/currentAccountSelector";
-import haveNotificationSelector from "@store/accounts/selectors/haveNotificationSelector";
-import classNames from "classnames";
+import { useStore } from 'effector-react';
+import currentAccountSelector from '@store/accounts/selectors/currentAccountSelector';
+import haveNotificationSelector from '@store/accounts/selectors/haveNotificationSelector';
+import classNames from 'classnames';
+import DropDown from './DropDown';
+import * as Styled from './styles';
+import ArrowDown from '../../atoms/ArrowDown';
 
 const AccountOption: FC = () => {
   const current_account = useStore(currentAccountSelector);
@@ -18,7 +18,7 @@ const AccountOption: FC = () => {
   const ToggleDropdown = () => setIsDropdownHide((isHide) => !isHide);
 
   return (
-    <Styled.Container className={classNames({ "not-active": !is_dropdown_hide })}>
+    <Styled.Container className={classNames({ 'not-active': !is_dropdown_hide })}>
       <UserBasicData
         image={current_account?.personalInformation.profileImage!}
         username={current_account?.personalInformation.username!}

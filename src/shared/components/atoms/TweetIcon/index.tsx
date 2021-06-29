@@ -1,7 +1,6 @@
-import { FC, memo, useState } from "react";
-import * as S from "./styles";
-
-import classnames from "classnames";
+import { FC, memo, useState } from 'react';
+import classnames from 'classnames';
+import * as S from './styles';
 
 export type TIconColor = {
   background?: string;
@@ -51,8 +50,8 @@ const TweetIcon: FC<TProps> = ({
       </S.IconContainer>
       <S.Text>
         {currentAmount !== 0
-          ? String(currentAmount > 99 ? "99+" : currentAmount)
-          : ""}
+          ? String(currentAmount > 99 ? '99+' : currentAmount)
+          : ''}
       </S.Text>
     </S.Container>
   );

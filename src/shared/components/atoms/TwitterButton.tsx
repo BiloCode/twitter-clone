@@ -1,8 +1,8 @@
-import { FC } from "react";
-import { colors } from "@style-config/colors";
+import { FC } from 'react';
+import { colors } from '@style-config/colors';
 
-import styled from "styled-components";
-import classnames from "classnames";
+import styled from 'styled-components';
+import classnames from 'classnames';
 
 export const TwitterText = styled.div`
   font-weight: 800;

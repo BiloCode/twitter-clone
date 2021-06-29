@@ -1,7 +1,7 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
-import { colors } from "@style-config/colors";
-import { INPUT_SEARCH_HEIGHT } from "@style-config/constants";
+import { colors } from '@style-config/colors';
+import { INPUT_SEARCH_HEIGHT } from '@style-config/constants';
 
 export const Icon = styled.span`
   width: 64px;

@@ -1,5 +1,5 @@
-import { FC } from "react";
-import { Redirect, RouteComponentProps } from "@reach/router";
+import { FC } from 'react';
+import { Redirect, RouteComponentProps } from '@reach/router';
 
 const Default: FC<RouteComponentProps> = () => <Redirect noThrow to="/home" />;
 

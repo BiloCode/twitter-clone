@@ -1,7 +1,6 @@
-import { FC } from "react";
-import * as S from "./styles";
-
-import Image from "@atoms/Image";
+import { FC } from 'react';
+import Image from '@atoms/Image';
+import * as S from './styles';
 
 type TweetImageProps = {
   src: string;

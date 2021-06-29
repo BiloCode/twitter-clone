@@ -1,10 +1,10 @@
-import styled from "styled-components";
-import { colors } from "@style-config/colors";
+import styled from 'styled-components';
+import { colors } from '@style-config/colors';
 
 export const ItemContainer = styled.div({
-  width: "max-content",
-  display: "flex",
-  alignItems: "center",
+  width: 'max-content',
+  display: 'flex',
+  alignItems: 'center',
   padding: 10,
   borderRadius: 28,
 });
@@ -12,16 +12,16 @@ export const ItemContainer = styled.div({
 export const IconContainer = styled.div({
   fontSize: 28,
   lineHeight: 0,
-  position: "relative",
+  position: 'relative',
 });
 
 export const TextContainer = styled.div({
-  margin: "0 15px",
+  margin: '0 15px',
 });
 
 export const Text = styled.span({
   fontSize: 19,
-  fontWeight: "bold",
+  fontWeight: 'bold',
 });
 
 interface MainContainerProps {
@@ -30,14 +30,14 @@ interface MainContainerProps {
 
 export const MainContainer = styled.div<MainContainerProps>(({ isSelect }) => ({
   height: 60,
-  display: "flex",
-  alignItems: "center",
-  padding: "7px 0",
+  display: 'flex',
+  alignItems: 'center',
+  padding: '7px 0',
   [`${IconContainer} , ${TextContainer}`]: {
-    color: isSelect ? colors.skyblue : "black",
+    color: isSelect ? colors.skyblue : 'black',
   },
-  ":hover": {
-    cursor: "pointer",
+  ':hover': {
+    cursor: 'pointer',
     [ItemContainer]: {
       backgroundColor: colors.skyblueSmooth,
     },

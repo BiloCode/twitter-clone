@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const BottomContent = styled.div`
   padding: 1em;
@@ -8,7 +8,7 @@ export const BottomContent = styled.div`
 `;
 
 export const ButtonsContainer = styled.div({
-  display: "flex",
-  justifyContent: "space-between",
+  display: 'flex',
+  justifyContent: 'space-between',
   lineHeight: 0,
 });

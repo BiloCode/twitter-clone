@@ -1,15 +1,15 @@
-import React, { FC, memo } from "react";
-import * as Styled from "./styles";
+import React, { FC, memo } from 'react';
 
-import Item from "./Item";
-import UserAccountItem from "../../../molecules/UserAccountItem";
-import ShadedContainer from "@atoms/ShadedContainer";
+import ShadedContainer from '@atoms/ShadedContainer';
 
-import { useStore } from "effector-react";
-import { accountsStore } from "@store/accounts";
-import { TPersonalInformation } from "@store/accounts/types";
-import { AccountChange, selectedAccountStore } from "@store/account_selected";
-import currentAccountSelector from "@store/accounts/selectors/currentAccountSelector";
+import { useStore } from 'effector-react';
+import { accountsStore } from '@store/accounts';
+import { TPersonalInformation } from '@store/accounts/types';
+import { AccountChange, selectedAccountStore } from '@store/account_selected';
+import currentAccountSelector from '@store/accounts/selectors/currentAccountSelector';
+import UserAccountItem from '../../../molecules/UserAccountItem';
+import * as Styled from './styles';
+import Item from './Item';
 
 const DropDown: FC = () => {
   const selected_account = useStore(selectedAccountStore);

@@ -1,13 +1,13 @@
-import { useState } from "react";
-import classNames from "classnames";
-import * as S from "./styles";
+import { useState } from 'react';
+import classNames from 'classnames';
 
-import TitleBarPush from "@molecules/TitleBarPush";
-import UserSearchChat from "@organisms/UserSearchChat";
-import UserChatConversation from "@organisms/UserChatConversation";
+import TitleBarPush from '@molecules/TitleBarPush';
+import UserSearchChat from '@organisms/UserSearchChat';
+import UserChatConversation from '@organisms/UserChatConversation';
 
-import { AiOutlineMail } from "react-icons/ai";
-import { BsChevronDoubleUp, BsChevronDoubleDown } from "react-icons/bs";
+import { AiOutlineMail } from 'react-icons/ai';
+import { BsChevronDoubleUp, BsChevronDoubleDown } from 'react-icons/bs';
+import * as S from './styles';
 
 const UserMessageFloat = () => {
   const [currentChat, setCurrentChat] = useState(0);

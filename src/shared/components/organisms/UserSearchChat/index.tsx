@@ -1,12 +1,12 @@
-import { useState } from "react";
-import * as S from "./styles";
+import { useState } from 'react';
 
-import { AiOutlineSearch } from "react-icons/ai";
+import { AiOutlineSearch } from 'react-icons/ai';
 
-import SearchBar from "@molecules/InputWithIcon";
-import TwitterUserChat from "@molecules/TwitterUserChat";
+import SearchBar from '@molecules/InputWithIcon';
+import TwitterUserChat from '@molecules/TwitterUserChat';
 
-import messages from "@application/mocks/messages";
+import messages from '@application/mocks/messages';
+import * as S from './styles';
 
 type ChatProps = {
   floating?: boolean;

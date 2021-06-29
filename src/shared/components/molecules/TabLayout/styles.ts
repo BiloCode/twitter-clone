@@ -1,5 +1,5 @@
-import { colors } from "@style-config/colors";
-import styled from "styled-components";
+import { colors } from '@style-config/colors';
+import styled from 'styled-components';
 
 type TContainer = {
   colums: number;

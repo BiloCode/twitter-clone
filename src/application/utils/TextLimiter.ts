@@ -1,4 +1,4 @@
-type LimiterSize = "default" | "large" | "short";
+type LimiterSize = 'default' | 'large' | 'short';
 
 class TextLimiter {
   static exec = (text: string, size?: LimiterSize): string => {
@@ -14,7 +14,7 @@ class TextLimiter {
       return text;
     }
 
-    return text.trim().slice(0, max_characters) + "...";
+    return `${text.trim().slice(0, max_characters)}...`;
   };
 }
 

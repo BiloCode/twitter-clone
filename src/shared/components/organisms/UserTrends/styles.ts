@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const TitleBarContainer = styled.div`
   background-color: rgb(250, 250, 250);

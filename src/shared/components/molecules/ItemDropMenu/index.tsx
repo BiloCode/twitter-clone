@@ -1,5 +1,5 @@
-import { FC } from "react";
-import * as S from "./styles";
+import { FC } from 'react';
+import * as S from './styles';
 
 type TProps = {
   icon: JSX.Element;

@@ -1,5 +1,5 @@
-import { SKYBLUE, WHITE_LIGHT } from "@style-config/colors";
-import styled from "styled-components";
+import { SKYBLUE, WHITE_LIGHT } from '@style-config/colors';
+import styled from 'styled-components';
 
 export const IconsContainer = styled.div`
   display: grid;

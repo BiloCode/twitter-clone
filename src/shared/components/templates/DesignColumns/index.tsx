@@ -1,16 +1,16 @@
-import { FC } from "react";
-import * as S from "./styles";
+import { FC } from 'react';
 
-import UserMessageFloat from "@templates/UserMessageFloat";
-import UserTrends from "@organisms/UserTrends";
-import Portals from "@atoms/Portals";
-import SearchBar from "@organisms/SearchBarFloatResults";
-import UserRecomendations from "@organisms/UserRecomendations";
-import StickyContainer from "@atoms/StickyContainer";
+import UserMessageFloat from '@templates/UserMessageFloat';
+import UserTrends from '@organisms/UserTrends';
+import Portals from '@atoms/Portals';
+import SearchBar from '@organisms/SearchBarFloatResults';
+import UserRecomendations from '@organisms/UserRecomendations';
+import StickyContainer from '@atoms/StickyContainer';
 
-import useRouteCheck from "@hooks/useRouteCheck";
+import useRouteCheck from '@hooks/useRouteCheck';
 
-import { useScrollableRightContent } from "@context/ScrollableRightContent/context";
+import { useScrollableRightContent } from '@context/ScrollableRightContent/context';
+import * as S from './styles';
 
 const DesignColumns: FC = ({ children }) => {
   const { rightElementRef } = useScrollableRightContent();
@@ -21,7 +21,7 @@ const DesignColumns: FC = ({ children }) => {
       <S.LeftContainer>{children}</S.LeftContainer>
       <S.RightContainer>
         <S.AsideContent>
-          {!routeCheck("explore") && (
+          {!routeCheck('explore') && (
             <StickyContainer>
               <S.SearchContainer>
                 <SearchBar />
@@ -29,7 +29,7 @@ const DesignColumns: FC = ({ children }) => {
             </StickyContainer>
           )}
           <S.ScrollableContainer ref={rightElementRef}>
-            {!routeCheck("explore") && <UserTrends />}
+            {!routeCheck('explore') && <UserTrends />}
             <UserRecomendations />
           </S.ScrollableContainer>
         </S.AsideContent>

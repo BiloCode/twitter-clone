@@ -1,8 +1,8 @@
-import React, { FC, memo } from "react";
-import * as Styled from "./styles";
-import { BsCheck } from "react-icons/bs";
+import React, { FC, memo } from 'react';
+import { BsCheck } from 'react-icons/bs';
 
-import UserBasicData from "@templates/UserBasicData";
+import UserBasicData from '@templates/UserBasicData';
+import * as Styled from './styles';
 
 interface IProps {
   onClick?(): void;

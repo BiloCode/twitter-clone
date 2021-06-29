@@ -1,9 +1,9 @@
-import { FC, memo } from "react";
-import { IconType } from "react-icons/lib";
-import * as Styled from "./styles";
+import { FC, memo } from 'react';
+import { IconType } from 'react-icons/lib';
 
-import Icon from "@atoms/Icon";
-import Text from "@atoms/Text";
+import Icon from '@atoms/Icon';
+import Text from '@atoms/Text';
+import * as Styled from './styles';
 
 interface IProps {
   icon: IconType;

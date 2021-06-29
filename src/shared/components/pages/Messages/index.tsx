@@ -1,13 +1,13 @@
-import { FC } from "react";
-import { RouteComponentProps } from "@reach/router";
-import * as S from "./styles";
+import { FC } from 'react';
+import { RouteComponentProps } from '@reach/router';
 
-import TitleBarPush from "@molecules/TitleBarPush";
-import UserSearchChat from "@organisms/UserSearchChat";
-import UserChatConversation from "@organisms/UserChatConversation";
+import TitleBarPush from '@molecules/TitleBarPush';
+import UserSearchChat from '@organisms/UserSearchChat';
+import UserChatConversation from '@organisms/UserChatConversation';
 
-import { HiOutlineCog } from "react-icons/hi";
-import { RiMailAddLine } from "react-icons/ri";
+import { HiOutlineCog } from 'react-icons/hi';
+import { RiMailAddLine } from 'react-icons/ri';
+import * as S from './styles';
 
 const Messages: FC<RouteComponentProps> = () => (
   <S.MainContainer>

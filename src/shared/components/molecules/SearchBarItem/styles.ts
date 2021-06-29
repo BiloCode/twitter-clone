@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
-import { colors } from "@style-config/colors";
+import { colors } from '@style-config/colors';
 
 export const MainContainer = styled.div`
   cursor: pointer;

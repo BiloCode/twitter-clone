@@ -1,14 +1,14 @@
-import { useState } from "react";
-import * as S from "./styles";
+import { useState } from 'react';
 
 import {
   AiOutlineClose,
   AiOutlineDoubleRight,
   AiOutlineDoubleLeft,
-} from "react-icons/ai";
+} from 'react-icons/ai';
 
-import HoverableIcon from "@atoms/HoverableIcon";
-import TweetReactions from "@molecules/TweetReactions";
+import HoverableIcon from '@atoms/HoverableIcon';
+import TweetReactions from '@molecules/TweetReactions';
+import * as S from './styles';
 
 const ImageViewer = () => {
   const [isVisible, setIsVisible] = useState<boolean>(true);

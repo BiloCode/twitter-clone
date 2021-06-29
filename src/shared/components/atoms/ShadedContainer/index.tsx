@@ -1,5 +1,5 @@
-import { FC } from "react";
-import * as Styled from "./styles";
+import { FC } from 'react';
+import * as Styled from './styles';
 
 export type TProps = {
   horizontalSize?: number | string;

@@ -1,19 +1,19 @@
-import classnames from "classnames";
-import * as S from "./styles";
+import classnames from 'classnames';
 
-import { BiImage } from "react-icons/bi";
-import { AiOutlineGif } from "react-icons/ai";
-import { BsBarChart, BsPlusCircle } from "react-icons/bs";
-import { GrEmoji } from "react-icons/gr";
-import { HiOutlineCalendar } from "react-icons/hi";
+import { BiImage } from 'react-icons/bi';
+import { AiOutlineGif } from 'react-icons/ai';
+import { BsBarChart, BsPlusCircle } from 'react-icons/bs';
+import { GrEmoji } from 'react-icons/gr';
+import { HiOutlineCalendar } from 'react-icons/hi';
 
-import UserAvatar from "../../atoms/UserAvatar";
-import HoverableIcon from "../../atoms/HoverableIcon";
-import TwitterButton from "../../atoms/TwitterButton";
-import { TweetImageContainer } from "../../atoms/TweetImageContainer";
+import { useStore } from 'effector-react';
+import currentAccountSelector from '@store/accounts/selectors/currentAccountSelector';
+import HoverableIcon from '../../atoms/HoverableIcon';
+import TwitterButton from '../../atoms/TwitterButton';
+import { TweetImageContainer } from '../../atoms/TweetImageContainer';
 
-import { useStore } from "effector-react";
-import currentAccountSelector from "@store/accounts/selectors/currentAccountSelector";
+import * as S from './styles';
+import UserAvatar from '../../atoms/UserAvatar';
 
 const NewTweetControls = () => {
   const current_account = useStore(currentAccountSelector);
@@ -36,7 +36,7 @@ const NewTweetControls = () => {
             <HoverableIcon icon={GrEmoji} />
             <HoverableIcon icon={HiOutlineCalendar} />
           </S.Icons>
-          <S.TweetActions className={classnames({ "empty-input": emptyInput })}>
+          <S.TweetActions className={classnames({ 'empty-input': emptyInput })}>
             {!emptyInput && (
               <>
                 <S.TweetTextLimitContainer>

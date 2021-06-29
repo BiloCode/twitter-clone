@@ -1,4 +1,4 @@
-import { TAccountState } from "@store/accounts/types";
+import { TAccountState } from '@store/accounts/types';
 
 export type TCoords = {
   x: number;

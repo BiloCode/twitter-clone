@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 import { TProps } from '.';
 
 export const Container = styled.div<TProps>`

@@ -1,11 +1,11 @@
-import { FC } from "react";
-import * as Styled from "./styles";
-import { TAccountState } from "@store/accounts/types";
+import { FC } from 'react';
+import { TAccountState } from '@store/accounts/types';
 
-import CommonFollowers from "@molecules/CommonFollowers";
-import UserAvatar from "@atoms/UserAvatar";
-import UserFollowSection from "@molecules/UserFollowSection";
-import UserProfileInformation from "@molecules/UserProfileInformation";
+import CommonFollowers from '@molecules/CommonFollowers';
+import UserAvatar from '@atoms/UserAvatar';
+import UserFollowSection from '@molecules/UserFollowSection';
+import UserProfileInformation from '@molecules/UserProfileInformation';
+import * as Styled from './styles';
 
 interface IProps {
   twitterUser?: TAccountState;
@@ -13,7 +13,9 @@ interface IProps {
 
 const UserProfile: FC<IProps> = ({ children, twitterUser }) => {
   const {
-    personalInformation: { nickname, username, description, profileImage },
+    personalInformation: {
+      nickname, username, description, profileImage,
+    },
     followers,
     following,
   } = twitterUser!;

@@ -1,15 +1,15 @@
-import classNames from "classnames";
-import { FC } from "react";
+import classNames from 'classnames';
+import { FC } from 'react';
 
-import * as S from "./styles";
+import * as S from './styles';
 
 type TitleType =
-  | "black-big"
-  | "black"
-  | "black-medium"
-  | "small"
-  | "black-small"
-  | "default";
+  | 'black-big'
+  | 'black'
+  | 'black-medium'
+  | 'small'
+  | 'black-small'
+  | 'default';
 
 type TitleProps = {
   type?: TitleType;
@@ -20,11 +20,11 @@ const Title: FC<TitleProps> = ({ children, onClick, type }) => (
   <S.MainText
     className={classNames({
       hoverable: !!onClick,
-      small: type === "small",
-      black: type === "black",
-      "black-small": type === "black-small",
-      "black-big": type === "black-big",
-      "black-medium": type === "black-medium",
+      small: type === 'small',
+      black: type === 'black',
+      'black-small': type === 'black-small',
+      'black-big': type === 'black-big',
+      'black-medium': type === 'black-medium',
     })}
   >
     {children}

@@ -1,4 +1,4 @@
-import Tweet from "../organisms/Tweet";
+import Tweet from '../organisms/Tweet';
 
 const TweetCommentBig = () => (
   <>

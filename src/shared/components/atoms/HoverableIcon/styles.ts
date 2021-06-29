@@ -1,7 +1,7 @@
-import styled from "styled-components";
-import { colors, TEXT_LIGHT, WHITE_LIGHT } from "@style-config/colors";
+import styled from 'styled-components';
+import { colors, TEXT_LIGHT, WHITE_LIGHT } from '@style-config/colors';
 
-const size = "38px";
+const size = '38px';
 
 export const Icon = styled.span`
   line-height: 0;

@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const BottomContent = styled.div`
   padding: 1em;
@@ -22,8 +22,8 @@ export const UserCreateData = styled.div`
 
 export const ButtonsContainer = styled.div({
   height: 49,
-  display: "flex",
-  justifyContent: "flex-end",
-  position: "relative",
+  display: 'flex',
+  justifyContent: 'flex-end',
+  position: 'relative',
   lineHeight: 0,
 });

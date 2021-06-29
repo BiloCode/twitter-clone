@@ -1,7 +1,7 @@
-import { colors } from "@style-config/colors";
-import styled from "styled-components";
+import { colors } from '@style-config/colors';
+import styled from 'styled-components';
 
-//Date
+// Date
 export const Container = styled.div`
   display: grid;
   grid-template-columns: repeat(2, max-content);

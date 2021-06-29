@@ -1,8 +1,8 @@
-import { FC } from "react";
-import * as S from "./styles";
+import { FC } from 'react';
+import UserAvatar from '@atoms/UserAvatar';
+import * as S from './styles';
 
-import UserAvatar from "@atoms/UserAvatar";
-import UserAllNames from "../../molecules/UserAllNames";
+import UserAllNames from '../../molecules/UserAllNames';
 
 interface IProps {
   image: string;

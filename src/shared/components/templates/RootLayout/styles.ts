@@ -1,20 +1,20 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const MainContainer = styled.div({
   minWidth: 976,
-  display: "flex",
-  justifyContent: "space-between",
-  alignItems: "flex-start",
+  display: 'flex',
+  justifyContent: 'space-between',
+  alignItems: 'flex-start',
 });
 
 export const MenuSection = styled.header({
   flexGrow: 1,
-  height: "100vh",
-  display: "flex",
-  justifyContent: "flex-end",
-  alignItems: "flex-start",
-  padding: "0 10px",
-  borderRight: "1px solid rgb(230,230,230)",
+  height: '100vh',
+  display: 'flex',
+  justifyContent: 'flex-end',
+  alignItems: 'flex-start',
+  padding: '0 10px',
+  borderRight: '1px solid rgb(230,230,230)',
 });
 
 export const MainSection = styled.main`

@@ -1,7 +1,7 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
-import { colors } from "@style-config/colors";
-import { TwitterText, TwitterContainer } from "../../TwitterButton";
+import { colors } from '@style-config/colors';
+import { TwitterText, TwitterContainer } from '../../TwitterButton';
 
 export const FollowerTitle = styled(TwitterText)``;
 export const FollowerButton = styled(TwitterContainer)`

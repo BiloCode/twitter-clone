@@ -1,10 +1,10 @@
-import { FC, MouseEvent } from "react";
-import * as S from "./styles";
+import { FC, MouseEvent } from 'react';
 
-import Title from "@atoms/Title";
-import classNames from "classnames";
-import Text from "@atoms/Text";
-import TextLimiter from "@application/utils/TextLimiter";
+import Title from '@atoms/Title';
+import classNames from 'classnames';
+import Text from '@atoms/Text';
+import TextLimiter from '@application/utils/TextLimiter';
+import * as S from './styles';
 
 type TProps = {
   nickname: string;
@@ -31,7 +31,10 @@ const UserAllNames: FC<TProps> = ({
     <Title type="small" onClick={onClick}>
       {TextLimiter.exec(nickname)}
     </Title>
-    <Text>@{username}</Text>
+    <Text>
+      @
+      {username}
+    </Text>
   </S.TextContainer>
 );
 

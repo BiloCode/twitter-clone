@@ -5,7 +5,7 @@ import Option from '../Option';
 
 const MoreOptions = () => (
   <>
-    <Option content={<CgMoreO />} text='More' />
+    <Option content={<CgMoreO />} text="More" />
   </>
 );
 

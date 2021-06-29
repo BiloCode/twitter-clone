@@ -1,5 +1,5 @@
-import { MouseEvent } from "react";
-import { SetActive, SetPosition } from "@store/float_user_profile";
+import { MouseEvent } from 'react';
+import { SetActive, SetPosition } from '@store/float_user_profile';
 
 const usePositionFloatProfile = () => {
   let timeout: NodeJS.Timeout;

@@ -1,7 +1,9 @@
-import { floatUserProfileStore, SetActive, SetPosition, SetProfileData } from ".";
+import { TAccountState } from '@store/accounts/types';
+import {
+  floatUserProfileStore, SetActive, SetPosition, SetProfileData,
+} from '.';
 
-import { TCoords } from "./types";
-import { TAccountState } from "@store/accounts/types";
+import { TCoords } from './types';
 
 floatUserProfileStore.on(SetActive, (state, isActive: boolean) => ({
   ...state,

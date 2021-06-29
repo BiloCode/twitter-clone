@@ -1,9 +1,9 @@
-import { BsThreeDots } from "react-icons/bs";
-import * as S from "./styles";
+import { BsThreeDots } from 'react-icons/bs';
 
-import Text from "@atoms/Text";
-import Title from "@atoms/Title";
-import HoverableIcon from "../../atoms/HoverableIcon";
+import Text from '@atoms/Text';
+import Title from '@atoms/Title';
+import * as S from './styles';
+import HoverableIcon from '../../atoms/HoverableIcon';
 
 const Trend = () => (
   <S.Container>

@@ -1,20 +1,20 @@
-import { Router } from "@reach/router";
+import { Router } from '@reach/router';
 
-//Menu
-import RootLayout from "@templates/RootLayout";
-import NotificationLayout from "@templates/NotificationLayout";
-import ProfileLayout from "@templates/ProfileLayout";
+// Menu
+import RootLayout from '@templates/RootLayout';
+import NotificationLayout from '@templates/NotificationLayout';
+import ProfileLayout from '@templates/ProfileLayout';
 
-//Containers
-import Home from "@pages/Home";
-import Default from "@pages/Default";
-import Explore from "@pages/Explore";
-import Saves from "@pages/Saves";
-import Messages from "@pages/Messages";
-import Lists from "@pages/Lists";
-import Mentions from "@pages/Mentions";
-import Notifications from "@pages/Notifications";
-import Tweets from "@pages/Tweets";
+// Containers
+import Home from '@pages/Home';
+import Default from '@pages/Default';
+import Explore from '@pages/Explore';
+import Saves from '@pages/Saves';
+import Messages from '@pages/Messages';
+import Lists from '@pages/Lists';
+import Mentions from '@pages/Mentions';
+import Notifications from '@pages/Notifications';
+import Tweets from '@pages/Tweets';
 
 const DefaultRouter = () => (
   <Router>
