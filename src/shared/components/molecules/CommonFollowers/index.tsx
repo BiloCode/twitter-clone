@@ -1,9 +1,9 @@
-import { memo } from "react";
-import faker from "faker";
-import * as Styled from "./styles";
+import { memo } from 'react';
+import faker from 'faker';
 
-import UserAvatar from "@atoms/UserAvatar";
-import Text from "@atoms/Text";
+import UserAvatar from '@atoms/UserAvatar';
+import Text from '@atoms/Text';
+import * as Styled from './styles';
 
 const followers = new Array(3).fill(() => faker.random.image());
 

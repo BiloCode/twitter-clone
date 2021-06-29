@@ -1,8 +1,8 @@
-import { FC } from "react";
-import * as Styled from "./styles";
+import { FC } from 'react';
+import usePositionFloatProfile from '@hooks/usePositionFloatProfile';
+import * as Styled from './styles';
 
-import UserAllNames from "../UserAllNames";
-import usePositionFloatProfile from "@hooks/usePositionFloatProfile";
+import UserAllNames from '../UserAllNames';
 
 interface IProps {
   nickname: string;

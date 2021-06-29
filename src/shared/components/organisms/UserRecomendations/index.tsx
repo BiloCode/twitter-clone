@@ -1,12 +1,12 @@
-import faker from "faker";
-import * as S from "./styles";
+import faker from 'faker';
 
-import FollowButton from "@atoms/FollowButton";
-import UserBasicData from "@templates/UserBasicData";
-import HoverableText from "@atoms/HoverableText";
-import TitleBarSimple from "@molecules/TitleBarSimple";
+import FollowButton from '@atoms/FollowButton';
+import UserBasicData from '@templates/UserBasicData';
+import HoverableText from '@atoms/HoverableText';
+import TitleBarSimple from '@molecules/TitleBarSimple';
+import * as S from './styles';
 
-const users = new Array(3).fill("");
+const users = new Array(3).fill('');
 
 const UserRecomendations = () => (
   <div>

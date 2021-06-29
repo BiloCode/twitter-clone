@@ -1,16 +1,14 @@
-import { FC } from "react";
-import faker from "faker";
-import * as S from "./styles";
+import { FC, useMemo } from 'react';
+import faker from 'faker';
 
-import UserAvatar from "../../atoms/UserAvatar";
+import { colors } from '@style-config/colors';
+import { AiOutlineRetweet } from 'react-icons/ai';
+import { BsBellFill, BsFillHeartFill, BsFillPersonFill } from 'react-icons/bs';
+import Text from '@atoms/Text';
+import * as S from './styles';
+import UserAvatar from '../../atoms/UserAvatar';
 
-import { colors } from "@style-config/colors";
-import { AiOutlineRetweet } from "react-icons/ai";
-import { BsBellFill, BsFillHeartFill, BsFillPersonFill } from "react-icons/bs";
-import Text from "@atoms/Text";
-import { useMemo } from "react";
-
-export type NotificationType = "liked" | "retweet" | "follow" | "default";
+export type NotificationType = 'liked' | 'retweet' | 'follow' | 'default';
 export type NotificationProps = {
   type?: NotificationType;
 };
@@ -18,11 +16,11 @@ export type NotificationProps = {
 const Notification: FC<NotificationProps> = ({ type }) => {
   const GetIcon = useMemo((size: number = 24) => {
     switch (type) {
-      case "follow":
+      case 'follow':
         return <BsFillPersonFill size={size} color={colors.skyblue} />;
-      case "liked":
+      case 'liked':
         return <BsFillHeartFill size={size} color={colors.red} />;
-      case "retweet":
+      case 'retweet':
         return <AiOutlineRetweet size={size} color={colors.green} />;
       default:
         return <BsBellFill size={size} color={colors.skyblue} />;
@@ -40,7 +38,9 @@ const Notification: FC<NotificationProps> = ({ type }) => {
         </S.UserAvatars>
         <S.NotificationText>
           <S.Title>
-            <span>Escuela de Juegos</span> Retwiteo
+            <span>Escuela de Juegos</span>
+            {' '}
+            Retwiteo
           </S.Title>
           <Text>
             Hace un par de semanas realize un proyecto web y este es el resultado,
@@ -53,7 +53,7 @@ const Notification: FC<NotificationProps> = ({ type }) => {
 };
 
 Notification.defaultProps = {
-  type: "default",
+  type: 'default',
 };
 
 export default Notification;

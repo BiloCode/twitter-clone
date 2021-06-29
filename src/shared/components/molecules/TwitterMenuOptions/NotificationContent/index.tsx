@@ -1,6 +1,6 @@
 import React, { FC, memo } from 'react';
-import * as Styled from './styles';
 import { AiOutlineBell } from 'react-icons/ai';
+import * as Styled from './styles';
 
 interface IProps {
   notifications? : number;

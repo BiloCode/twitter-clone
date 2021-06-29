@@ -1,4 +1,4 @@
-import * as S from "./styles";
+import * as S from './styles';
 
 type ImageProps = {
   src: string;

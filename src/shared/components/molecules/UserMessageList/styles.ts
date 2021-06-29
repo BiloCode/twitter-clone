@@ -1,5 +1,5 @@
-import { AVATAR_SIZE } from "@style-config/constants";
-import styled from "styled-components";
+import { AVATAR_SIZE } from '@style-config/constants';
+import styled from 'styled-components';
 
 export const MessagesContainer = styled.div`
   display: grid;

@@ -1,16 +1,16 @@
-import { FC } from "react";
-import * as S from "./styles";
+import { FC } from 'react';
 
-import UserAvatar from "@atoms/UserAvatar";
-import TextWithIcon from "@molecules/TextWithIcon";
-import UserFollowSection from "@molecules/UserFollowSection";
-import BackgroundImage from "@molecules/BackgroundImage";
-import UserProfileInformation from "@molecules/UserProfileInformation";
+import UserAvatar from '@atoms/UserAvatar';
+import TextWithIcon from '@molecules/TextWithIcon';
+import UserFollowSection from '@molecules/UserFollowSection';
+import BackgroundImage from '@molecules/BackgroundImage';
+import UserProfileInformation from '@molecules/UserProfileInformation';
 
-import { TAccountState } from "@store/accounts/types";
+import { TAccountState } from '@store/accounts/types';
 
-import { BiCalendar } from "react-icons/bi";
-import { HiOutlineLocationMarker } from "react-icons/hi";
+import { BiCalendar } from 'react-icons/bi';
+import { HiOutlineLocationMarker } from 'react-icons/hi';
+import * as S from './styles';
 
 interface IProps {
   twitterUser?: TAccountState;
@@ -30,10 +30,10 @@ const UserProfileExtends: FC<IProps> = ({ children, twitterUser }) => {
     following,
   } = twitterUser!;
 
-  const dateNow = new Intl.DateTimeFormat("es-ES", {
-    day: "numeric",
-    month: "long",
-    year: "numeric",
+  const dateNow = new Intl.DateTimeFormat('es-ES', {
+    day: 'numeric',
+    month: 'long',
+    year: 'numeric',
   }).format(createdAt);
 
   return (

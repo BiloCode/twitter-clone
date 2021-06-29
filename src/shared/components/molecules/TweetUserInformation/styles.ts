@@ -1,14 +1,14 @@
-import styled from "styled-components";
-import { colors } from "@style-config/colors";
+import styled from 'styled-components';
+import { colors } from '@style-config/colors';
 
 export const Container = styled.div({
-  display: "flex",
-  alignItems: "center",
+  display: 'flex',
+  alignItems: 'center',
 });
 
 export const Nickname = styled.span({
   fontWeight: 700,
-  color: "black",
+  color: 'black',
   fontSize: 15,
 });
 
@@ -20,17 +20,17 @@ export const Username = styled.span({
 });
 
 export const UserInformationContainer = styled.div({
-  display: "flex",
-  alignItems: "center",
-  cursor: "pointer",
-  position: "relative",
+  display: 'flex',
+  alignItems: 'center',
+  cursor: 'pointer',
+  position: 'relative',
   [`:hover ${Nickname}`]: {
-    textDecoration: "underline",
+    textDecoration: 'underline',
   },
 });
 
 export const Point = styled.div({
-  padding: "0 5px",
+  padding: '0 5px',
   color: colors.textLight,
   fontSize: 15,
 });

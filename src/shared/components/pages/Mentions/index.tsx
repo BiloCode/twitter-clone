@@ -1,7 +1,7 @@
-import { FC } from "react";
-import { RouteComponentProps } from "@reach/router";
+import { FC } from 'react';
+import { RouteComponentProps } from '@reach/router';
 
-import DefaultContent from "@molecules/DefaultContent";
+import DefaultContent from '@molecules/DefaultContent';
 
 const Mentions: FC<RouteComponentProps> = () => (
   <div>

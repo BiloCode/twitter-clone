@@ -6,8 +6,8 @@ interface IProps {
   onClick?() : void;
 }
 
-const Item : FC<IProps> = ({ text , onClick }) => (
-  <Styled.Container onClick={onClick} >
+const Item : FC<IProps> = ({ text, onClick }) => (
+  <Styled.Container onClick={onClick}>
     <Styled.Text>{text}</Styled.Text>
   </Styled.Container>
 );

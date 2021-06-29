@@ -1,12 +1,12 @@
-import { useNavigate } from "@reach/router";
-import * as S from "./styles";
+import { useNavigate } from '@reach/router';
 
-import HoverableIcon from "@atoms/HoverableIcon";
-import Title from "@atoms/Title";
-import Text from "@atoms/Text";
+import HoverableIcon from '@atoms/HoverableIcon';
+import Title from '@atoms/Title';
+import Text from '@atoms/Text';
 
-import { IconType } from "react-icons";
-import { AiOutlineArrowLeft } from "react-icons/ai";
+import { IconType } from 'react-icons';
+import { AiOutlineArrowLeft } from 'react-icons/ai';
+import * as S from './styles';
 
 type Icon = {
   element: IconType;
@@ -20,9 +20,11 @@ type Props = {
   viewIconBack?: boolean;
 };
 
-const TitleBarPush = ({ title, viewIconBack, subtitle, icons }: Props) => {
+const TitleBarPush = ({
+  title, viewIconBack, subtitle, icons,
+}: Props) => {
   const navigate = useNavigate();
-  const onClickBack = () => navigate("/home");
+  const onClickBack = () => navigate('/home');
 
   return (
     <S.Container>

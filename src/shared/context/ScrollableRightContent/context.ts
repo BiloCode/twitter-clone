@@ -1,4 +1,6 @@
-import { createContext, createRef, RefObject, useContext } from "react";
+import {
+  createContext, createRef, RefObject, useContext,
+} from 'react';
 
 export type ScrollableRightContentType = {
   rightElementRef: RefObject<HTMLDivElement>;
@@ -7,8 +9,7 @@ export type ScrollableRightContentType = {
 export const ScrollableRightContent = createContext<ScrollableRightContentType>(
   {
     rightElementRef: createRef(),
-  }
+  },
 );
 
-export const useScrollableRightContent = () =>
-  useContext(ScrollableRightContent);
+export const useScrollableRightContent = () => useContext(ScrollableRightContent);

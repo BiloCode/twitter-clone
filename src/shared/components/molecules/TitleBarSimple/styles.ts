@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
-import { TITLE_BAR_HEIGHT } from "@style-config/constants";
+import { TITLE_BAR_HEIGHT } from '@style-config/constants';
 
 export const Container = styled.div`
   width: 100%;

@@ -1,5 +1,3 @@
-const path = require("path");
-
 module.exports = {
     "env": {
         "browser": true,
@@ -7,7 +5,7 @@ module.exports = {
     },
     "extends": [
         "plugin:react/recommended",
-        "airbnb"
+        "airbnb",
     ],
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
@@ -19,19 +17,30 @@ module.exports = {
     },
     "plugins": [
         "react",
-        "@typescript-eslint"
+        "@typescript-eslint",
+        "import"
     ],
     "rules": {
-        "commonjs" : true,
         "react/react-in-jsx-scope": "off",
         "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", ".ts", ".tsx"] }],
-        "import/extensions": ["warn", "always"],
+        "import/extensions": [
+          "error",
+          "always",
+          {
+            "ts": "never",
+            "tsx": "never",
+            "js": "never",
+            "jsx": "never"
+          }
+        ],
+        "max-len" : "off",
+        "import/prefer-default-export" : "off",
+        "react/require-default-props" : "off",
+        "react/no-array-index-key" : "off"
     },
     "settings" : {
-        "import/resolver":{
-            webpack : {
-                config : path.resolve(__dirname, "./config/webpack.dev.js"),
-            }
-        }
-    }
+      "import/resolver":{
+        typescript : {}
+      }
+  }
 };

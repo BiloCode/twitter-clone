@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Container = styled.div`
   display: grid;
@@ -6,7 +6,7 @@ export const Container = styled.div`
 `;
 
 export const Description = styled.p({
-  display: "block",
+  display: 'block',
   fontSize: 15,
 });
 

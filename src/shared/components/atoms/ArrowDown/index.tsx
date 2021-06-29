@@ -1,6 +1,6 @@
-import { FC } from "react";
-import * as Styled from "./styles";
-import { FiChevronDown } from "react-icons/fi";
+import { FC } from 'react';
+import { FiChevronDown } from 'react-icons/fi';
+import * as Styled from './styles';
 
 interface IProps {
   showIndicator?: boolean;

@@ -1,9 +1,9 @@
-import React from "react";
-import { BsThreeDots } from "react-icons/bs";
-import * as S from "./styles";
+import React from 'react';
+import { BsThreeDots } from 'react-icons/bs';
+import useDropdownActive from '@hooks/useDropdownActive';
+import * as S from './styles';
 
-import useDropdownActive from "@hooks/useDropdownActive";
-import ListMenuDropdown from "./ListMenuDropdown";
+import ListMenuDropdown from './ListMenuDropdown';
 
 const TweetOptions = () => {
   const { active, toggleActive } = useDropdownActive();

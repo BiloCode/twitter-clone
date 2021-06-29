@@ -1,10 +1,10 @@
-import classNames from "classnames";
-import * as S from "./styles";
+import classNames from 'classnames';
 
-import Text from "@atoms/Text";
-import UserAvatar from "@atoms/UserAvatar";
-import UserMessage from "@molecules/UserMessage";
-import DateFormated from "@application/utils/DateFormated";
+import Text from '@atoms/Text';
+import UserAvatar from '@atoms/UserAvatar';
+import UserMessage from '@molecules/UserMessage';
+import DateFormated from '@application/utils/DateFormated';
+import * as S from './styles';
 
 type TProps = {
   sendDate: Date;
@@ -19,7 +19,7 @@ const UserMessageList = ({
   userProfileImage,
   userAuthenticated,
 }: TProps) => (
-  <S.MainContainer className={classNames({ "user-auth": userAuthenticated })}>
+  <S.MainContainer className={classNames({ 'user-auth': userAuthenticated })}>
     <S.MessageWithAvatar>
       {!userAuthenticated && <UserAvatar image={userProfileImage} />}
       <S.MessagesContainer>

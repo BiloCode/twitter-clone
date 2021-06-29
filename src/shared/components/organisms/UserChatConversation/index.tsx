@@ -1,51 +1,51 @@
-import faker from "faker";
-import classNames from "classnames";
-import * as S from "./styles";
+import faker from 'faker';
+import classNames from 'classnames';
 
-import { BiCalendar } from "react-icons/bi";
-import { BsFillImageFill, BsChevronDoubleDown } from "react-icons/bs";
-import { AiOutlineGif, AiOutlineSend } from "react-icons/ai";
-import { GrEmoji } from "react-icons/gr";
-import { VscMegaphone } from "react-icons/vsc";
+import { BiCalendar } from 'react-icons/bi';
+import { BsFillImageFill, BsChevronDoubleDown } from 'react-icons/bs';
+import { AiOutlineGif, AiOutlineSend } from 'react-icons/ai';
+import { GrEmoji } from 'react-icons/gr';
+import { VscMegaphone } from 'react-icons/vsc';
 
-import Text from "@atoms/Text";
-import TextWithIcon from "@molecules/TextWithIcon";
-import UserAllNames from "@molecules/UserAllNames";
-import UserFollowSection from "@molecules/UserFollowSection";
-import TitleBarUserChat from "@molecules/TitleBarUserChat";
-import UserMessageList from "@molecules/UserMessageList";
-import IconWithIcon from "@molecules/InputWithIcon";
-import HoverableIcon from "@atoms/HoverableIcon";
-import StickyContainer from "@atoms/StickyContainer";
+import Text from '@atoms/Text';
+import TextWithIcon from '@molecules/TextWithIcon';
+import UserAllNames from '@molecules/UserAllNames';
+import UserFollowSection from '@molecules/UserFollowSection';
+import TitleBarUserChat from '@molecules/TitleBarUserChat';
+import UserMessageList from '@molecules/UserMessageList';
+import IconWithIcon from '@molecules/InputWithIcon';
+import HoverableIcon from '@atoms/HoverableIcon';
+import StickyContainer from '@atoms/StickyContainer';
+import * as S from './styles';
 
 const allMessages = [
   {
-    avatarURL: "",
+    avatarURL: '',
     sendDate: new Date(),
     userAuthenticated: false,
     message: [
-      "Hola que tal bro",
-      "dime algo porfa",
-      "ella me ama? o yo la amo a ella, aunque tambien depende de que sexo sea",
+      'Hola que tal bro',
+      'dime algo porfa',
+      'ella me ama? o yo la amo a ella, aunque tambien depende de que sexo sea',
     ],
   },
   {
-    avatarURL: "",
+    avatarURL: '',
     sendDate: new Date(),
     userAuthenticated: true,
     message: [
-      "Hola que tal bro",
-      "dime algo porfa",
-      "ella me ama? o yo la amo a ella, aunque tambien depende de que sexo sea",
+      'Hola que tal bro',
+      'dime algo porfa',
+      'ella me ama? o yo la amo a ella, aunque tambien depende de que sexo sea',
     ],
   },
   {
-    avatarURL: "",
+    avatarURL: '',
     sendDate: new Date(),
     message: [
-      "Hola que tal bro",
-      "dime algo porfa",
-      "ella me ama? o yo la amo a ella, aunque tambien depende de que sexo sea",
+      'Hola que tal bro',
+      'dime algo porfa',
+      'ella me ama? o yo la amo a ella, aunque tambien depende de que sexo sea',
     ],
   },
 ];
@@ -64,7 +64,7 @@ const UserChatConversation = ({ floating }: ChatProps) => (
         <UserAllNames horizontal nickname="Jhony Code" username="bot_kun" />
         <Text>{faker.lorem.words(20)}</Text>
         <UserFollowSection followers={4} following={5} />
-        <TextWithIcon icon={BiCalendar} text={`Se unio el 28 de Diciembre`} />
+        <TextWithIcon icon={BiCalendar} text="Se unio el 28 de Diciembre" />
       </S.UserBasicProfile>
       <S.ListMessage>
         {allMessages.map((v, i) => (
@@ -83,7 +83,7 @@ const UserChatConversation = ({ floating }: ChatProps) => (
       <HoverableIcon icon={AiOutlineGif} />
       <IconWithIcon
         placeholder="Star a new message"
-        icon={{ position: "right", type: GrEmoji }}
+        icon={{ position: 'right', type: GrEmoji }}
       />
       <HoverableIcon icon={AiOutlineSend} />
     </S.MessageInputContainer>

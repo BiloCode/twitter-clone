@@ -1,8 +1,8 @@
-import { FC, memo } from "react";
-import * as S from "./styles";
+import { FC, memo } from 'react';
 
-import Text from "@atoms/Text";
-import Title from "@atoms/Title";
+import Text from '@atoms/Text';
+import Title from '@atoms/Title';
+import * as S from './styles';
 
 interface IProps {
   following: number;

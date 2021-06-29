@@ -1,10 +1,9 @@
-import * as S from "./styles";
+import faker from 'faker';
 
-import faker from "faker";
+import { BsPersonFill } from 'react-icons/bs';
+import * as S from './styles';
 
-import { BsPersonFill } from "react-icons/bs";
-
-import UserBasicData from "../../templates/UserBasicData";
+import UserBasicData from '../../templates/UserBasicData';
 
 type IProps = {
   isFollowing?: boolean;

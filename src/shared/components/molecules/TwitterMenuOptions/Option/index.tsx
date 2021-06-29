@@ -8,8 +8,10 @@ interface IProps {
   onClick?() : void;
 }
 
-const Option : FC<IProps> = ({ text , onClick , isSelect , content }) => (
-  <Styled.MainContainer onClick={onClick} isSelect={isSelect} >
+const Option : FC<IProps> = ({
+  text, onClick, isSelect, content,
+}) => (
+  <Styled.MainContainer onClick={onClick} isSelect={isSelect}>
     <Styled.ItemContainer>
       <Styled.IconContainer>
         {content}
@@ -18,7 +20,7 @@ const Option : FC<IProps> = ({ text , onClick , isSelect , content }) => (
         text && (
           <Styled.TextContainer>
             <Styled.Text>{text}</Styled.Text>
-          </Styled.TextContainer> 
+          </Styled.TextContainer>
         )
       }
     </Styled.ItemContainer>

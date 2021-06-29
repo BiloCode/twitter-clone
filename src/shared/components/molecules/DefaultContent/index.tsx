@@ -1,7 +1,7 @@
-import { FC } from "react";
-import Text from "@atoms/Text";
-import Title from "@atoms/Title";
-import * as S from "./styles";
+import { FC } from 'react';
+import Text from '@atoms/Text';
+import Title from '@atoms/Title';
+import * as S from './styles';
 
 type DefaultContentProps = {
   title: string;

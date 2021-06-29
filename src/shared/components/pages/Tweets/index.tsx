@@ -1,7 +1,7 @@
-import { FC } from "react";
-import { RouteComponentProps } from "@reach/router";
+import { FC } from 'react';
+import { RouteComponentProps } from '@reach/router';
 
-import Tweet from "@organisms/Tweet";
+import Tweet from '@organisms/Tweet';
 
 const Tweets: FC<RouteComponentProps> = () => (
   <div>

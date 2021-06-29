@@ -1,6 +1,6 @@
-import { FC } from "react";
+import { FC } from 'react';
 
-import * as S from "./styles";
+import * as S from './styles';
 
 interface IProps {
   onClick?(): void;

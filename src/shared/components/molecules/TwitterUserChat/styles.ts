@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
-import { SKYBLUE, WHITE_LIGHT } from "@style-config/colors";
+import { SKYBLUE, WHITE_LIGHT } from '@style-config/colors';
 
 export const MainContainer = styled.div`
   display: grid;

@@ -1,4 +1,4 @@
-import styled, { keyframes } from "styled-components";
+import styled, { keyframes } from 'styled-components';
 
 interface IRootContainerProps {
   top : number;
@@ -20,4 +20,4 @@ export const RootContainer = styled.div<IRootContainerProps>`
 
 export const Container = styled.div({
 
-})
+});

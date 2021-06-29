@@ -1,8 +1,8 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Container = styled.div({
-  display: "flex",
-  justifyContent: "space-between",
+  display: 'flex',
+  justifyContent: 'space-between',
 });
 
 export const UserDataContainer = styled.div`
@@ -13,7 +13,7 @@ export const UserDataContainer = styled.div`
 `;
 
 export const ChildrenContainer = styled.div({
-  display: "flex",
-  justifyContent: "center",
-  alignItems: "center",
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
 });

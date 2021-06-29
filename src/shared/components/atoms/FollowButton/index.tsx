@@ -1,7 +1,7 @@
-import { FC, useState } from "react";
+import { FC, useState } from 'react';
 
-import Follower from "./Follower";
-import TwitterButton from "@atoms/TwitterButton";
+import TwitterButton from '@atoms/TwitterButton';
+import Follower from './Follower';
 
 type FollowManagerProps = {
   isFollow: boolean;

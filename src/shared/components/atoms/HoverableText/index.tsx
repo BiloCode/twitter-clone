@@ -1,6 +1,6 @@
-import { FC } from "react";
-import * as S from "./styles";
-import classnames from "classnames";
+import { FC } from 'react';
+import classnames from 'classnames';
+import * as S from './styles';
 
 type TProps = {
   text: string;

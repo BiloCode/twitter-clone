@@ -1,13 +1,13 @@
-import { FC, memo } from "react";
-import * as Styled from "./styles";
+import { FC, memo } from 'react';
 
-import ShadedContainer from "@atoms/ShadedContainer";
-import UserProfile from "@organisms/UserProfile";
-import FollowButton from "@atoms/FollowButton";
+import ShadedContainer from '@atoms/ShadedContainer';
+import UserProfile from '@organisms/UserProfile';
+import FollowButton from '@atoms/FollowButton';
 
-import { TCoords } from "@store/float_user_profile/types";
-import { TAccountState } from "@store/accounts/types";
-import { SetActive } from "@store/float_user_profile";
+import { TCoords } from '@store/float_user_profile/types';
+import { TAccountState } from '@store/accounts/types';
+import { SetActive } from '@store/float_user_profile';
+import * as Styled from './styles';
 
 type TwitterUserFloatProps = {
   coords: TCoords;

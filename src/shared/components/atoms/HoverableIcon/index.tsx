@@ -1,10 +1,9 @@
-import classNames from "classnames";
-import * as Styled from "./styles";
-
-import { IconType } from "react-icons";
+import classNames from 'classnames';
+import { IconType } from 'react-icons';
+import * as Styled from './styles';
 
 interface IProps {
-  color?: "default" | "light";
+  color?: 'default' | 'light';
   icon: IconType;
   onClick?(): void;
 }
@@ -12,7 +11,7 @@ interface IProps {
 const HoverableIcon = ({ color, onClick, icon: Icon }: IProps) => (
   <Styled.Container
     onClick={onClick}
-    className={classNames({ light: color === "light" })}
+    className={classNames({ light: color === 'light' })}
   >
     <Styled.Icon>
       <Icon />

@@ -1,5 +1,5 @@
-import { FC, useRef } from "react";
-import { ScrollableRightContent } from "./context";
+import { FC, useRef } from 'react';
+import { ScrollableRightContent } from './context';
 
 export const ScrollableRightContentProvider: FC = ({ children }) => {
   const rightElementRef = useRef<HTMLDivElement>(null);

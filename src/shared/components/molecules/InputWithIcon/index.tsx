@@ -1,9 +1,9 @@
-import * as S from "./styles";
-import classNames from "classnames";
+import classNames from 'classnames';
 
-import Icon from "@atoms/Icon";
+import Icon from '@atoms/Icon';
 
-import { IconType } from "react-icons/lib";
+import { IconType } from 'react-icons/lib';
+import * as S from './styles';
 
 type TProps = {
   isActive?: boolean;
@@ -12,7 +12,7 @@ type TProps = {
   onFocus?(): void;
   icon: {
     type: IconType;
-    position?: "right" | "left";
+    position?: 'right' | 'left';
   };
 };
 
@@ -24,7 +24,7 @@ const InputWithIcon = ({
   placeholder,
 }: TProps) => (
   <S.InputContainer
-    className={classNames({ active: isActive, right: icon.position === "right" })}
+    className={classNames({ active: isActive, right: icon.position === 'right' })}
     htmlFor="search-bar"
   >
     <S.Icon>

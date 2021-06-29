@@ -1,9 +1,9 @@
-import classNames from "classnames";
-import * as S from "./styles";
+import classNames from 'classnames';
 
-import Text from "@atoms/Text";
-import UserAvatar from "@atoms/UserAvatar";
-import UserAllNames from "@molecules/UserAllNames";
+import Text from '@atoms/Text';
+import UserAvatar from '@atoms/UserAvatar';
+import UserAllNames from '@molecules/UserAllNames';
+import * as S from './styles';
 
 type TProps = {
   select?: boolean;
@@ -19,8 +19,10 @@ type TProps = {
   };
 };
 
-const TwitterUserChat = ({ select, user, chat, onClick }: TProps) => {
-  const dateFormated = Intl.DateTimeFormat("es-ES").format(chat.lastUpdated);
+const TwitterUserChat = ({
+  select, user, chat, onClick,
+}: TProps) => {
+  const dateFormated = Intl.DateTimeFormat('es-ES').format(chat.lastUpdated);
 
   return (
     <S.MainContainer onClick={onClick} className={classNames({ select })}>

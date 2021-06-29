@@ -1,19 +1,19 @@
-import styled from "styled-components";
-import { colors } from "@style-config/colors";
+import styled from 'styled-components';
+import { colors } from '@style-config/colors';
 
 export const Container = styled.button({
   width: 250,
   height: 50,
   backgroundColor: colors.skyblue,
-  padding: "10px 0",
+  padding: '10px 0',
   borderRadius: 25,
-  ":hover": {
+  ':hover': {
     backgroundColor: colors.skyblueDarken,
   },
 });
 
 export const Text = styled.span({
-  fontWeight: "bold",
-  color: "#fff",
+  fontWeight: 'bold',
+  color: '#fff',
   fontSize: 16,
 });

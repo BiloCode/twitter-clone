@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
-const paddingTop = "14px";
+const paddingTop = '14px';
 
 export const TweetContainer = styled.article`
   padding: 0 15px;
@@ -31,7 +31,7 @@ export const ImageContainer = styled.div`
 `;
 
 export const InformationContainer = styled.div({
-  width: "100%",
+  width: '100%',
   flexShrink: 1,
   paddingBottom: 10,
 });
@@ -49,8 +49,8 @@ export const Icon = styled.div`
   right: 0;
 `;
 
-export const ImageSize = "48px";
-export const Separator = "6px";
+export const ImageSize = '48px';
+export const Separator = '6px';
 export const IndicatorComment = styled.div`
   width: 2px;
   height: calc(100% - ${paddingTop} - ${ImageSize});

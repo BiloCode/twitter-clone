@@ -1,6 +1,6 @@
-import React, { FC } from "react";
-import ShadedContainer from "../ShadedContainer";
-import * as S from "./styles";
+import React, { FC } from 'react';
+import ShadedContainer from '../ShadedContainer';
+import * as S from './styles';
 
 export type TProps = {
   top?: number | string;

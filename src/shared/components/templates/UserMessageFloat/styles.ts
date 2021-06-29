@@ -1,5 +1,5 @@
-import { TITLE_BAR_HEIGHT } from "@style-config/constants";
-import styled from "styled-components";
+import { TITLE_BAR_HEIGHT } from '@style-config/constants';
+import styled from 'styled-components';
 
 export const MainContainer = styled.div`
   width: 420px;
